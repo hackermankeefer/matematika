@@ -1,0 +1,17 @@
+{
+  "topicName": "<Must exactly match the paired topic file>",
+  "topicOverview": "<One-sentence description of this example set>",
+  "examples": [
+    {
+      "id": "<unique-slug>-beginner-01",
+      "difficulty": "beginner",
+      "question": "<A clear student-facing question>",
+      "given": "<Known information>",
+      "expectedMethod": "<Suitable method, not hidden reasoning>",
+      "formula": "<Relevant formula or relationship>",
+      "workedSolution": "<Concise, verifiable steps>",
+      "finalAnswer": "<Answer with units or interpretation>",
+      "commonMistake": "<Likely mistake and how to avoid it>"
+    }
+  ]
+}

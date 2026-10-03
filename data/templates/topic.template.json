@@ -1,0 +1,37 @@
+{
+  "topicName": "<Human-readable topic name>",
+  "topicOverview": "<Short scope summary used for retrieval>",
+  "keywords": ["<search phrase>", "<curriculum term>"],
+  "prerequisites": ["<prior knowledge>"],
+  "subtopics": [
+    {
+      "name": "<Subtopic name>",
+      "keywords": ["<specific search phrase>"],
+      "definitions": [
+        {
+          "term": "<Term>",
+          "meaning": "<Precise Grade 11 definition>"
+        }
+      ],
+      "formulas": [
+        {
+          "name": "<Formula name>",
+          "latex": "<KaTeX-compatible expression>",
+          "variables": [
+            {
+              "symbol": "<symbol>",
+              "meaning": "<what the symbol represents>"
+            }
+          ]
+        }
+      ],
+      "conditions": ["<When the formula or method applies>"],
+      "importantProperties": ["<Useful mathematical property>"],
+      "derivations": ["<Optional concise explanation of why it works>"],
+      "workedExamples": ["<Optional checked example with a clear result>"],
+      "commonMistakes": ["<Likely learner error and correction>"],
+      "prerequisites": ["<Subtopic-specific prerequisite>"],
+      "exampleProblemTypes": ["<Question type this subtopic supports>"]
+    }
+  ]
+}

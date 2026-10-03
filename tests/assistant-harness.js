@@ -3,24 +3,34 @@ const path = require('node:path');
 const vm = require('node:vm');
 
 const root = path.resolve(__dirname, '..');
-const knowledgeDirectory = path.join(root, 'knowledge');
-const curriculumNames = [
-    'functions',
-    'business-mathematics',
-    'statistics',
-    'sequences-and-series',
-    'logic-and-mathematical-reasoning',
-    'measurement-and-conversion',
-    'trigonometry'
-];
+const knowledgeDirectory = path.join(root, 'data', 'knowledge');
 
 function readJson(filePath) {
     return JSON.parse(fs.readFileSync(filePath, 'utf8'));
 }
 
+const knowledgeManifest = readJson(path.join(knowledgeDirectory, 'manifest.json'));
+const curriculumNames = knowledgeManifest.topics.map(entry => entry.id);
+
+function readTopic(id) {
+    return readJson(path.join(knowledgeDirectory, 'topics', `${id}.json`));
+}
+
+function readExamples(id) {
+    return readJson(path.join(knowledgeDirectory, 'examples', `${id}.json`));
+}
+
+function loadKnowledgeModules() {
+    return knowledgeManifest.topics.map(entry => ({
+        id: entry.id,
+        topic: readTopic(entry.id),
+        examples: readExamples(entry.id)
+    }));
+}
+
 function loadCalculator() {
     const window = {};
-    const source = fs.readFileSync(path.join(root, 'math-calculator.js'), 'utf8');
+    const source = fs.readFileSync(path.join(root, 'assets', 'js', 'math-calculator.js'), 'utf8');
     vm.runInNewContext(source, { window, console }, { filename: 'math-calculator.js' });
     return window.Grade11MathCalculator;
 }
@@ -83,14 +93,16 @@ function createAssistantHarness(modelResponse, options = {}) {
         querySelector() { return null; },
         createElement(tagName) { return createElement(tagName); }
     };
-    const curriculum = curriculumNames.map(name => readJson(path.join(knowledgeDirectory, `${name}.json`)));
-    const examples = curriculumNames.map(name => readJson(path.join(knowledgeDirectory, `${name}-examples.json`)));
+    const modules = loadKnowledgeModules();
+    const curriculum = modules.map(module => module.topic);
+    const examples = modules.map(module => module.examples);
     const window = {
         Grade11MathCalculator: loadCalculator(),
         GRADE_11_MATH_KNOWLEDGE: curriculum,
         GRADE_11_MATH_EXAMPLES: examples,
         GRADE_11_MATH_KNOWLEDGE_READY: Promise.resolve(curriculum),
         GRADE_11_MATH_EXAMPLES_READY: Promise.resolve(examples),
+        MATHEMATICS_AI_PROVIDER: options.provider || 'ollama',
         MATHEMATICS_AI_ENDPOINT: options.endpoint || 'http://ollama.test/api/chat',
         MATHEMATICS_AI_MODEL: options.model || 'test-model',
         localStorage,
@@ -116,7 +128,7 @@ function createAssistantHarness(modelResponse, options = {}) {
         return { ok: true, json: async () => ({ message: { content } }) };
     };
     const context = { window, document, fetch, console, NodeFilter: { SHOW_TEXT: 4 }, URL, queueMicrotask };
-    vm.runInNewContext(fs.readFileSync(path.join(root, 'assistant.js'), 'utf8'), context, { filename: 'assistant.js' });
+    vm.runInNewContext(fs.readFileSync(path.join(root, 'assets', 'js', 'assistant.js'), 'utf8'), context, { filename: 'assistant.js' });
 
     const panel = elements.find(element => element.className === 'assistant-panel');
     const form = panel.querySelector('.assistant-form');
@@ -143,4 +155,15 @@ function createAssistantHarness(modelResponse, options = {}) {
     };
 }
 
-module.exports = { createAssistantHarness, curriculumNames, knowledgeDirectory, loadCalculator, normalizeTruthValues, readJson, root };
+module.exports = {
+    createAssistantHarness,
+    curriculumNames,
+    knowledgeDirectory,
+    loadCalculator,
+    loadKnowledgeModules,
+    normalizeTruthValues,
+    readExamples,
+    readJson,
+    readTopic,
+    root
+};

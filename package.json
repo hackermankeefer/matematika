@@ -1,8 +1,12 @@
 {
-  "name": "mathematics-archive",
+  "name": "mathematics-observatory",
+  "description": "Grade 11 mathematics learning site with Gemini on Vercel and optional Ollama support",
   "private": true,
   "scripts": {
-    "test": "node --test tests/grade11-ai.test.js",
+    "knowledge:build": "node scripts/build-knowledge-index.js",
+    "knowledge:check": "node scripts/build-knowledge-index.js --check",
+    "pretest": "npm run knowledge:check",
+    "test": "node --test tests/grade11-ai.test.js tests/project-structure.test.js tests/gemini-api.test.js",
     "test:ollama": "node --test tests/grade11-ai-live.test.js"
   },
   "dependencies": {

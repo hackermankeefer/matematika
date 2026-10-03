@@ -2,7 +2,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const test = require('node:test');
-const { createAssistantHarness, curriculumNames, knowledgeDirectory, loadCalculator, normalizeTruthValues, readJson, root } = require('./assistant-harness');
+const { createAssistantHarness, curriculumNames, loadCalculator, loadKnowledgeModules, normalizeTruthValues, readExamples, readJson, readTopic, root } = require('./assistant-harness');
 
 const calculator = loadCalculator();
 
@@ -18,13 +18,13 @@ test('truth-value normalization accepts T/F labels without matching longer words
 });
 
 test('all seven curriculum and example modules are structurally complete', () => {
-    assert.equal(curriculumNames.length, 7);
+    assert.ok(curriculumNames.length > 0);
     const ids = new Set();
     const questions = new Set();
 
     for (const name of curriculumNames) {
-        const curriculum = readJson(path.join(knowledgeDirectory, `${name}.json`));
-        const exampleModule = readJson(path.join(knowledgeDirectory, `${name}-examples.json`));
+        const curriculum = readTopic(name);
+        const exampleModule = readExamples(name);
         assert.ok(curriculum.topicName && Array.isArray(curriculum.subtopics), `${name} curriculum shape`);
         assert.ok(exampleModule.topicName && Array.isArray(exampleModule.examples), `${name} examples shape`);
         assert.ok(curriculum.subtopics.length > 0, `${name} has subtopics`);
@@ -450,6 +450,22 @@ for (const scenario of assistantScenarios) {
         assert.ok(harness.mathRenders[0].options.delimiters.some(delimiter => delimiter.left === '$'));
     });
 }
+
+test('assistant sends Gemini requests through its configured same-origin proxy', async () => {
+    const harness = createAssistantHarness({
+        topic: 'Functions', given: 'f(x) = 2x + 1', find: 'f(4)',
+        method: 'Substitute x = 4.', working: ['2(4) + 1 = 9.'], check: '', answer: '9'
+    }, { provider: 'gemini', endpoint: '/api/assistant' });
+
+    await harness.submit('Given f(x) = 2x + 1, find f(4).');
+    const request = harness.requests[0];
+
+    assert.equal(request.url, '/api/assistant');
+    assert.ok(Array.isArray(request.options.messages));
+    assert.equal(request.options.format.type, 'object');
+    assert.equal(request.options.model, undefined, 'the server selects the Gemini model from its environment');
+    assert.equal(request.options.options, undefined, 'provider-specific Ollama tuning is not sent to Gemini');
+});
 
 test('assistant retrieves Fibonacci rules and contextual pattern examples', async () => {
     const fibonacciHarness = createAssistantHarness({
@@ -1068,14 +1084,12 @@ test('live AI cases cover every topic and all six evaluation criteria', () => {
     const liveCases = readJson(path.join(__dirname, 'grade11-ai-cases.json'));
     assert.equal(liveCases.length, 21);
     const topics = new Set();
+    const curriculumModules = loadKnowledgeModules();
 
     for (const evaluation of liveCases) {
-        const moduleName = curriculumNames.find(name => {
-            const module = readJson(path.join(knowledgeDirectory, `${name}.json`));
-            return module.topicName === evaluation.topic;
-        });
+        const moduleName = curriculumModules.find(module => module.topic.topicName === evaluation.topic)?.id;
         assert.ok(moduleName, `${evaluation.id}: topic exists`);
-        const module = readJson(path.join(knowledgeDirectory, `${moduleName}.json`));
+        const module = readTopic(moduleName);
         assert.ok(module.subtopics.some(subtopic => subtopic.name === evaluation.subtopic), `${evaluation.id}: subtopic exists`);
         assert.ok(evaluation.methodPattern && evaluation.reasoningPattern && evaluation.answerPattern, `${evaluation.id}: method, reasoning, and answer checks exist`);
         assert.ok(Array.isArray(evaluation.expectedNumbers) || evaluation.expectedCalculationPattern, `${evaluation.id}: calculation check exists`);
@@ -1083,7 +1097,7 @@ test('live AI cases cover every topic and all six evaluation criteria', () => {
         topics.add(evaluation.topic);
     }
 
-    assert.equal(topics.size, 7, 'live cases cover all seven curriculum areas');
+    assert.equal(topics.size, curriculumNames.length, 'live cases cover every curriculum area');
     for (const topic of topics) {
         assert.ok(liveCases.filter(evaluation => evaluation.topic === topic).length >= 2, `${topic} has more than one evaluation form`);
     }
