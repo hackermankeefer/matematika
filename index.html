@@ -4,28 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Mathematics Observatory | Grade 11</title>
-    <link rel="stylesheet" href="styles.css?v=3">
-    <link rel="stylesheet" href="assistant.css?v=3">
-    <style>
-        /* Temporary test: hide the text I-beam cursor on the home page. */
-        body,
-        body * {
-            cursor: default !important;
-            user-select: none;
-        }
-
-        a,
-        button,
-        [role="button"] {
-            cursor: pointer !important;
-        }
-
-        input,
-        textarea,
-        [contenteditable="true"] {
-            user-select: text;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/styles.css?v=3">
+    <link rel="stylesheet" href="assets/css/assistant.css?v=3">
 </head>
 <body>
     <!-- Navigation -->
@@ -41,15 +21,11 @@
                 <span></span>
             </button>
             <ul class="nav-links">
-                <li><a href="#" class="nav-link active">Home</a></li>
+                <li><a href="index.html" class="nav-link active">Home</a></li>
                 <li><a href="learn.html" class="nav-link" data-section="learn">Learn</a></li>
                 <li><a href="explore.html" class="nav-link" data-section="explore">Explore</a></li>
-                <li><a href="visualize.html" class="nav-link" data-section="visualize">Visualize</a></li>
-                <li><a href="laboratory.html" class="nav-link" data-section="laboratory">Laboratory</a></li>
-                <li><a href="challenges.html" class="nav-link" data-section="challenges">Challenges</a></li>
                 <li><a href="history.html" class="nav-link" data-section="history">History</a></li>
                 <li><a href="proofs.html" class="nav-link" data-section="proofs">Why It Works</a></li>
-                <li><a href="library.html" class="nav-link" data-section="library">Library</a></li>
             </ul>
         </div>
     </nav>
@@ -68,7 +44,7 @@
             <p class="hero-subtitle">A comprehensive digital exploration of Grade 11 Mathematics</p>
             <div class="hero-stats">
                 <div class="stat">
-                    <span class="stat-number">8</span>
+                    <span class="stat-number">4</span>
                     <span class="stat-label">Sections</span>
                 </div>
                 <div class="stat">
@@ -116,45 +92,6 @@
             <a href="explore.html" class="card-link">Enter →</a>
         </div>
 
-        <div class="section-card visualize">
-            <div class="card-icon">📊</div>
-            <h2 class="card-title">Visualize</h2>
-            <p class="card-description">See mathematics come alive through interactive graphs, geometric animations, and dynamic visualizations.</p>
-            <ul class="card-topics">
-                <li>Function Graphing</li>
-                <li>Geometric Transformations</li>
-                <li>Unit Circle Explorer</li>
-                <li>Statistical Plots</li>
-            </ul>
-            <a href="visualize.html" class="card-link">Enter →</a>
-        </div>
-
-        <div class="section-card laboratory">
-            <div class="card-icon">🧪</div>
-            <h2 class="card-title">Laboratory</h2>
-            <p class="card-description">Experiment with mathematical concepts by manipulating variables and observing real-time results.</p>
-            <ul class="card-topics">
-                <li>Function Transformation Lab</li>
-                <li>Probability Simulator</li>
-                <li>Sequence Generator</li>
-                <li>Statistical Experiments</li>
-            </ul>
-            <a href="laboratory.html" class="card-link">Enter →</a>
-        </div>
-
-        <div class="section-card challenges">
-            <div class="card-icon">🎯</div>
-            <h2 class="card-title">Challenges</h2>
-            <p class="card-description">Test your understanding with problems, puzzles, and practice exercises ranging from fundamental to advanced.</p>
-            <ul class="card-topics">
-                <li>Practice Problems</li>
-                <li>Mathematical Puzzles</li>
-                <li>Logic Challenges</li>
-                <li>Competition Prep</li>
-            </ul>
-            <a href="challenges.html" class="card-link">Enter →</a>
-        </div>
-
         <div class="section-card history">
             <div class="card-icon">📜</div>
             <h2 class="card-title">History</h2>
@@ -181,22 +118,10 @@
             <a href="proofs.html" class="card-link">Enter →</a>
         </div>
 
-        <div class="section-card library">
-            <div class="card-icon">📖</div>
-            <h2 class="card-title">Library</h2>
-            <p class="card-description">Your comprehensive reference for formulas, definitions, theorems, symbols, and mathematical constants.</p>
-            <ul class="card-topics">
-                <li>Formula Reference</li>
-                <li>Glossary</li>
-                <li>Symbol Guide</li>
-                <li>Quick Tables</li>
-            </ul>
-            <a href="library.html" class="card-link">Enter →</a>
-        </div>
     </section>
 
     <!-- About Section -->
-    <section class="about-section">
+    <section class="about-section" id="about">
         <div class="about-content">
             <h2 class="section-heading">About This Archive</h2>
             <p class="about-text">
@@ -241,16 +166,16 @@
                 <ul>
                     <li><a href="learn.html">Learn</a></li>
                     <li><a href="explore.html">Explore</a></li>
-                    <li><a href="visualize.html">Visualize</a></li>
-                    <li><a href="library.html">Library</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="proofs.html">Why It Works</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h4>Resources</h4>
                 <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Sources</a></li>
-                    <li><a href="#">Technology</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="docs/references/G11-General-Mathematics.pdf">Curriculum source</a></li>
+                    <li><a href="explore.html">Formula practice</a></li>
                 </ul>
             </div>
         </div>
@@ -259,9 +184,9 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
-    <script src="curriculum-data.js?v=6"></script>
-    <script src="math-calculator.js?v=6"></script>
-    <script src="assistant.js?v=42"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/curriculum-data.js?v=6"></script>
+    <script src="assets/js/math-calculator.js?v=6"></script>
+    <script src="assets/js/assistant.js?v=42"></script>
 </body>
 </html>

@@ -2,7 +2,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const test = require('node:test');
-const { createAssistantHarness, curriculumNames, knowledgeDirectory, loadCalculator, normalizeTruthValues, readJson } = require('./assistant-harness');
+const { createAssistantHarness, loadCalculator, loadKnowledgeModules, normalizeTruthValues, readJson } = require('./assistant-harness');
 
 const cases = JSON.parse(fs.readFileSync(path.join(__dirname, 'grade11-ai-cases.json'), 'utf8'));
 const selectedCaseId = process.env.MATHEMATICS_AI_CASE;
@@ -12,6 +12,7 @@ const endpoint = process.env.MATHEMATICS_AI_ENDPOINT || 'http://127.0.0.1:11434/
 const tagsEndpoint = endpoint.replace(/\/api\/chat\/?$/, '');
 
 const calculator = loadCalculator();
+const curriculumModules = loadKnowledgeModules().map(module => module.topic);
 
 function findNumbers(text) {
     return (text.match(/-?(?:\d{1,3}(?:,\d{3})+(?:\.\d+)?|\d+(?:\.\d+)?|\.\d+)/g) || [])
@@ -143,8 +144,7 @@ test('live Grade 11 AI evaluation against local Ollama', { timeout: 600000 }, as
                 assert.ok(request, 'the application sent the question to the model');
                 const systemPrompt = request.messages[0]?.content || '';
                 const retrievalTopics = evaluation.retrievalTopics || [evaluation.topic];
-                const retrievedModules = curriculumNames
-                    .map(name => readJson(path.join(knowledgeDirectory, `${name}.json`)))
+                const retrievedModules = curriculumModules
                     .filter(module => retrievalTopics.includes(module.topicName) && systemPrompt.includes(`Topic: ${module.topicName}`));
                 assert.ok(retrievedModules.length, `application retrieval includes one of ${retrievalTopics.join(', ')}`);
                 const expectedSubtopics = evaluation.retrievalSubtopics || (evaluation.subtopic ? [evaluation.subtopic] : []);

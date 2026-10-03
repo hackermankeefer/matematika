@@ -1,8 +1,12 @@
 (() => {
     if (document.querySelector('.assistant-launcher')) return;
 
-    const endpoint = window.MATHEMATICS_AI_ENDPOINT || 'http://127.0.0.1:11434/api/chat';
-    const model = window.MATHEMATICS_AI_MODEL || 'qwen3:4b';
+    const provider = window.MATHEMATICS_AI_PROVIDER
+        || (window.MATHEMATICS_AI_ENDPOINT ? 'ollama' : 'gemini');
+    const endpoint = window.MATHEMATICS_AI_ENDPOINT
+        || (provider === 'gemini' ? '/api/assistant' : 'http://127.0.0.1:11434/api/chat');
+    const model = window.MATHEMATICS_AI_MODEL
+        || (provider === 'gemini' ? 'gemini-3.5-flash-lite' : 'qwen3:4b');
     const mathResponseFormat = {
         type: 'object',
         properties: {
@@ -995,18 +999,19 @@
 
         conversation.push({ role: 'user', content: question });
         const curriculumContext = getCurriculumContext(question, calculatorTask);
+        const recentConversation = conversation.slice(1).slice(/\b(all|overview|curriculum|syllabus|topics)\b/i.test(question) ? -2 : -6);
+        if (recentConversation[0]?.role === 'assistant') recentConversation.shift();
         const requestMessages = [
             {
                 role: 'system',
                 content: `${conversation[0].content}\n\nCurrent response mode: ${requestMode}. ${getTutoringModeInstruction(requestMode)} Use these Grade 11 curriculum notes when relevant. Treat them as reference material, not an exhaustive syllabus. If the problem is ambiguous or essential information is missing, ask a concise clarifying question rather than guessing.\n\n${calculatorSummary}\n\n${curriculumContext}`
             },
-            ...conversation.slice(1).slice(/\b(all|overview|curriculum|syllabus|topics)\b/i.test(question) ? -2 : -6)
+            ...recentConversation
         ];
 
-        const response = await fetch(endpoint, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
+        const requestPayload = provider === 'gemini'
+            ? { messages: requestMessages, format: mathResponseFormat }
+            : {
                 model,
                 messages: requestMessages,
                 think: false,
@@ -1017,9 +1022,19 @@
                     temperature: 0.2
                 },
                 stream: false
-            })
+            };
+        const response = await fetch(endpoint, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(requestPayload)
         });
-        if (!response.ok) throw new Error('Assistant request failed');
+        if (!response.ok) {
+            if (provider === 'gemini') {
+                const failure = await response.json().catch(() => ({}));
+                throw new Error(`Gemini: ${failure.error || 'The request could not be completed.'}`);
+            }
+            throw new Error('Assistant request failed');
+        }
         const result = await response.json();
         const modelReply = formatMathResponse(result.message?.content || '', requestMode) || 'I could not produce a complete solution. Please try a shorter question or split the problem into smaller parts.';
         const baseReply = calculatorTask && requestMode !== 'hint'
@@ -1054,9 +1069,13 @@
             await getReply(question, reply);
         } catch (error) {
             if (conversation.at(-1)?.role === 'user') conversation.pop();
-            reply.textContent = error.message?.includes('KaTeX')
-                ? 'The answer is ready, but KaTeX could not load its local assets. Check the KaTeX files and refresh the page.'
-                : 'I could not reach the local AI, but I am still here. Check that its endpoint is running and try again.';
+            if (error.message?.includes('KaTeX')) {
+                reply.textContent = 'The answer is ready, but KaTeX could not load its local assets. Check the KaTeX files and refresh the page.';
+            } else if (error.message?.startsWith('Gemini: ')) {
+                reply.textContent = error.message.slice('Gemini: '.length);
+            } else {
+                reply.textContent = 'I could not reach the AI service. Check the selected provider and try again.';
+            }
         } finally {
             saveChatState();
             input.disabled = false;

@@ -4,10 +4,9 @@
 		{
 			"label": "Run Grade 11 Mathematics test suite",
 			"type": "shell",
-			"command": "node",
+			"command": "npm",
 			"args": [
-				"--test",
-				"tests/grade11-ai.test.js"
+				"test"
 			],
 			"isBackground": false,
 			"problemMatcher": [],

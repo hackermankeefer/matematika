@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "business-mathematics",
+      "topic": "topics/business-mathematics.json",
+      "examples": "examples/business-mathematics.json"
+    },
+    {
+      "id": "functions",
+      "topic": "topics/functions.json",
+      "examples": "examples/functions.json"
+    },
+    {
+      "id": "logic-and-mathematical-reasoning",
+      "topic": "topics/logic-and-mathematical-reasoning.json",
+      "examples": "examples/logic-and-mathematical-reasoning.json"
+    },
+    {
+      "id": "measurement-and-conversion",
+      "topic": "topics/measurement-and-conversion.json",
+      "examples": "examples/measurement-and-conversion.json"
+    },
+    {
+      "id": "sequences-and-series",
+      "topic": "topics/sequences-and-series.json",
+      "examples": "examples/sequences-and-series.json"
+    },
+    {
+      "id": "statistics",
+      "topic": "topics/statistics.json",
+      "examples": "examples/statistics.json"
+    },
+    {
+      "id": "trigonometry",
+      "topic": "topics/trigonometry.json",
+      "examples": "examples/trigonometry.json"
+    }
+  ]
+}
