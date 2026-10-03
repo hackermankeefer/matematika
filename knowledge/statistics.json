@@ -1,0 +1,312 @@
+{
+  "topicName": "Statistics",
+  "topicOverview": "Statistics collects, organizes, summarizes, and interprets data about a population or sample. It also uses sampling and hypothesis tests to evaluate claims while accounting for uncertainty. A statistical answer should explain the result in context and state assumptions and limitations.",
+  "keywords": ["statistics", "data", "population", "sample", "census", "parameter", "statistic", "data types", "categorical", "quantitative", "frequency distribution", "frequency table", "mean", "average", "median", "mode", "weighted mean", "quartile", "decile", "percentile", "IQR", "interquartile range", "range", "variance", "standard deviation", "box plot", "box-and-whisker", "histogram", "data interpretation", "distribution", "outlier", "correlation", "regression", "probability", "chance", "event", "outcome", "sample space", "normal distribution", "z-score", "hypothesis testing", "hypothesis test", "test of significance", "null hypothesis", "alternative hypothesis", "significance level", "p-value", "z-test", "t-test", "test statistic", "critical value"],
+  "prerequisites": ["Fractions, decimals, and percentages", "Ordering numbers", "Addition and division", "Coordinate graphing", "Reading tables, labels, and units"],
+  "subtopics": [
+    {
+      "name": "Population and sample",
+      "keywords": ["population", "sample", "census", "parameter", "statistic", "population parameter", "sample statistic", "sampling bias", "random sample", "representative sample"],
+      "definitions": [{"term": "Population", "meaning": "The complete group of people, objects, or measurements a study aims to describe."}, {"term": "Sample", "meaning": "A subset of a population observed to learn about the population."}, {"term": "Parameter and statistic", "meaning": "A parameter describes a population; a statistic is calculated from a sample."}],
+      "formulas": [{"name": "Sample proportion estimate", "latex": "\\hat{p}=\\frac{x}{n}", "variables": [{"symbol": "x", "meaning": "number of sampled cases with the attribute"}, {"symbol": "n", "meaning": "sample size"}, {"symbol": "p-hat", "meaning": "sample-based estimate of the population proportion"}]}],
+      "conditions": ["Define the target population and sampling unit clearly.", "A sample should represent the target population; random selection helps reduce selection bias but does not guarantee a perfect sample.", "A census attempts to measure every population member."],
+      "importantProperties": ["Larger samples can reduce random variability, but a large biased sample can still be misleading.", "Nonresponse, undercoverage, voluntary response, and leading questions can bias results.", "Conclusions from a sample are estimates and should acknowledge sampling uncertainty."],
+      "workedExamples": ["A school has 1,200 students and surveys 100 selected students: the school population is 1,200 students and the sample is the 100 surveyed.", "If 42 of 100 sampled students prefer option A, the sample proportion is 42/100=0.42 or 42%."],
+      "commonMistakes": ["Calling a sample result a population fact without qualification.", "Assuming a sample is representative just because it is large.", "Confusing the statistic computed from data with the population parameter it estimates."],
+      "prerequisites": ["Sets and groups", "Fractions and percentages"],
+      "exampleProblemTypes": ["Identify the population, sample, parameter, and statistic in a study.", "Evaluate whether a sampling method is biased.", "Calculate and interpret a sample proportion.", "Decide whether a census or sample is practical."]
+    },
+    {
+      "name": "Types of data",
+      "keywords": ["types of data", "categorical", "qualitative", "quantitative", "discrete", "continuous", "nominal", "ordinal", "measurement scale"],
+      "definitions": [{"term": "Categorical (qualitative) data", "meaning": "Values that label groups or categories rather than measuring a numeric amount."}, {"term": "Quantitative data", "meaning": "Numerical counts or measurements for which arithmetic comparisons are meaningful."}, {"term": "Discrete data", "meaning": "Countable numerical values, often whole-number counts."}, {"term": "Continuous data", "meaning": "Measurements that can take any value in an interval, subject to measurement precision."}],
+      "formulas": [],
+      "conditions": ["Classify data by what the values mean, not merely whether digits appear.", "A numeric ID code is categorical if arithmetic on it has no meaningful interpretation."],
+      "importantProperties": ["Categorical data may be nominal (no natural order) or ordinal (ordered categories).", "Quantitative data may be discrete or continuous.", "Choose summaries and graphs that match the data type."],
+      "workedExamples": ["Eye color is categorical nominal; satisfaction rating from low to high is categorical ordinal.", "Number of siblings is discrete quantitative; height is continuous quantitative."],
+      "commonMistakes": ["Treating category codes such as 1, 2, and 3 as measurements.", "Calling every numerical-looking variable quantitative.", "Using a histogram for unordered categories."],
+      "prerequisites": ["Reading survey questions and measurement units"],
+      "exampleProblemTypes": ["Classify a variable as categorical or quantitative.", "Distinguish discrete from continuous data.", "Choose a suitable graph and summary for a variable.", "Identify nominal and ordinal categories."]
+    },
+    {
+      "name": "Frequency distributions",
+      "keywords": ["frequency distribution", "frequency table", "relative frequency", "cumulative frequency", "class interval", "class width", "grouped data"],
+      "definitions": [{"term": "Frequency", "meaning": "The number of observations in a value or class."}, {"term": "Relative frequency", "meaning": "The fraction or proportion of all observations in a value or class."}, {"term": "Cumulative frequency", "meaning": "The running total of frequencies up to and including a class or value."}],
+      "formulas": [
+        {"name": "Relative frequency", "latex": "f_r=\\frac{f}{n}", "variables": [{"symbol": "f", "meaning": "frequency of a value or class"}, {"symbol": "n", "meaning": "total number of observations"}]},
+        {"name": "Percentage frequency", "latex": "100\\%\\times\\frac{f}{n}", "variables": [{"symbol": "f", "meaning": "class frequency"}, {"symbol": "n", "meaning": "total frequency"}]}
+      ],
+      "conditions": ["Classes should be mutually exclusive and cover the intended data range.", "For grouped data, class boundaries and widths must be clear.", "Relative frequencies sum to 1, or 100% after converting to percentages, apart from rounding."],
+      "importantProperties": ["The sum of class frequencies equals the sample size.", "Cumulative frequency is nondecreasing and the final total equals n.", "Grouped tables summarize data but may lose exact individual values."],
+      "workedExamples": ["If 12 of 40 observations fall in a class, relative frequency=12/40=0.30=30%.", "For class frequencies 3, 5, 7, cumulative frequencies are 3, 8, 15."],
+      "commonMistakes": ["Using the number of classes instead of total observations as the denominator.", "Creating overlapping or missing class intervals.", "Reporting a cumulative frequency that decreases."],
+      "prerequisites": ["Fractions and percentages", "Counting and ordering data"],
+      "exampleProblemTypes": ["Construct a frequency or relative-frequency table.", "Find a class frequency from a percentage.", "Complete cumulative frequencies.", "Interpret a grouped distribution." ]
+    },
+    {
+      "name": "Mean",
+      "keywords": ["mean", "arithmetic mean", "average", "population mean", "sample mean"],
+      "definitions": [{"term": "Mean", "meaning": "The balance point of numerical data: the total is shared equally among all observations."}, {"term": "Population mean", "meaning": "The average of every value in the population."}, {"term": "Sample mean", "meaning": "The average of the observed sample, often used to estimate the population mean."}],
+      "formulas": [
+        {"name": "Population mean", "latex": "\\mu=\\frac{\\sum_{i=1}^{N}x_i}{N}", "variables": [{"symbol": "x_i", "meaning": "i-th population value"}, {"symbol": "N", "meaning": "population size"}, {"symbol": "mu", "meaning": "population mean"}]},
+        {"name": "Sample mean", "latex": "\\bar{x}=\\frac{\\sum_{i=1}^{n}x_i}{n}", "variables": [{"symbol": "x_i", "meaning": "i-th sample value"}, {"symbol": "n", "meaning": "sample size"}, {"symbol": "x-bar", "meaning": "sample mean"}]}
+      ],
+      "conditions": ["The mean is intended for quantitative data.", "Include every observation, or multiply values by frequencies when working from a frequency table."],
+      "importantProperties": ["The mean uses every value and is sensitive to extreme observations.", "The sum of deviations from the mean is zero.", "The mean has the same units as the data."],
+      "workedExamples": ["For 2, 4, 6, the mean is (2+4+6)/3=4.", "If a data set has mean 10 and 5 values, its total is 50."],
+      "commonMistakes": ["Dividing by the number of distinct values rather than the total frequency.", "Treating an outlier-sensitive mean as always representative.", "Mixing units or omitting one observation."],
+      "prerequisites": ["Addition", "Division", "Frequency tables"],
+      "exampleProblemTypes": ["Calculate mean from raw or frequency data.", "Find a missing observation from a known mean.", "Interpret the mean in context.", "Compare means while considering outliers and distribution shape."]
+    },
+    {
+      "name": "Median",
+      "keywords": ["median", "middle value", "middle observation", "50th percentile"],
+      "definitions": [{"term": "Median", "meaning": "The middle ordered value; half the observations are at or below it and half are at or above it."}],
+      "formulas": [
+        {"name": "Median position for odd n", "latex": "\\frac{n+1}{2}", "variables": [{"symbol": "n", "meaning": "number of ordered observations"}]},
+        {"name": "Median for even n", "latex": "\\frac{x_{(n/2)}+x_{(n/2+1)}}{2}", "variables": [{"symbol": "x_(k)", "meaning": "k-th observation after ordering"}, {"symbol": "n", "meaning": "even number of observations"}]}
+      ],
+      "conditions": ["Order all values first.", "For an even number of observations, the median is the mean of the two central values; it need not be an observed value."],
+      "importantProperties": ["The median is resistant to extreme values compared with the mean.", "The median is a useful center for skewed data or data with outliers.", "For ordinal data, a median category may be meaningful even when averaging categories is not."],
+      "workedExamples": ["Ordered data 1, 4, 7 has median 4.", "Ordered data 2, 5, 8, 11 has median (5+8)/2=6.5."],
+      "commonMistakes": ["Finding the middle before sorting.", "Choosing one of the two middle values for an even-sized data set instead of averaging them.", "Confusing the median with the mean."],
+      "prerequisites": ["Ordering numbers", "Even and odd counts", "Averages"],
+      "exampleProblemTypes": ["Find median from raw or grouped data.", "Compare mean and median to infer skew or outlier influence.", "Find a missing central value.", "Interpret a median in a real-world context."]
+    },
+    {
+      "name": "Mode",
+      "keywords": ["mode", "what does mode mean", "mode in statistics", "statistical mode", "most frequent", "modal value", "multimodal", "most common category"],
+      "definitions": [{"term": "Mode", "meaning": "The value or category occurring most often."}],
+      "formulas": [],
+      "conditions": ["Mode can be used for categorical or quantitative data.", "A data set may have one mode, multiple modes tied for highest frequency, or no useful mode if all values occur equally often."],
+      "importantProperties": ["Mode identifies the most common value, not necessarily a typical numerical center.", "For categorical data, the mode may be the only meaningful measure of center."],
+      "workedExamples": ["In 2, 2, 3, 5, the mode is 2.", "In red, blue, red, blue, green, the data are bimodal: red and blue."],
+      "commonMistakes": ["Assuming every data set has exactly one mode.", "Calling the largest value the mode rather than the most frequent value.", "Assuming two modes means the data are evenly distributed."],
+      "prerequisites": ["Counting frequencies"],
+      "exampleProblemTypes": ["Find the most frequent value or category.", "Identify a unimodal, bimodal, multimodal, or no-mode data set.", "Use mode to describe a popular size, product, or response."]
+    },
+    {
+      "name": "Weighted mean",
+      "keywords": ["weighted mean", "weighted average", "weights", "course average", "frequency mean"],
+      "definitions": [{"term": "Weighted mean", "meaning": "An average in which values contribute according to assigned weights or frequencies."}],
+      "formulas": [
+        {"name": "Weighted mean", "latex": "\\bar{x}_w=\\frac{\\sum w_i x_i}{\\sum w_i}", "variables": [{"symbol": "x_i", "meaning": "value or score"}, {"symbol": "w_i", "meaning": "weight or frequency of that value"}, {"symbol": "x-bar_w", "meaning": "weighted mean"}]}
+      ],
+      "conditions": ["Weights must be nonnegative and have a meaningful interpretation.", "If weights are percentages, they should total 100%; if normalized proportions, they should total 1.", "Use frequencies as weights for repeated observations."],
+      "importantProperties": ["Larger weights exert more influence on the result.", "Equal weights reduce the formula to the ordinary mean.", "A weighted mean lies between the smallest and largest values when weights are nonnegative."],
+      "workedExamples": ["Scores 80 and 90 weighted 40% and 60% give 0.4(80)+0.6(90)=86.", "Values 2, 5 with frequencies 3, 1 have mean (3×2+1×5)/4=2.75."],
+      "commonMistakes": ["Adding weights without dividing by their total when they do not sum to 1.", "Applying category weights to the wrong scores.", "Treating a frequency count as a percentage without conversion."],
+      "prerequisites": ["Mean", "Percentages", "Multiplication and division"],
+      "exampleProblemTypes": ["Calculate a course grade with category weights.", "Find a mean from a frequency distribution.", "Determine a missing score or weight from a target average."]
+    },
+    {
+      "name": "Quartiles",
+      "keywords": ["quartile", "first quartile", "Q1", "second quartile", "Q2", "third quartile", "Q3", "quartile position"],
+      "definitions": [{"term": "Quartiles", "meaning": "Cut points that divide ordered data into four parts of roughly equal size."}, {"term": "Q1 and Q3", "meaning": "The first and third quartiles; about 25% of observations lie at or below Q1 and about 75% at or below Q3."}],
+      "formulas": [
+        {"name": "Quartile position (one common convention)", "latex": "L_k=\\frac{k(n+1)}{4},\\quad k=1,2,3", "variables": [{"symbol": "L_k", "meaning": "position used to locate the k-th quartile"}, {"symbol": "n", "meaning": "number of ordered observations"}, {"symbol": "k", "meaning": "quartile number"}]}
+      ],
+      "conditions": ["Order the data first.", "Quartile algorithms differ across textbooks and software; use the method specified by the course and state it if needed.", "If a position is fractional, the method may interpolate between adjacent values."],
+      "importantProperties": ["Q2 is the median.", "Quartiles describe relative position, not equal numerical distances.", "Q1 and Q3 are less sensitive to extremes than the range."],
+      "workedExamples": ["For the ordered values 1, 2, 3, 4, 5 under the median-of-halves convention, Q2=3, Q1=1.5, Q3=4.5.", "For n=19, the position formula gives Q1 position 5 and Q3 position 15."],
+      "commonMistakes": ["Using a different quartile convention without noticing.", "Failing to order the values.", "Assuming quartiles always coincide with observed values."],
+      "prerequisites": ["Median", "Ordering data", "Fractions and positions"],
+      "exampleProblemTypes": ["Find Q1, Q2, and Q3 from a small data set.", "Use a stated software or textbook quartile convention.", "Interpret quartiles from a box plot.", "Compare relative positions between groups."]
+    },
+    {
+      "name": "Deciles",
+      "keywords": ["decile", "deciles", "D1", "D5", "D9", "decile rank", "tenth"],
+      "definitions": [{"term": "Deciles", "meaning": "Nine cut points that divide ordered data into ten groups of approximately equal proportions."}, {"term": "D_k", "meaning": "The cut point at or below approximately k/10 of the observations, for k from 1 to 9."}],
+      "formulas": [
+        {"name": "Decile position (one common convention)", "latex": "L_k=\\frac{k(n+1)}{10},\\quad k=1,\\ldots,9", "variables": [{"symbol": "L_k", "meaning": "position of decile k in ordered data"}, {"symbol": "n", "meaning": "number of observations"}, {"symbol": "k", "meaning": "decile index"}]}
+      ],
+      "conditions": ["Order the observations first.", "Position and interpolation conventions vary; follow the stated class method.", "Deciles describe positions, not equal-width value intervals."],
+      "importantProperties": ["D5 is the median under consistent percentile conventions.", "Approximately 10% of observations lie in each decile group."],
+      "workedExamples": ["D7 marks a value with about 70% of observations at or below it.", "For n=19, one common position formula gives D3 position 3(20)/10=6."],
+      "commonMistakes": ["Treating D7 as the 7th observation regardless of sample size.", "Confusing decile number with the percentage value.", "Ignoring the method used for fractional positions."],
+      "prerequisites": ["Ordering data", "Quartiles and percentiles", "Fractions"],
+      "exampleProblemTypes": ["Find a stated decile using the course convention.", "Interpret a score's decile rank.", "Compare positions in an examination or dataset."]
+    },
+    {
+      "name": "Percentiles",
+      "keywords": ["percentile", "percentile rank", "P10", "P25", "P50", "P90", "percentile position"],
+      "definitions": [{"term": "k-th percentile", "meaning": "A cut point at or below approximately k percent of ordered observations."}, {"term": "Percentile rank", "meaning": "The percentage of observations at or below a specified value, according to a stated convention."}],
+      "formulas": [
+        {"name": "Percentile position (one common convention)", "latex": "L_k=\\frac{k(n+1)}{100}", "variables": [{"symbol": "L_k", "meaning": "position of percentile k"}, {"symbol": "k", "meaning": "percentile number from 1 to 99"}, {"symbol": "n", "meaning": "number of ordered observations"}]}
+      ],
+      "conditions": ["Order the data and use the specified percentile definition; software packages may use different interpolation methods.", "A percentile is a position measure, not the percent of questions correct or the percent value itself."],
+      "importantProperties": ["P50 is the median under consistent conventions; P25 and P75 correspond to quartile cut points.", "A score at the 80th percentile is at or above roughly 80% of scores, not necessarily equal to 80% correct."],
+      "workedExamples": ["A student at the 90th percentile performed at or above approximately 90% of the reference group under the stated ranking convention.", "P25 is the first quartile, Q1, when the same calculation convention is used."],
+      "commonMistakes": ["Interpreting percentile rank as a percentage score.", "Assuming all tools calculate percentiles identically.", "Confusing percentile position with percentile rank."],
+      "prerequisites": ["Ordering data", "Percentages", "Quartiles and deciles"],
+      "exampleProblemTypes": ["Find or interpret a percentile from a dataset or table.", "Interpret a test score's percentile rank.", "Compare values from different distributions by percentile."]
+    },
+    {
+      "name": "Interquartile range (IQR)",
+      "keywords": ["IQR", "interquartile range", "middle 50 percent", "quartile spread", "outlier fences"],
+      "definitions": [{"term": "Interquartile range", "meaning": "The width of the middle half of the ordered data, measuring spread between Q1 and Q3."}],
+      "formulas": [
+        {"name": "Interquartile range", "latex": "IQR=Q_3-Q_1", "variables": [{"symbol": "Q1", "meaning": "first quartile"}, {"symbol": "Q3", "meaning": "third quartile"}]},
+        {"name": "1.5-IQR outlier fences", "latex": "Q_1-1.5(IQR),\\quad Q_3+1.5(IQR)", "variables": [{"symbol": "Q1", "meaning": "first quartile"}, {"symbol": "Q3", "meaning": "third quartile"}]}
+      ],
+      "conditions": ["Find Q1 and Q3 using the same quartile convention.", "The 1.5-IQR rule flags potential outliers; it does not prove a value is erroneous."],
+      "importantProperties": ["IQR measures the spread of the middle 50% and is resistant to extreme values.", "IQR is nonnegative and has the same units as the observations."],
+      "workedExamples": ["If Q1=12 and Q3=20, IQR=20-12=8.", "With Q1=12, Q3=20, IQR=8, the fences are 0 and 32; values outside are potential outliers."],
+      "commonMistakes": ["Subtracting Q3 from Q1 in the wrong order.", "Using the range instead of IQR.", "Automatically deleting every value outside a fence."],
+      "prerequisites": ["Quartiles", "Subtraction", "Ordering data"],
+      "exampleProblemTypes": ["Calculate and interpret IQR.", "Compare robust spread across groups.", "Use fences to flag potential outliers."]
+    },
+    {
+      "name": "Range",
+      "keywords": ["range", "data range", "maximum minimum", "overall spread"],
+      "definitions": [{"term": "Range", "meaning": "The distance from the smallest to the largest observation, giving a simple measure of total spread."}],
+      "formulas": [{"name": "Range", "latex": "R=x_{max}-x_{min}", "variables": [{"symbol": "x_max", "meaning": "maximum observation"}, {"symbol": "x_min", "meaning": "minimum observation"}, {"symbol": "R", "meaning": "range in the data's units"}]}],
+      "conditions": ["The range requires a finite minimum and maximum.", "Use comparable units and data definitions when comparing ranges."],
+      "importantProperties": ["Range uses only the two extreme values and is highly sensitive to outliers.", "Range is nonnegative and has the same units as the data."],
+      "workedExamples": ["For 3, 5, 8, 14, range=14-3=11.", "A new extreme observation can change the range even if most data stay the same."],
+      "commonMistakes": ["Subtracting minimum from maximum incorrectly.", "Calling the interval from minimum to maximum the range when the question asks for its width.", "Using range as a robust summary of spread."],
+      "prerequisites": ["Ordering numbers", "Subtraction"],
+      "exampleProblemTypes": ["Find range from raw data, a table, or graph.", "Compare total spread across datasets.", "Explain how an outlier affects range."]
+    },
+    {
+      "name": "Variance",
+      "keywords": ["variance", "population variance", "sample variance", "squared deviations", "s squared", "sigma squared"],
+      "definitions": [{"term": "Variance", "meaning": "The average squared distance of observations from their mean; it measures spread around the mean."}, {"term": "Population variance", "meaning": "Mean squared deviation for every value in a population."}, {"term": "Sample variance", "meaning": "An estimate of population variance computed from a sample, commonly using n-1 in the denominator."}],
+      "formulas": [
+        {"name": "Population variance", "latex": "\\sigma^2=\\frac{\\sum_{i=1}^{N}(x_i-\\mu)^2}{N}", "variables": [{"symbol": "x_i", "meaning": "population observation"}, {"symbol": "mu", "meaning": "population mean"}, {"symbol": "N", "meaning": "population size"}]},
+        {"name": "Sample variance", "latex": "s^2=\\frac{\\sum_{i=1}^{n}(x_i-\\bar{x})^2}{n-1}", "variables": [{"symbol": "x_i", "meaning": "sample observation"}, {"symbol": "x-bar", "meaning": "sample mean"}, {"symbol": "n", "meaning": "sample size"}]}
+      ],
+      "conditions": ["Use population variance when the dataset is the full population; use sample variance when estimating population variance from a sample, unless the course specifies otherwise.", "The sample formula requires n>1.", "Squared deviations are calculated from the corresponding population or sample mean."],
+      "importantProperties": ["Variance is nonnegative and is zero only when all values are equal.", "Variance is expressed in squared data units, which makes standard deviation easier to interpret in context.", "Squaring deviations prevents positive and negative differences from canceling."],
+      "workedExamples": ["For population values 2, 4, 6, mean=4 and variance=((2-4)^2+(4-4)^2+(6-4)^2)/3=8/3.", "For sample 2, 4, 6, sample variance=8/(3-1)=4."],
+      "commonMistakes": ["Dividing sample squared deviations by n instead of n-1 when sample variance is requested.", "Forgetting to square each deviation.", "Using the median instead of mean in the standard variance formula.", "Interpreting squared units as ordinary data units."],
+      "prerequisites": ["Mean", "Squaring and summing", "Population versus sample"],
+      "exampleProblemTypes": ["Calculate population or sample variance.", "Determine which variance formula applies.", "Interpret variance as a measure of spread.", "Find a missing data value from a variance condition." ]
+    },
+    {
+      "name": "Standard deviation",
+      "keywords": ["standard deviation", "population standard deviation", "sample standard deviation", "sigma", "typical distance from mean"],
+      "definitions": [{"term": "Standard deviation", "meaning": "The square root of variance; it describes a typical distance of observations from their mean in the original data units."}],
+      "formulas": [
+        {"name": "Population standard deviation", "latex": "\\sigma=\\sqrt{\\frac{\\sum(x_i-\\mu)^2}{N}}", "variables": [{"symbol": "x_i", "meaning": "population observation"}, {"symbol": "mu", "meaning": "population mean"}, {"symbol": "N", "meaning": "population size"}]},
+        {"name": "Sample standard deviation", "latex": "s=\\sqrt{\\frac{\\sum(x_i-\\bar{x})^2}{n-1}}", "variables": [{"symbol": "x_i", "meaning": "sample observation"}, {"symbol": "x-bar", "meaning": "sample mean"}, {"symbol": "n", "meaning": "sample size"}]}
+      ],
+      "conditions": ["Use the matching population or sample convention for the data.", "Standard deviation is most informative when the mean is a reasonable center and the distribution is not extremely skewed."],
+      "importantProperties": ["Standard deviation is nonnegative and has the same units as the data.", "A larger standard deviation indicates greater spread around the mean, not a larger mean.", "It is sensitive to outliers because deviations are squared."],
+      "workedExamples": ["If population variance is 9 square units, population standard deviation is sqrt(9)=3 data units.", "If two classes have the same mean but SDs 4 and 10, the second class is more spread out around its mean."],
+      "commonMistakes": ["Reporting variance when standard deviation is requested.", "Forgetting the square root.", "Comparing standard deviations from different units without converting.", "Claiming SD means every value is exactly that far from the mean."],
+      "prerequisites": ["Variance", "Square roots", "Mean"],
+      "exampleProblemTypes": ["Calculate or interpret standard deviation.", "Compare variability between groups on the same scale.", "Explain the effect of an outlier or a unit change on standard deviation."]
+    },
+    {
+      "name": "Box-and-whisker plots",
+      "keywords": ["box plot", "box-and-whisker plot", "five-number summary", "whiskers", "quartile plot", "boxplot"],
+      "definitions": [{"term": "Box-and-whisker plot", "meaning": "A display of a distribution using the minimum, Q1, median, Q3, and maximum, with possible outliers shown separately depending on convention."}, {"term": "Five-number summary", "meaning": "Minimum, first quartile, median, third quartile, and maximum."}],
+      "formulas": [{"name": "Five-number summary and IQR", "latex": "(x_{min},Q_1,Q_2,Q_3,x_{max}),\\quad IQR=Q_3-Q_1", "variables": [{"symbol": "Q2", "meaning": "median"}, {"symbol": "Q1,Q3", "meaning": "first and third quartiles"}, {"symbol": "x_min,x_max", "meaning": "minimum and maximum or whisker endpoints, depending on plot convention"}]}],
+      "conditions": ["Use the same quartile convention when constructing and comparing plots.", "Some box plots extend whiskers to the minimum and maximum; modified box plots extend to the most extreme non-outlier and plot outliers separately. State or infer the convention."],
+      "importantProperties": ["The box spans Q1 to Q3 and contains the middle 50% of observations; the line marks the median.", "Unequal segment lengths can indicate skew or uneven spread.", "Side-by-side box plots support comparisons of center, spread, and possible outliers, but hide individual data values."],
+      "workedExamples": ["If the five-number summary is 2, 5, 8, 12, 20, draw whiskers at 2 and 20, a box from 5 to 12, and a median line at 8 under the min-max convention.", "The box width in value units is IQR=12-5=7."],
+      "commonMistakes": ["Making box sections equal lengths even when quartile values are not equally spaced.", "Confusing the median with the mean.", "Assuming whiskers always mean the same thing across modified and unmodified plots."],
+      "prerequisites": ["Median", "Quartiles", "IQR", "Number lines"],
+      "exampleProblemTypes": ["Construct a box plot from data or a five-number summary.", "Read median, quartiles, range, and IQR from a plot.", "Compare two or more distributions from side-by-side plots.", "Identify possible outliers under a stated convention."]
+    },
+    {
+      "name": "Histograms",
+      "keywords": ["histogram", "bins", "class intervals", "bin width", "frequency density", "histogram shape"],
+      "definitions": [{"term": "Histogram", "meaning": "A graph of quantitative data using adjacent bars for intervals; bar area represents frequency when class widths differ."}, {"term": "Bin or class interval", "meaning": "A numerical interval grouping observations."}, {"term": "Frequency density", "meaning": "Frequency divided by interval width, used as bar height when bin widths are unequal."}],
+      "formulas": [{"name": "Frequency density", "latex": "\\text{frequency density}=\\frac{\\text{frequency}}{\\text{class width}}", "variables": [{"symbol": "frequency", "meaning": "number of observations in an interval"}, {"symbol": "class width", "meaning": "interval length"}]}],
+      "conditions": ["Use adjacent bars because quantitative intervals have an ordered continuous scale.", "For equal bin widths, frequency may be shown by bar height; for unequal widths, use frequency density so bar area represents frequency.", "State interval boundaries clearly to avoid gaps or overlaps."],
+      "importantProperties": ["Histogram shape depends on bin width and starting boundary.", "A histogram shows distribution shape, center, spread, gaps, and possible skew; it does not show each raw value.", "Unlike a bar chart, histogram bars usually touch."],
+      "workedExamples": ["A class contains 12 values over width 3; its frequency density is 12/3=4.", "For equal-width classes, a taller bar indicates greater frequency; for unequal-width classes, compare bar areas."],
+      "commonMistakes": ["Leaving gaps between histogram bars for adjacent numeric intervals.", "Comparing heights when unequal class widths require comparing areas.", "Using bins that obscure important structure without noting the choice."],
+      "prerequisites": ["Frequency distributions", "Intervals", "Reading axes and scales"],
+      "exampleProblemTypes": ["Construct a histogram from raw or grouped data.", "Interpret skew, clusters, gaps, and modality.", "Calculate frequency density for unequal bins.", "Compare histograms using a common scale and binning." ]
+    },
+    {
+      "name": "Data interpretation",
+      "keywords": ["interpret data", "data interpretation", "interpret a data distribution", "data distribution", "describe distribution", "compare data", "shape center spread", "misleading graph", "context"],
+      "definitions": [{"term": "Distribution", "meaning": "The pattern of values in data, described by shape, center, spread, and unusual features."}, {"term": "Skew", "meaning": "Asymmetry in a distribution; a long tail indicates the direction of skew."}, {"term": "Association", "meaning": "A pattern of relationship between variables; association alone does not establish causation."}],
+      "formulas": [],
+      "conditions": ["Use graph labels, units, sample size, source, and collection method when making claims.", "Compare groups using the same scale and appropriate summaries.", "Distinguish observed data from an inference or causal claim."],
+      "importantProperties": ["Describe shape, center, spread, and outliers together rather than reporting a single statistic alone.", "For symmetric distributions without strong outliers, mean and SD are often useful; for skewed distributions or outliers, median and IQR are often more robust.", "A truncated axis, selected sample, or unequal binning can distort a visual impression.", "Correlation or an observed difference does not by itself prove causation."],
+      "workedExamples": ["A right-skewed income distribution often has mean greater than median because a few high values pull the mean upward.", "When comparing exam scores, report which group has the higher median and which has the greater IQR, then interpret those differences in context."],
+      "commonMistakes": ["Reporting a statistic without units or context.", "Calling a distribution skewed based only on the mean and median without considering a plot.", "Claiming causation from an observational association.", "Ignoring sample bias or an axis scale that exaggerates differences."],
+      "prerequisites": ["Data types", "Graphs", "Measures of center and spread", "Population and sample"],
+      "exampleProblemTypes": ["Write a complete description of a distribution from a graph.", "Compare two groups using suitable summaries.", "Critique a graph or statistical claim.", "Decide whether a conclusion is supported by the sampling method and data." ]
+    },
+    {
+      "name": "Correlation and linear regression",
+      "keywords": ["correlation", "regression", "scatter plot", "scatterplot", "line of best fit", "residual", "association", "causation"],
+      "definitions": [{"term": "Correlation", "meaning": "The direction and strength of a linear association between two quantitative variables."}, {"term": "Regression line", "meaning": "A linear model used to describe a trend and predict one variable from another."}, {"term": "Residual", "meaning": "Observed response minus predicted response."}],
+      "formulas": [
+        {"name": "Linear regression model", "latex": "\\hat{y}=a+bx", "variables": [{"symbol": "x", "meaning": "explanatory variable"}, {"symbol": "y-hat", "meaning": "predicted response"}, {"symbol": "a", "meaning": "intercept"}, {"symbol": "b", "meaning": "slope"}]},
+        {"name": "Residual", "latex": "e=y-\\hat{y}", "variables": [{"symbol": "y", "meaning": "observed response"}, {"symbol": "y-hat", "meaning": "predicted response"}]}
+      ],
+      "conditions": ["Use a linear model only when the scatter plot has an approximately straight trend.", "Avoid extrapolation far beyond observed x-values.", "Observational correlation does not establish causation."],
+      "importantProperties": ["Residual patterns can reveal nonlinearity or changing spread.", "Correlation describes linear association, not all possible relationships."],
+      "workedExamples": ["If observed y=18 and predicted y=15, residual=18-15=3.", "A positive slope means predicted y tends to rise as x rises, within the model range."],
+      "commonMistakes": ["Claiming causation from correlation alone.", "Reversing residual subtraction.", "Assuming a strong association is linear."],
+      "prerequisites": ["Coordinate graphs", "Mean and spread", "Interpreting rates of change"],
+      "exampleProblemTypes": ["Describe direction, form, and strength in a scatter plot.", "Interpret regression slope and intercept.", "Calculate and interpret residuals.", "Assess interpolation, extrapolation, and model fit." ]
+    },
+    {
+      "name": "Probability",
+      "keywords": ["probability", "chance", "event", "outcome", "sample space", "favorable outcomes", "complement", "independent events", "conditional probability", "mutually exclusive", "union of events"],
+      "definitions": [
+        {"term": "Sample space", "meaning": "The set of all possible outcomes of a chance experiment."},
+        {"term": "Event", "meaning": "A set of outcomes from the sample space."},
+        {"term": "Complement", "meaning": "The event that A does not occur; it contains all outcomes outside A."},
+        {"term": "Independent events", "meaning": "Events where the occurrence of one does not change the probability of the other."}
+      ],
+      "formulas": [
+        {"name": "Classical probability", "latex": "P(A) = n(A)/n(S)", "variables": [{"symbol": "n(A)", "meaning": "number of equally likely outcomes in event A"}, {"symbol": "n(S)", "meaning": "number of outcomes in the sample space"}]},
+        {"name": "Complement rule", "latex": "P(A^c)=1-P(A)", "variables": [{"symbol": "A^c", "meaning": "event A does not occur"}]},
+        {"name": "Addition rule", "latex": "P(A or B)=P(A)+P(B)-P(A and B)", "variables": [{"symbol": "A or B", "meaning": "A or B or both"}, {"symbol": "A and B", "meaning": "both A and B"}]},
+        {"name": "Conditional probability", "latex": "P(A given B)=P(A and B)/P(B), P(B)>0", "variables": [{"symbol": "P(A given B)", "meaning": "probability of A given B"}, {"symbol": "P(A and B)", "meaning": "probability that both A and B occur"}]},
+        {"name": "Independent-event product", "latex": "P(A and B)=P(A)P(B)", "variables": [{"symbol": "A,B", "meaning": "independent events"}]}
+      ],
+      "conditions": ["Classical probability applies when outcomes are equally likely.", "Probabilities lie between 0 and 1 inclusive.", "For conditional probability, the probability of the condition event must be positive.", "For draws without replacement, update the sample space after each draw."],
+      "importantProperties": ["Mutually exclusive events have no common outcomes, so P(A intersection B)=0.", "Independent events need not be mutually exclusive.", "The complement probability is 1-P(A).", "Use the restricted sample space when a question says 'given that'."],
+      "workedExamples": ["For a fair die, P(rolling a value greater than 4)=2/6=1/3.", "If P(A)=0.35, then P(not A)=1-0.35=0.65.", "If 2 of the 3 even die outcomes are greater than 3, then P(roll>3 | even)=2/3."],
+      "commonMistakes": ["Adding probabilities for independent events when multiplication is required for both events.", "Treating dependent draws as independent after a draw without replacement.", "Using the full sample space instead of the restricted space in a conditional probability.", "Adding P(A) and P(B) without subtracting the intersection when events overlap."],
+      "prerequisites": ["Fractions", "Ratios", "Sets and events", "Counting outcomes"],
+      "exampleProblemTypes": ["Find classical probabilities from equally likely outcomes.", "Use complements, unions, and intersections.", "Distinguish independent and dependent events.", "Calculate conditional probability from a restricted sample space." ]
+    },
+    {
+      "name": "Normal distributions and z-scores",
+      "keywords": ["normal distribution", "bell curve", "z-score", "standard normal", "empirical rule", "standardized score"],
+      "definitions": [{"term": "Normal distribution", "meaning": "A symmetric, bell-shaped model determined by its mean and standard deviation."}, {"term": "Z-score", "meaning": "The number of standard deviations an observation lies above or below the mean."}],
+      "formulas": [{"name": "Z-score", "latex": "z=\\frac{x-\\mu}{\\sigma}", "variables": [{"symbol": "x", "meaning": "observation"}, {"symbol": "mu", "meaning": "mean"}, {"symbol": "sigma", "meaning": "standard deviation"}]}],
+      "conditions": ["Use normal-model rules only when the distribution is approximately normal.", "Standard deviation must be positive to compute a z-score."],
+      "importantProperties": ["A positive z-score is above the mean and a negative z-score is below it.", "For an approximately normal distribution, about 68%, 95%, and 99.7% lie within 1, 2, and 3 standard deviations of the mean."],
+      "workedExamples": ["If x=80, mean=70, and SD=5, z=(80-70)/5=2, so the value is 2 SD above the mean."],
+      "commonMistakes": ["Interpreting a z-score as a percent.", "Applying the empirical rule to strongly non-normal data.", "Using a negative standard deviation."],
+      "prerequisites": ["Mean", "Standard deviation", "Percentages", "Signed numbers"],
+      "exampleProblemTypes": ["Find and interpret a z-score.", "Estimate proportions with the empirical rule.", "Compare relative standing across different scales." ]
+    },
+    {
+      "name": "Statistical hypothesis testing",
+      "keywords": ["hypothesis testing", "hypothesis test", "test of significance", "null hypothesis", "alternative hypothesis", "significance level", "p-value", "z-test", "t-test", "test statistic", "critical value", "reject the null", "fail to reject"],
+      "definitions": [{"term":"Null hypothesis","meaning":"The baseline claim, usually that a population parameter equals a specified value."},{"term":"Alternative hypothesis","meaning":"The competing claim supported when the sample evidence is sufficiently inconsistent with the null."},{"term":"Significance level","meaning":"The preselected cutoff alpha for deciding whether evidence is sufficiently unusual under the null."},{"term":"P-value","meaning":"Assuming the null hypothesis is true, the probability of obtaining a test statistic at least as extreme as the observed one, in the direction specified by the alternative."}],
+      "formulas": [{"name":"One-sample z statistic for a mean","latex":"z=\\frac{\\bar{x}-\\mu_0}{\\sigma/\\sqrt{n}}","variables":[{"symbol":"x-bar","meaning":"sample mean"},{"symbol":"mu_0","meaning":"mean stated by the null hypothesis"},{"symbol":"sigma","meaning":"known population standard deviation"},{"symbol":"n","meaning":"sample size"}]},{"name":"One-sample t statistic for a mean","latex":"t=\\frac{\\bar{x}-\\mu_0}{s/\\sqrt{n}}","variables":[{"symbol":"s","meaning":"sample standard deviation"},{"symbol":"degrees of freedom","meaning":"n-1 for a one-sample t test"}]},{"name":"P-value decision rule","latex":"p\\le\\alpha\\;\\Rightarrow\\;\\text{reject }H_0","variables":[{"symbol":"p","meaning":"p-value"},{"symbol":"alpha","meaning":"chosen significance level"}]}],
+      "conditions": ["State the null and alternative hypotheses and choose a one- or two-sided alternative before using the sample result.","Use a z test for a mean when the population standard deviation is known and the sampling distribution conditions are satisfied; use a t test when it is unknown and estimate it with s.","Check random sampling, independence, and an appropriate normal model or sample-size condition.","A small p-value is evidence against the null, not the probability that the null hypothesis is true."],
+      "importantProperties": ["Compare the p-value with the preselected significance level alpha.","If p<=alpha, reject the null; if p>alpha, fail to reject it. Do not say that the null has been proved true.","Statistical significance does not by itself measure practical importance or prove causation.","The alternative hypothesis determines whether the test is left-tailed, right-tailed, or two-tailed."],
+      "workedExamples": ["If a two-sided test gives p=0.03 and alpha=0.05, reject H0 because 0.03<0.05; the sample provides evidence for H1.","If p=0.12 and alpha=0.05, fail to reject H0; the evidence is not strong enough at the 5% level."],
+      "commonMistakes": ["Treating the p-value as the probability that H0 is true.","Choosing alpha after seeing the result.","Saying that failing to reject H0 proves it.","Using a one-sided test when the stated alternative is two-sided."],
+      "prerequisites": ["Sample means and standard deviations", "Normal distributions and z-scores", "Sampling and variability", "Inequalities and probability"],
+      "exampleProblemTypes": ["State H0 and H1 from a claim.","Choose between a z test and a t test from the supplied information.","Interpret a p-value at a stated significance level.","Write a conclusion in context without claiming proof or causation."]
+    },
+    {
+      "name": "Random variables and expected value",
+      "keywords": ["random variable", "discrete random variable", "expected value", "expected payoff", "expected winnings", "expected return", "probability distribution", "probability mass function"],
+      "definitions": [{"term":"Random variable","meaning":"A numerical value assigned to each outcome of a random process."},{"term":"Expected value","meaning":"The probability-weighted mean of a random variable's possible values; it describes the long-run average over repeated trials, not a guaranteed outcome."}],
+      "formulas": [{"name":"Expected value of a discrete random variable","latex":"E(X)=\\sum x_i p_i,\\quad \\sum p_i=1","variables":[{"symbol":"x_i","meaning":"possible value of X"},{"symbol":"p_i","meaning":"probability of x_i"}]},{"name":"Variance of a discrete random variable","latex":"Var(X)=\\sum (x_i-\\mu)^2p_i,\\quad \\mu=E(X)","variables":[{"symbol":"mu","meaning":"expected value"},{"symbol":"x_i,p_i","meaning":"outcomes and their probabilities"}]}],
+      "conditions": ["List all relevant outcomes and their probabilities.","Each probability must lie from 0 to 1 and the probabilities must sum to 1.","Use expected value as a long-run average, not a prediction of a single trial."],
+      "importantProperties": ["Expected value is the sum of each outcome multiplied by its probability.","Variance measures probability-weighted squared distance from the expected value.","The standard deviation is the square root of variance and uses the random variable's units."],
+      "workedExamples": ["A game pays 10 with probability 0.2 and 0 otherwise: E(X)=10(0.2)+0(0.8)=2 per play on average."],
+      "commonMistakes": ["Adding outcomes without weighting by probability.","Using probabilities that do not total 1.","Interpreting the expected value as a certain single outcome."],
+      "prerequisites": ["Probability", "Weighted mean", "Fractions and decimals"],
+      "exampleProblemTypes": ["Calculate expected winnings or cost from a probability table.","Interpret a random variable's expected value in context.","Find variance or standard deviation from a discrete distribution."]
+    }
+  ]
+}

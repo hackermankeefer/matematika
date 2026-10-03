@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why It Works - The Mathematics Observatory</title>
+    <meta name="description" content="Discover the reasoning behind mathematical concepts. Understand why formulas work, not just how to use them.">
+    <link rel="stylesheet" href="styles.css?v=3">
+    <link rel="stylesheet" href="assistant.css?v=3">
+    <link rel="stylesheet" href="proofs.css">
+</head>
+<body class="proofs-page">
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="Home">
+                <span class="logo-symbol">∫</span>
+                <span class="logo-text">The Mathematics Observatory</span>
+            </a>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="learn.html" class="nav-link">Learn</a></li>
+                <li><a href="explore.html" class="nav-link">Explore</a></li>
+                <li><a href="visualize.html" class="nav-link">Visualize</a></li>
+                <li><a href="laboratory.html" class="nav-link">Laboratory</a></li>
+                <li><a href="challenges.html" class="nav-link">Challenges</a></li>
+                <li><a href="history.html" class="nav-link">History</a></li>
+                <li><a href="proofs.html" class="nav-link active">Why It Works</a></li>
+                <li><a href="library.html" class="nav-link">Library</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="proofs-hero">
+            <div class="hero-content">
+                <div class="hero-badge">Understanding Mathematics</div>
+                <h1 class="hero-title">Why It Works</h1>
+                <p class="hero-subtitle">Move beyond memorization. Discover the reasoning, logic, and beauty behind every formula and theorem.</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Key Concepts</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">25+</span>
+                        <span class="stat-label">Visual Proofs</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">∞</span>
+                        <span class="stat-label">Understanding</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mathematical Intuition Section -->
+        <section class="intuition-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Mathematical Intuition</h2>
+                    <p>Understanding the "why" transforms formulas from mysterious symbols into logical tools.</p>
+                </div>
+
+                <div class="intuition-grid">
+                    <article class="intuition-card" data-concept="quadratic">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M10,90 Q50,20 90,90" stroke="currentColor" fill="none" stroke-width="2.5"/>
+                                <line x1="50" y1="20" x2="50" y2="90" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3,3" opacity="0.6"/>
+                            </svg>
+                        </div>
+                        <h3>Why Complete the Square?</h3>
+                        <p class="concept-preview">The quadratic formula isn't random—it comes from turning any parabola into a perfect square pattern.</p>
+                        <button class="explore-btn" aria-expanded="false" aria-controls="quadratic-detail">
+                            <span>Explore Intuition</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="concept-detail" id="quadratic-detail" hidden>
+                            <p><strong>The Big Idea:</strong> Every quadratic equation can be rewritten as a perfect square plus or minus a constant.</p>
+                            <div class="reasoning-steps">
+                                <div class="step">
+                                    <span class="step-number">1</span>
+                                    <p>Start with: <code>ax² + bx + c = 0</code></p>
+                                </div>
+                                <div class="step">
+                                    <span class="step-number">2</span>
+                                    <p>Make the leading coefficient 1 by dividing: <code>x² + (b/a)x + c/a = 0</code></p>
+                                </div>
+                                <div class="step">
+                                    <span class="step-number">3</span>
+                                    <p>Take half of the x coefficient, square it, and add to both sides to create a perfect square</p>
+                                </div>
+                                <div class="step">
+                                    <span class="step-number">4</span>
+                                    <p>The result is always <code>(x + b/2a)² = (b² - 4ac)/4a²</code></p>
+                                </div>
+                            </div>
+                            <p class="insight"><strong>Insight:</strong> This pattern works for <em>every</em> quadratic because squaring creates symmetry—that's why parabolas are symmetric!</p>
+                        </div>
+                    </article>
+
+                    <article class="intuition-card" data-concept="pythagorean">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M20,80 L20,40 L60,80 Z" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                                <rect x="20" y="15" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.7"/>
+                                <rect x="60" y="55" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.7"/>
+                            </svg>
+                        </div>
+                        <h3>Why a² + b² = c²?</h3>
+                        <p class="concept-preview">The Pythagorean theorem is really about comparing areas—the geometry makes it obvious.</p>
+                        <button class="explore-btn" aria-expanded="false" aria-controls="pythagorean-detail">
+                            <span>Explore Intuition</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="concept-detail" id="pythagorean-detail" hidden>
+                            <p><strong>The Big Idea:</strong> If you build squares on each side of a right triangle, the two smaller squares' areas always equal the largest square's area.</p>
+                            <div class="reasoning-steps">
+                                <div class="step">
+                                    <span class="step-number">1</span>
+                                    <p>Draw a right triangle with sides a, b, and hypotenuse c</p>
+                                </div>
+                                <div class="step">
+                                    <span class="step-number">2</span>
+                                    <p>Build a square on each side (areas: a², b², c²)</p>
+                                </div>
+                                <div class="step">
+                                    <span class="step-number">3</span>
+                                    <p>Through geometric rearrangement, the two smaller squares can be cut and perfectly fitted into the large square</p>
+                                </div>
+                            </div>
+                            <p class="insight"><strong>Insight:</strong> This isn't just algebra—it's a fundamental relationship about space itself. The right angle creates the perfect balance.</p>
+                        </div>
+                    </article>
+
+                    <article class="intuition-card" data-concept="exponents">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <text x="20" y="50" font-size="32" font-family="serif" fill="currentColor">2</text>
+                                <text x="42" y="35" font-size="18" font-family="serif" fill="currentColor">n</text>
+                                <path d="M55,45 L75,25 M75,25 L80,30 M75,25 L70,20" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </div>
+                        <h3>Why Do Exponent Rules Work?</h3>
+                        <p class="concept-preview">Exponent rules aren't arbitrary—they're shortcuts for repeated multiplication patterns.</p>
+                        <button class="explore-btn" aria-expanded="false" aria-controls="exponents-detail">
+                            <span>Explore Intuition</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="concept-detail" id="exponents-detail" hidden>
+                            <p><strong>The Big Idea:</strong> Exponents count how many times you multiply something by itself. The rules emerge naturally from this counting.</p>
+                            <div class="reasoning-steps">
+                                <div class="step">
+                                    <span class="step-number">1</span>
+                                    <p><code>a^m × a^n = a^(m+n)</code> because you're combining m groups with n groups</p>
+                                </div>
+                                <div class="step">
+                                    <span class="step-number">2</span>
+                                    <p><code>(a^m)^n = a^(mn)</code> because you're grouping m factors, n times</p>
+                                </div>
+                                <div class="step">
+                                    <span class="step-number">3</span>
+                                    <p><code>a^0 = 1</code> because dividing a^n by a^n leaves you with one</p>
+                                </div>
+                                <div class="step">
+                                    <span class="step-number">4</span>
+                                    <p><code>a^(-n) = 1/a^n</code> to keep the addition rule consistent</p>
+                                </div>
+                            </div>
+                            <p class="insight"><strong>Insight:</strong> Each rule is designed to make exponent patterns consistent. Mathematics chooses definitions that preserve patterns!</p>
+                        </div>
+                    </article>
+
+                    <article class="intuition-card" data-concept="trig">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <circle cx="50" cy="50" r="35" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <line x1="50" y1="50" x2="85" y2="50" stroke="currentColor" stroke-width="1.5"/>
+                                <line x1="50" y1="50" x2="72" y2="25" stroke="currentColor" stroke-width="2"/>
+                                <path d="M60,50 A10,10 0 0,1 65,42" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                        <h3>Why sin²θ + cos²θ = 1?</h3>
+                        <p class="concept-preview">This identity is just the Pythagorean theorem in disguise—on the unit circle.</p>
+                        <button class="explore-btn" aria-expanded="false" aria-controls="trig-detail">
+                            <span>Explore Intuition</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="concept-detail" id="trig-detail" hidden>
+                            <p><strong>The Big Idea:</strong> On a circle with radius 1, any point has coordinates (cos θ, sin θ), and the distance from the center is always 1.</p>
+                            <div class="reasoning-steps">
+                                <div class="step">
+                                    <span class="step-number">1</span>
+                                    <p>Draw a unit circle (radius = 1) centered at origin</p>
+                                </div>
+                                <div class="step">
+                                    <span class="step-number">2</span>
+                                    <p>Pick any angle θ and draw a line to the circle</p>
+                                </div>
+                                <div class="step">
+                                    <span class="step-number">3</span>
+                                    <p>The point coordinates are (cos θ, sin θ)</p>
+                                </div>
+                                <div class="step">
+                                    <span class="step-number">4</span>
+                                    <p>Distance formula: √(cos²θ + sin²θ) = 1</p>
+                                </div>
+                                <div class="step">
+                                    <span class="step-number">5</span>
+                                    <p>Square both sides: cos²θ + sin²θ = 1</p>
+                                </div>
+                            </div>
+                            <p class="insight"><strong>Insight:</strong> Every trig identity is a geometric truth about circles and triangles. Algebra just expresses what the shapes already show!</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Behind the Formula Section -->
+        <section class="formula-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Behind the Formula</h2>
+                    <p>Every formula has a story. Here's how mathematicians discovered and developed them.</p>
+                </div>
+
+                <div class="formula-explorer">
+                    <div class="formula-tabs" role="tablist">
+                        <button class="formula-tab active" role="tab" aria-selected="true" aria-controls="formula-quadratic" data-formula="formula-quadratic" id="tab-quadratic">Quadratic Formula</button>
+                        <button class="formula-tab" role="tab" aria-selected="false" aria-controls="formula-distance" data-formula="formula-distance" id="tab-distance">Distance Formula</button>
+                        <button class="formula-tab" role="tab" aria-selected="false" aria-controls="formula-slope" data-formula="formula-slope" id="tab-slope">Slope Formula</button>
+                        <button class="formula-tab" role="tab" aria-selected="false" aria-controls="formula-circle" data-formula="formula-circle" id="tab-circle">Circle Equation</button>
+                    </div>
+
+                    <div class="formula-panels">
+                        <div class="formula-panel active" role="tabpanel" id="formula-quadratic" aria-labelledby="tab-quadratic">
+                            <div class="formula-display">
+                                <div class="formula-equation">
+                                    <span class="formula-name">Quadratic Formula</span>
+                                    <div class="formula-math">x = <span class="fraction"><span class="numerator">-b ± √(b² - 4ac)</span><span class="denominator">2a</span></span></div>
+                                </div>
+                                <div class="formula-origin">
+                                    <h3>Where It Comes From</h3>
+                                    <p>The quadratic formula is derived by completing the square on the general quadratic equation <code>ax² + bx + c = 0</code>. Ancient Babylonians used geometric methods around 2000 BCE, but the algebraic formula we use today was perfected by Islamic mathematicians like Al-Khwarizmi around 820 CE.</p>
+
+                                    <h4>The Derivation Path:</h4>
+                                    <ol class="derivation-list">
+                                        <li>Start with: <code>ax² + bx + c = 0</code></li>
+                                        <li>Divide by a: <code>x² + (b/a)x + c/a = 0</code></li>
+                                        <li>Move constant to right: <code>x² + (b/a)x = -c/a</code></li>
+                                        <li>Complete the square: add <code>(b/2a)²</code> to both sides</li>
+                                        <li>Factor left side: <code>(x + b/2a)² = b²/4a² - c/a</code></li>
+                                        <li>Simplify right side: <code>(x + b/2a)² = (b² - 4ac)/4a²</code></li>
+                                        <li>Take square root: <code>x + b/2a = ±√(b² - 4ac)/2a</code></li>
+                                        <li>Solve for x: <code>x = (-b ± √(b² - 4ac))/2a</code></li>
+                                    </ol>
+
+                                    <div class="formula-insight">
+                                        <strong>Why It Matters:</strong> The discriminant <code>b² - 4ac</code> tells you everything about solutions: positive = 2 real roots, zero = 1 real root, negative = 2 complex roots.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="formula-panel" role="tabpanel" id="formula-distance" aria-labelledby="tab-distance" hidden>
+                            <div class="formula-display">
+                                <div class="formula-equation">
+                                    <span class="formula-name">Distance Formula</span>
+                                    <div class="formula-math">d = √[(x₂ - x₁)² + (y₂ - y₁)²]</div>
+                                </div>
+                                <div class="formula-origin">
+                                    <h3>Where It Comes From</h3>
+                                    <p>The distance formula is a direct application of the Pythagorean theorem. It was formalized by René Descartes when he invented coordinate geometry in the 1630s, connecting algebra and geometry for the first time.</p>
+
+                                    <h4>The Derivation Path:</h4>
+                                    <ol class="derivation-list">
+                                        <li>Plot two points: <code>A(x₁, y₁)</code> and <code>B(x₂, y₂)</code></li>
+                                        <li>Draw a right triangle with the line segment as hypotenuse</li>
+                                        <li>Horizontal leg length: <code>|x₂ - x₁|</code></li>
+                                        <li>Vertical leg length: <code>|y₂ - y₁|</code></li>
+                                        <li>Apply Pythagorean theorem: <code>d² = (x₂ - x₁)² + (y₂ - y₁)²</code></li>
+                                        <li>Take square root: <code>d = √[(x₂ - x₁)² + (y₂ - y₁)²]</code></li>
+                                    </ol>
+
+                                    <div class="formula-insight">
+                                        <strong>Why It Matters:</strong> This formula works in any coordinate system and extends to 3D as <code>√[(x₂-x₁)² + (y₂-y₁)² + (z₂-z₁)²]</code>. It's the foundation of all distance measurements in mathematics.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="formula-panel" role="tabpanel" id="formula-slope" aria-labelledby="tab-slope" hidden>
+                            <div class="formula-display">
+                                <div class="formula-equation">
+                                    <span class="formula-name">Slope Formula</span>
+                                    <div class="formula-math">m = <span class="fraction"><span class="numerator">y₂ - y₁</span><span class="denominator">x₂ - x₁</span></span> = <span class="fraction"><span class="numerator">rise</span><span class="denominator">run</span></span></div>
+                                </div>
+                                <div class="formula-origin">
+                                    <h3>Where It Comes From</h3>
+                                    <p>Slope measures steepness—how much y changes for each unit of x change. The concept emerged from calculus (rates of change) and was standardized with coordinate geometry.</p>
+
+                                    <h4>The Reasoning:</h4>
+                                    <ol class="derivation-list">
+                                        <li>Take two points on a line: <code>(x₁, y₁)</code> and <code>(x₂, y₂)</code></li>
+                                        <li>Vertical change (rise): <code>y₂ - y₁</code></li>
+                                        <li>Horizontal change (run): <code>x₂ - x₁</code></li>
+                                        <li>Steepness is the ratio: <code>m = rise/run</code></li>
+                                        <li>This ratio is constant for any two points on the same line</li>
+                                    </ol>
+
+                                    <div class="formula-insight">
+                                        <strong>Why It Matters:</strong> Slope = 0 means horizontal, undefined slope means vertical, positive means upward, negative means downward. Parallel lines have equal slopes, perpendicular lines have slopes that multiply to -1.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="formula-panel" role="tabpanel" id="formula-circle" aria-labelledby="tab-circle" hidden>
+                            <div class="formula-display">
+                                <div class="formula-equation">
+                                    <span class="formula-name">Circle Equation</span>
+                                    <div class="formula-math">(x - h)² + (y - k)² = r²</div>
+                                </div>
+                                <div class="formula-origin">
+                                    <h3>Where It Comes From</h3>
+                                    <p>A circle is defined as all points at a fixed distance (radius r) from a center point (h, k). The equation is simply the distance formula rearranged.</p>
+
+                                    <h4>The Derivation Path:</h4>
+                                    <ol class="derivation-list">
+                                        <li>Circle definition: all points <code>(x, y)</code> at distance r from center <code>(h, k)</code></li>
+                                        <li>Use distance formula: <code>√[(x - h)² + (y - k)²] = r</code></li>
+                                        <li>Square both sides: <code>(x - h)² + (y - k)² = r²</code></li>
+                                        <li>This is the standard form of a circle equation</li>
+                                    </ol>
+
+                                    <div class="formula-insight">
+                                        <strong>Why It Matters:</strong> Every point satisfying this equation is exactly r units from (h, k). Expanding gives <code>x² + y² + Dx + Ey + F = 0</code>, which you can complete the square on to find center and radius.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step-by-Step Derivations Section -->
+        <section class="derivations-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Step-by-Step Derivations</h2>
+                    <p>Watch formulas emerge naturally through logical reasoning.</p>
+                </div>
+
+                <div class="derivation-interactive">
+                    <div class="derivation-selector">
+                        <h3>Choose a Derivation:</h3>
+                        <select id="derivation-select" class="derivation-dropdown" aria-label="Choose a derivation">
+                            <option value="sum-of-squares">Sum of First n Squares</option>
+                            <option value="arithmetic-series">Arithmetic Series Formula</option>
+                            <option value="geometric-series">Geometric Series Formula</option>
+                            <option value="binomial">Binomial Theorem Pattern</option>
+                        </select>
+                    </div>
+
+                    <div class="derivation-display">
+                        <div class="derivation-content active" data-derivation="sum-of-squares">
+                            <h3>Deriving: Sum of First n Squares</h3>
+                            <p class="derivation-goal">Goal: Find a formula for 1² + 2² + 3² + ... + n²</p>
+
+                            <div class="derivation-steps">
+                                <div class="derivation-step" data-step="1">
+                                    <div class="step-header">
+                                        <span class="step-label">Step 1</span>
+                                        <button class="step-toggle" aria-expanded="true">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="18 15 12 9 6 15"></polyline>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="step-content">
+                                        <p><strong>Start with a clever identity:</strong></p>
+                                        <p class="step-math">n³ - (n-1)³ = 3n² - 3n + 1</p>
+                                        <p class="step-explanation">This comes from expanding the binomial (n-1)³ = n³ - 3n² + 3n - 1</p>
+                                    </div>
+                                </div>
+
+                                <div class="derivation-step" data-step="2">
+                                    <div class="step-header">
+                                        <span class="step-label">Step 2</span>
+                                        <button class="step-toggle" aria-expanded="true">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="18 15 12 9 6 15"></polyline>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="step-content">
+                                        <p><strong>Write this identity for n = 1, 2, 3, ..., n:</strong></p>
+                                        <div class="step-math-block">
+                                            <p>1³ - 0³ = 3(1²) - 3(1) + 1</p>
+                                            <p>2³ - 1³ = 3(2²) - 3(2) + 1</p>
+                                            <p>3³ - 2³ = 3(3²) - 3(3) + 1</p>
+                                            <p>...</p>
+                                            <p>n³ - (n-1)³ = 3(n²) - 3(n) + 1</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="derivation-step" data-step="3">
+                                    <div class="step-header">
+                                        <span class="step-label">Step 3</span>
+                                        <button class="step-toggle" aria-expanded="true">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="18 15 12 9 6 15"></polyline>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="step-content">
+                                        <p><strong>Add all equations (telescoping sum!):</strong></p>
+                                        <p class="step-math">n³ = 3(1² + 2² + ... + n²) - 3(1 + 2 + ... + n) + n</p>
+                                        <p class="step-explanation">Left side telescopes to just n³. Right side has our desired sum!</p>
+                                    </div>
+                                </div>
+
+                                <div class="derivation-step" data-step="4">
+                                    <div class="step-header">
+                                        <span class="step-label">Step 4</span>
+                                        <button class="step-toggle" aria-expanded="true">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="18 15 12 9 6 15"></polyline>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="step-content">
+                                        <p><strong>Use the known formula for 1 + 2 + ... + n = n(n+1)/2:</strong></p>
+                                        <p class="step-math">n³ = 3·Σn² - 3·[n(n+1)/2] + n</p>
+                                    </div>
+                                </div>
+
+                                <div class="derivation-step" data-step="5">
+                                    <div class="step-header">
+                                        <span class="step-label">Step 5</span>
+                                        <button class="step-toggle" aria-expanded="true">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="18 15 12 9 6 15"></polyline>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="step-content">
+                                        <p><strong>Solve for Σn²:</strong></p>
+                                        <p class="step-math">3·Σn² = n³ + 3n(n+1)/2 - n</p>
+                                        <p class="step-math">Σn² = [n³ + 3n(n+1)/2 - n] / 3</p>
+                                    </div>
+                                </div>
+
+                                <div class="derivation-step" data-step="6">
+                                    <div class="step-header">
+                                        <span class="step-label">Final Result</span>
+                                        <button class="step-toggle" aria-expanded="true">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="18 15 12 9 6 15"></polyline>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="step-content">
+                                        <p><strong>Simplify to get the beautiful formula:</strong></p>
+                                        <p class="step-math-final">1² + 2² + 3² + ... + n² = n(n+1)(2n+1)/6</p>
+                                        <p class="step-insight">This formula works for any positive integer n. Try it: 1² + 2² + 3² = 1 + 4 + 9 = 14, and 3(4)(7)/6 = 84/6 = 14 ✓</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="derivation-controls">
+                                <button class="derivation-btn" id="collapse-all">Collapse All Steps</button>
+                                <button class="derivation-btn" id="expand-all">Expand All Steps</button>
+                            </div>
+                        </div>
+
+                        <div class="derivation-content" data-derivation="arithmetic-series">
+                            <h3>Deriving: Arithmetic Series Formula</h3>
+                            <p class="derivation-goal">Goal: Find a formula for a + (a+d) + (a+2d) + ... + (a+(n-1)d)</p>
+
+                            <div class="derivation-steps">
+                                <div class="derivation-step" data-step="1">
+                                    <div class="step-header">
+                                        <span class="step-label">Step 1</span>
+                                        <button class="step-toggle" aria-expanded="true">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="18 15 12 9 6 15"></polyline>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="step-content">
+                                        <p><strong>Write the sum in order:</strong></p>
+                                        <p class="step-math">S = a + (a+d) + (a+2d) + ... + (a+(n-1)d)</p>
+                                    </div>
+                                </div>
+
+                                <div class="derivation-step" data-step="2">
+                                    <div class="step-header">
+                                        <span class="step-label">Step 2</span>
+                                        <button class="step-toggle" aria-expanded="true">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="18 15 12 9 6 15"></polyline>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="step-content">
+                                        <p><strong>Gauss's brilliant trick—write it backwards:</strong></p>
+                                        <p class="step-math">S = (a+(n-1)d) + (a+(n-2)d) + ... + (a+d) + a</p>
+                                        <p class="step-explanation">Same sum, just reversed order</p>
+                                    </div>
+                                </div>
+
+                                <div class="derivation-step" data-step="3">
+                                    <div class="step-header">
+                                        <span class="step-label">Step 3</span>
+                                        <button class="step-toggle" aria-expanded="true">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="18 15 12 9 6 15"></polyline>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="step-content">
+                                        <p><strong>Add the two equations vertically:</strong></p>
+                                        <div class="step-math-block">
+                                            <p>2S = [a + (a+(n-1)d)] + [(a+d) + (a+(n-2)d)] + ... + [(a+(n-1)d) + a]</p>
+                                        </div>
+                                        <p class="step-explanation">Each pair sums to the same value!</p>
+                                    </div>
+                                </div>
+
+                                <div class="derivation-step" data-step="4">
+                                    <div class="step-header">
+                                        <span class="step-label">Step 4</span>
+                                        <button class="step-toggle" aria-expanded="true">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="18 15 12 9 6 15"></polyline>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="step-content">
+                                        <p><strong>Notice the pattern—each pair equals:</strong></p>
+                                        <p class="step-math">2a + (n-1)d</p>
+                                        <p class="step-explanation">This is the first term plus the last term!</p>
+                                    </div>
+                                </div>
+
+                                <div class="derivation-step" data-step="5">
+                                    <div class="step-header">
+                                        <span class="step-label">Step 5</span>
+                                        <button class="step-toggle" aria-expanded="true">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="18 15 12 9 6 15"></polyline>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="step-content">
+                                        <p><strong>We have n such pairs:</strong></p>
+                                        <p class="step-math">2S = n · [2a + (n-1)d]</p>
+                                    </div>
+                                </div>
+
+                                <div class="derivation-step" data-step="6">
+                                    <div class="step-header">
+                                        <span class="step-label">Final Result</span>
+                                        <button class="step-toggle" aria-expanded="true">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="18 15 12 9 6 15"></polyline>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="step-content">
+                                        <p><strong>Divide by 2:</strong></p>
+                                        <p class="step-math-final">S = n/2 · [2a + (n-1)d] = n/2 · (first + last)</p>
+                                        <p class="step-insight">The sum is just: (number of terms) × (average of first and last) / 2. This elegant pattern appears everywhere in mathematics!</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="derivation-controls">
+                                <button class="derivation-btn" id="collapse-all-2">Collapse All Steps</button>
+                                <button class="derivation-btn" id="expand-all-2">Expand All Steps</button>
+                            </div>
+                        </div>
+
+                        <div class="derivation-content" data-derivation="geometric-series">
+                            <h3>Deriving: Geometric Series Formula</h3>
+                            <p class="derivation-goal">Goal: Find a formula for a + ar + ar² + ... + ar^(n-1)</p>
+
+                            <div class="derivation-steps">
+                                <div class="derivation-step" data-step="1">
+                                    <div class="step-header">
+                                        <span class="step-label">Step 1</span>
+                                        <button class="step-toggle" aria-expanded="true">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="18 15 12 9 6 15"></polyline>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="step-content">
+                                        <p><strong>Let S equal the sum:</strong></p>
+                                        <p class="step-math">S = a + ar + ar² + ar³ + ... + ar^(n-1)</p>
+                                    </div>
+                                </div>
+
+                                <div class="derivation-step" data-step="2">
+                                    <div class="step-header">
+                                        <span class="step-label">Step 2</span>
+                                        <button class="step-toggle" aria-expanded="true">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="18 15 12 9 6 15"></polyline>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="step-content">
+                                        <p><strong>Multiply both sides by r:</strong></p>
+                                        <p class="step-math">rS = ar + ar² + ar³ + ... + ar^n</p>
+                                        <p class="step-explanation">This shifts each term one power higher</p>
+                                    </div>
+                                </div>
+
+                                <div class="derivation-step" data-step="3">
+                                    <div class="step-header">
+                                        <span class="step-label">Step 3</span>
+                                        <button class="step-toggle" aria-expanded="true">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="18 15 12 9 6 15"></polyline>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="step-content">
+                                        <p><strong>Subtract the second equation from the first:</strong></p>
+                                        <p class="step-math">S - rS = a - ar^n</p>
+                                        <p class="step-explanation">All middle terms cancel! This is the key insight.</p>
+                                    </div>
+                                </div>
+
+                                <div class="derivation-step" data-step="4">
+                                    <div class="step-header">
+                                        <span class="step-label">Step 4</span>
+                                        <button class="step-toggle" aria-expanded="true">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="18 15 12 9 6 15"></polyline>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="step-content">
+                                        <p><strong>Factor out S on the left:</strong></p>
+                                        <p class="step-math">S(1 - r) = a(1 - r^n)</p>
+                                    </div>
+                                </div>
+
+                                <div class="derivation-step" data-step="5">
+                                    <div class="step-header">
+                                        <span class="step-label">Final Result</span>
+                                        <button class="step-toggle" aria-expanded="true">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="18 15 12 9 6 15"></polyline>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="step-content">
+                                        <p><strong>Divide by (1 - r):</strong></p>
+                                        <p class="step-math-final">S = a(1 - r^n)/(1 - r)</p>
+                                        <p class="step-insight">For infinite series with |r| < 1, as n→∞, r^n→0, giving S = a/(1-r). This describes everything from compound interest to fractal patterns!</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="derivation-controls">
+                                <button class="derivation-btn" id="collapse-all-3">Collapse All Steps</button>
+                                <button class="derivation-btn" id="expand-all-3">Expand All Steps</button>
+                            </div>
+                        </div>
+
+                        <div class="derivation-content" data-derivation="binomial">
+                            <h3>Deriving: Binomial Theorem Pattern</h3>
+                            <p class="derivation-goal">Goal: Understand why (a + b)^n has the coefficients it does</p>
+
+                            <div class="derivation-steps">
+                                <div class="derivation-step" data-step="1">
+                                    <div class="step-header">
+                                        <span class="step-label">Step 1</span>
+                                        <button class="step-toggle" aria-expanded="true">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="18 15 12 9 6 15"></polyline>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="step-content">
+                                        <p><strong>Expand small powers by hand:</strong></p>
+                                        <div class="step-math-block">
+                                            <p>(a + b)¹ = a + b</p>
+                                            <p>(a + b)² = a² + 2ab + b²</p>
+                                            <p>(a + b)³ = a³ + 3a²b + 3ab² + b³</p>
+                                        </div>
+                                        <p class="step-explanation">Notice the coefficients: 1,1 then 1,2,1 then 1,3,3,1</p>
+                                    </div>
+                                </div>
+
+                                <div class="derivation-step" data-step="2">
+                                    <div class="step-header">
+                                        <span class="step-label">Step 2</span>
+                                        <button class="step-toggle" aria-expanded="true">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="18 15 12 9 6 15"></polyline>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="step-content">
+                                        <p><strong>Think about what (a+b)^n means:</strong></p>
+                                        <p class="step-math">(a + b)^n = (a + b)(a + b)(a + b)...(a + b)</p>
+                                        <p class="step-explanation">Multiply n copies of (a + b)</p>
+                                    </div>
+                                </div>
+
+                                <div class="derivation-step" data-step="3">
+                                    <div class="step-header">
+                                        <span class="step-label">Step 3</span>
+                                        <button class="step-toggle" aria-expanded="true">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="18 15 12 9 6 15"></polyline>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="step-content">
+                                        <p><strong>Count the ways to get a^k·b^(n-k):</strong></p>
+                                        <p class="step-explanation">To get a^k·b^(n-k), you must pick 'a' from k of the n factors and 'b' from the remaining (n-k) factors.</p>
+                                        <p class="step-math">Number of ways = C(n,k) = n!/(k!(n-k)!)</p>
+                                    </div>
+                                </div>
+
+                                <div class="derivation-step" data-step="4">
+                                    <div class="step-header">
+                                        <span class="step-label">Step 4</span>
+                                        <button class="step-toggle" aria-expanded="true">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="18 15 12 9 6 15"></polyline>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="step-content">
+                                        <p><strong>These are Pascal's Triangle numbers!</strong></p>
+                                        <div class="step-math-block">
+                                            <p style="text-align: center;">1</p>
+                                            <p style="text-align: center;">1  1</p>
+                                            <p style="text-align: center;">1  2  1</p>
+                                            <p style="text-align: center;">1  3  3  1</p>
+                                            <p style="text-align: center;">1  4  6  4  1</p>
+                                        </div>
+                                        <p class="step-explanation">Each number is the sum of the two above it, which matches C(n,k) = C(n-1,k-1) + C(n-1,k)</p>
+                                    </div>
+                                </div>
+
+                                <div class="derivation-step" data-step="5">
+                                    <div class="step-header">
+                                        <span class="step-label">Final Result</span>
+                                        <button class="step-toggle" aria-expanded="true">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="18 15 12 9 6 15"></polyline>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="step-content">
+                                        <p><strong>The Binomial Theorem:</strong></p>
+                                        <p class="step-math-final">(a + b)^n = Σ C(n,k) · a^(n-k) · b^k</p>
+                                        <p class="step-insight">The coefficient of each term is the number of ways to select which factors contribute 'a' vs 'b'. Combinatorics and algebra unite!</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="derivation-controls">
+                                <button class="derivation-btn" id="collapse-all-4">Collapse All Steps</button>
+                                <button class="derivation-btn" id="expand-all-4">Expand All Steps</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visual Proofs Section -->
+        <section class="visual-proofs-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Visual Proofs</h2>
+                    <p>Sometimes a picture is worth a thousand equations. These proofs need no words.</p>
+                </div>
+
+                <div class="proofs-gallery">
+                    <article class="visual-proof-card">
+                        <h3>Pythagorean Theorem</h3>
+                        <div class="proof-canvas-container">
+                            <canvas id="pythagorean-canvas" width="500" height="500" aria-label="Visual proof of Pythagorean theorem"></canvas>
+                        </div>
+                        <div class="proof-explanation">
+                            <p><strong>What you see:</strong> Four identical right triangles arranged around two different squares.</p>
+                            <p><strong>Why it proves a² + b² = c²:</strong> Both configurations have the same total area (same outer square). Subtract the four triangles from each, and what remains must be equal: a² + b² on the left = c² on the right.</p>
+                            <button class="animate-btn" data-canvas="pythagorean-canvas">Animate Proof</button>
+                        </div>
+                    </article>
+
+                    <article class="visual-proof-card">
+                        <h3>Sum of Odd Numbers</h3>
+                        <div class="proof-canvas-container">
+                            <canvas id="odd-sum-canvas" width="500" height="500" aria-label="Visual proof that sum of first n odd numbers equals n squared"></canvas>
+                        </div>
+                        <div class="proof-explanation">
+                            <p><strong>What you see:</strong> L-shaped regions stacking to form perfect squares.</p>
+                            <p><strong>Why it proves 1 + 3 + 5 + ... + (2n-1) = n²:</strong> Each odd number forms an L-shape that expands the previous square to the next size. The nth odd number makes an n×n square.</p>
+                            <button class="animate-btn" data-canvas="odd-sum-canvas">Animate Proof</button>
+                        </div>
+                    </article>
+
+                    <article class="visual-proof-card">
+                        <h3>Arithmetic Series (Gauss's Method)</h3>
+                        <div class="proof-canvas-container">
+                            <canvas id="gauss-canvas" width="500" height="400" aria-label="Visual proof of arithmetic series formula"></canvas>
+                        </div>
+                        <div class="proof-explanation">
+                            <p><strong>What you see:</strong> Dots arranged in ascending rows, then duplicated and flipped.</p>
+                            <p><strong>Why it proves 1 + 2 + ... + n = n(n+1)/2:</strong> When you flip and stack, you get a rectangle with n rows and (n+1) columns. The original sum is half of that rectangle's area.</p>
+                            <button class="animate-btn" data-canvas="gauss-canvas">Animate Proof</button>
+                        </div>
+                    </article>
+
+                    <article class="visual-proof-card">
+                        <h3>Difference of Squares</h3>
+                        <div class="proof-canvas-container">
+                            <canvas id="difference-squares-canvas" width="500" height="500" aria-label="Visual proof of difference of squares formula"></canvas>
+                        </div>
+                        <div class="proof-explanation">
+                            <p><strong>What you see:</strong> A large square with a smaller square cut from its corner, rearranged into a rectangle.</p>
+                            <p><strong>Why it proves a² - b² = (a+b)(a-b):</strong> The L-shaped region (difference of squares) can be cut and rearranged into a rectangle with dimensions (a+b) and (a-b).</p>
+                            <button class="animate-btn" data-canvas="difference-squares-canvas">Animate Proof</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Famous Theorems Section -->
+        <section class="theorems-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Famous Theorems Explained</h2>
+                    <p>The great results that shaped mathematics, made accessible.</p>
+                </div>
+
+                <div class="theorems-list">
+                    <article class="theorem-card">
+                        <div class="theorem-header">
+                            <div class="theorem-icon">∫</div>
+                            <div class="theorem-title-block">
+                                <h3>Fundamental Theorem of Calculus</h3>
+                                <p class="theorem-statement">∫[a to b] f'(x)dx = f(b) - f(a)</p>
+                            </div>
+                        </div>
+                        <div class="theorem-body">
+                            <p class="theorem-meaning"><strong>What it means:</strong> The area under a rate-of-change curve equals the total change. Integration and differentiation are inverse operations.</p>
+                            <p class="theorem-why"><strong>Why it works:</strong> Think of driving a car. If you know your velocity at every moment (the derivative), adding up all those tiny velocity×time products (the integral) gives your total distance traveled (the change in position).</p>
+                            <p class="theorem-impact"><strong>Why it matters:</strong> This theorem connects two seemingly different ideas—slopes (derivatives) and areas (integrals)—revealing they're two sides of the same coin. It's the foundation of all calculus.</p>
+                        </div>
+                    </article>
+
+                    <article class="theorem-card">
+                        <div class="theorem-header">
+                            <div class="theorem-icon">π</div>
+                            <div class="theorem-title-block">
+                                <h3>Euler's Identity</h3>
+                                <p class="theorem-statement">e^(iπ) + 1 = 0</p>
+                            </div>
+                        </div>
+                        <div class="theorem-body">
+                            <p class="theorem-meaning"><strong>What it means:</strong> The five most important numbers in mathematics (e, i, π, 1, 0) are connected in one elegant equation.</p>
+                            <p class="theorem-why"><strong>Why it works:</strong> When you raise e to an imaginary power, you trace a path around a circle. Going πi radians takes you exactly halfway around the unit circle to -1, so e^(iπ) = -1.</p>
+                            <p class="theorem-impact"><strong>Why it matters:</strong> Often called "the most beautiful equation," it bridges exponential growth, imaginary numbers, trigonometry, and circles—showing the deep unity of mathematics.</p>
+                        </div>
+                    </article>
+
+                    <article class="theorem-card">
+                        <div class="theorem-header">
+                            <div class="theorem-icon">Σ</div>
+                            <div class="theorem-title-block">
+                                <h3>Fundamental Theorem of Algebra</h3>
+                                <p class="theorem-statement">Every non-constant polynomial has at least one complex root</p>
+                            </div>
+                        </div>
+                        <div class="theorem-body">
+                            <p class="theorem-meaning"><strong>What it means:</strong> A polynomial of degree n has exactly n roots (counting multiplicity) in the complex numbers.</p>
+                            <p class="theorem-why"><strong>Why it works:</strong> Real numbers alone aren't enough to solve all polynomials (think x² + 1 = 0). But complex numbers provide the "missing" solutions, completing the number system.</p>
+                            <p class="theorem-impact"><strong>Why it matters:</strong> This guarantees that polynomial equations always have solutions—you just need the right number system. It validates the complex numbers as essential, not exotic.</p>
+                        </div>
+                    </article>
+
+                    <article class="theorem-card">
+                        <div class="theorem-header">
+                            <div class="theorem-icon">≈</div>
+                            <div class="theorem-title-block">
+                                <h3>Law of Large Numbers</h3>
+                                <p class="theorem-statement">Sample average converges to expected value as n → ∞</p>
+                            </div>
+                        </div>
+                        <div class="theorem-body">
+                            <p class="theorem-meaning"><strong>What it means:</strong> As you collect more data, the average of your observations gets closer and closer to the true population average.</p>
+                            <p class="theorem-why"><strong>Why it works:</strong> Random fluctuations tend to cancel out over many trials. Individual variations balance out, revealing the underlying pattern.</p>
+                            <p class="theorem-impact"><strong>Why it matters:</strong> This is why statistics works! It justifies using sample data to make inferences about populations and explains why casinos always win in the long run.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Explore the Reasoning Section -->
+        <section class="explore-reasoning-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Explore the Reasoning</h2>
+                    <p>Interactive challenges to test and deepen your understanding of mathematical logic.</p>
+                </div>
+
+                <div class="reasoning-challenges">
+                    <article class="challenge-card">
+                        <div class="challenge-header">
+                            <h3>Challenge 1: Why Can't We Divide by Zero?</h3>
+                            <span class="difficulty-badge">Conceptual</span>
+                        </div>
+                        <div class="challenge-content">
+                            <p class="challenge-question">Everyone says "you can't divide by zero," but <em>why</em>? What breaks?</p>
+                            <button class="reveal-btn" data-target="challenge-1-answer">Show Reasoning</button>
+                            <div class="challenge-answer" id="challenge-1-answer" hidden>
+                                <p><strong>The reasoning:</strong></p>
+                                <ol>
+                                    <li>Division is defined as the inverse of multiplication: a ÷ b = c means b × c = a</li>
+                                    <li>So 6 ÷ 0 = ? would mean: "What number times 0 gives 6?"</li>
+                                    <li>But <em>any</em> number times 0 equals 0, never 6</li>
+                                    <li>For 0 ÷ 0, <em>every</em> number works: 0 × anything = 0</li>
+                                    <li>So 6 ÷ 0 has no answer, and 0 ÷ 0 has infinitely many answers</li>
+                                </ol>
+                                <p class="insight-box"><strong>The insight:</strong> Division by zero doesn't produce infinity or error—it breaks the definition of division itself. Mathematics must be consistent, so we declare it undefined.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="challenge-card">
+                        <div class="challenge-header">
+                            <h3>Challenge 2: Why Does a Negative × Negative = Positive?</h3>
+                            <span class="difficulty-badge">Logical</span>
+                        </div>
+                        <div class="challenge-content">
+                            <p class="challenge-question">It seems counterintuitive. What's the logical reason this rule exists?</p>
+                            <button class="reveal-btn" data-target="challenge-2-answer">Show Reasoning</button>
+                            <div class="challenge-answer" id="challenge-2-answer" hidden>
+                                <p><strong>The reasoning:</strong></p>
+                                <ol>
+                                    <li>We want multiplication to follow the distributive property: a(b + c) = ab + ac</li>
+                                    <li>Consider: (-1)(1 + (-1)) = (-1)(0) = 0</li>
+                                    <li>Using distributive property: (-1)(1) + (-1)(-1) = 0</li>
+                                    <li>We know (-1)(1) = -1, so: -1 + (-1)(-1) = 0</li>
+                                    <li>Therefore: (-1)(-1) = 1</li>
+                                </ol>
+                                <p class="insight-box"><strong>The insight:</strong> Negative × negative = positive isn't arbitrary—it's the <em>only</em> choice that keeps the distributive property working. Mathematics chooses rules that preserve consistency!</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="challenge-card">
+                        <div class="challenge-header">
+                            <h3>Challenge 3: Why Is 0! = 1?</h3>
+                            <span class="difficulty-badge">Pattern Recognition</span>
+                        </div>
+                        <div class="challenge-content">
+                            <p class="challenge-question">0! means "multiply all positive integers up to 0." That's nothing—so why isn't it 0?</p>
+                            <button class="reveal-btn" data-target="challenge-3-answer">Show Reasoning</button>
+                            <div class="challenge-answer" id="challenge-3-answer" hidden>
+                                <p><strong>The reasoning:</strong></p>
+                                <ol>
+                                    <li>Factorials follow the pattern: n! = n × (n-1)!</li>
+                                    <li>So: 5! = 5 × 4!, and 4! = 4 × 3!, etc.</li>
+                                    <li>Going backwards: 1! = 1 × 0!</li>
+                                    <li>We know 1! = 1, so: 1 = 1 × 0!</li>
+                                    <li>Therefore: 0! = 1</li>
+                                </ol>
+                                <p><strong>Alternative view:</strong> n! counts the ways to arrange n objects. How many ways can you arrange zero objects? Exactly one way: do nothing. That's one arrangement.</p>
+                                <p class="insight-box"><strong>The insight:</strong> 0! = 1 makes the factorial formula work consistently for all cases, especially in combinatorics (C(n,0) = 1) and calculus (power series).</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="challenge-card">
+                        <div class="challenge-header">
+                            <h3>Challenge 4: Why Do Exponent Rules Extend to Negatives and Fractions?</h3>
+                            <span class="difficulty-badge">Consistency</span>
+                        </div>
+                        <div class="challenge-content">
+                            <p class="challenge-question">We define a^3 = a×a×a. But what about a^(-2) or a^(1/2)? Why do we define them the way we do?</p>
+                            <button class="reveal-btn" data-target="challenge-4-answer">Show Reasoning</button>
+                            <div class="challenge-answer" id="challenge-4-answer" hidden>
+                                <p><strong>The reasoning:</strong></p>
+                                <p><strong>For negative exponents:</strong></p>
+                                <ol>
+                                    <li>We want a^m × a^n = a^(m+n) to always work</li>
+                                    <li>So: a^2 × a^(-2) should equal a^(2 + (-2)) = a^0 = 1</li>
+                                    <li>That means a^(-2) = 1/a^2 (the reciprocal)</li>
+                                </ol>
+                                <p><strong>For fractional exponents:</strong></p>
+                                <ol>
+                                    <li>We want (a^m)^n = a^(mn) to always work</li>
+                                    <li>So: (a^(1/2))^2 should equal a^(1/2 × 2) = a^1 = a</li>
+                                    <li>That means a^(1/2) = √a (the square root)</li>
+                                </ol>
+                                <p class="insight-box"><strong>The insight:</strong> Mathematicians extend definitions to preserve the patterns we care about. The exponent rules are so useful that we define negative and fractional exponents specifically to keep them working!</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="reasoning-cta">
+                    <h3>Ready to Apply This Understanding?</h3>
+                    <p>Test your deeper knowledge with challenges that require reasoning, not just formulas.</p>
+                    <a href="challenges.html" class="cta-button">Try Reasoning Challenges</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>The Mathematics Observatory</h3>
+                <p>A Grade 11 exploration project</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="learn.html">Learn</a></li>
+                    <li><a href="explore.html">Explore</a></li>
+                    <li><a href="visualize.html">Visualize</a></li>
+                    <li><a href="library.html">Library</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Sources</a></li>
+                    <li><a href="#">Technology</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 The Mathematics Observatory. Created with precision and passion.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="curriculum-data.js?v=6"></script>
+    <script src="math-calculator.js?v=6"></script>
+    <script src="assistant.js?v=42"></script>
+    <script src="proofs.js"></script>
+</body>
+</html>

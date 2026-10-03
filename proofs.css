@@ -1,0 +1,1300 @@
+/* =========================================
+   Why It Works - Main Styles
+   ========================================= */
+
+:root {
+    --proofs-accent: #6366f1;
+    --proofs-accent-light: #818cf8;
+    --proofs-accent-dark: #4f46e5;
+    --proofs-purple: #a855f7;
+    --proofs-purple-light: #c4b5fd;
+    --proofs-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+    --proofs-gradient-reverse: linear-gradient(135deg, #a855f7 0%, #6366f1 100%);
+    --card-bg: rgba(255, 255, 255, 0.95);
+    --card-hover: rgba(255, 255, 255, 1);
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --text-light: #9ca3af;
+    --border-radius: 16px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --shadow: 0 10px 40px -10px rgba(99, 102, 241, 0.2);
+    --shadow-hover: 0 20px 60px -15px rgba(99, 102, 241, 0.3);
+}
+
+.proofs-page .container {
+    width: min(100% - 40px, 1200px);
+    margin: 0 auto;
+}
+
+.proofs-page .section-header {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.proofs-page .section-header h2 {
+    margin: 0 0 16px;
+    color: var(--text-primary);
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.proofs-page .section-header p {
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* =========================================
+   Hero Section
+   ========================================= */
+
+.proofs-hero {
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px 60px;
+    overflow: hidden;
+}
+
+.proofs-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    opacity: 0.95;
+    z-index: 0;
+}
+
+.proofs-hero::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 80%;
+    height: 120%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.proofs-page .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    text-align: center;
+    color: white;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 8px 24px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.proofs-page .hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+    margin: 0 0 20px;
+    line-height: 1.1;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.proofs-page .hero-subtitle {
+    font-size: 1.35rem;
+    margin: 0 0 40px;
+    line-height: 1.6;
+    opacity: 0.95;
+}
+
+.proofs-page .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.proofs-page .stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1;
+    color: white;
+}
+
+.proofs-page .stat-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-top: 8px;
+}
+
+.hero-visual {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45%;
+    height: 80%;
+    z-index: 2;
+}
+
+#heroCanvas {
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+}
+
+/* =========================================
+   Intuition Section
+   ========================================= */
+
+.intuition-section {
+    padding: 100px 0;
+    background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
+}
+
+.intuition-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.intuition-card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+    border: 1px solid rgba(99, 102, 241, 0.08);
+}
+
+.intuition-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+    border-color: rgba(99, 102, 241, 0.2);
+}
+
+.card-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 20px;
+    color: var(--proofs-accent);
+}
+
+.card-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.intuition-card h3 {
+    font-size: 1.5rem;
+    margin: 0 0 12px;
+    color: var(--text-primary);
+}
+
+.concept-preview {
+    color: var(--text-secondary);
+    margin: 0 0 20px;
+    line-height: 1.6;
+}
+
+.explore-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    background: var(--proofs-gradient);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 100%;
+    justify-content: center;
+}
+
+.explore-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+}
+
+.explore-btn svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.explore-btn[aria-expanded="true"] svg {
+    transform: rotate(180deg);
+}
+
+.concept-detail {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid rgba(99, 102, 241, 0.1);
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.concept-detail p {
+    color: var(--text-secondary);
+    margin: 0 0 16px;
+    line-height: 1.65;
+}
+
+.concept-detail strong {
+    color: var(--text-primary);
+}
+
+.reasoning-steps {
+    margin: 20px 0;
+}
+
+.step {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding-left: 12px;
+}
+
+.step-number {
+    font-weight: 700;
+    color: var(--proofs-accent);
+    min-width: 24px;
+}
+
+.step:last-child {
+    margin-bottom: 0;
+}
+
+.insight {
+    padding: 16px 20px;
+    background: linear-gradient(135deg, #f3f4f6 0%, #e0e7ff 100%);
+    border-radius: 12px;
+    margin-top: 20px;
+    border-left: 4px solid var(--proofs-accent);
+}
+
+.insight p {
+    margin: 0;
+    color: var(--text-primary);
+    font-style: italic;
+}
+
+/* =========================================
+   Formula Section
+   ========================================= */
+
+.formula-section {
+    padding: 100px 0;
+    background: linear-gradient(180deg, #ffffff 0%, #f8f9fc 100%);
+}
+
+.formula-explorer {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    border: 1px solid rgba(99, 102, 241, 0.1);
+}
+
+.formula-tabs {
+    display: flex;
+    border-bottom: 2px solid rgba(99, 102, 241, 0.1);
+    background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+}
+
+.formula-tab {
+    flex: 1;
+    padding: 18px 30px;
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: var(--transition);
+    position: relative;
+}
+
+.formula-tab:hover {
+    color: var(--proofs-accent);
+    background: rgba(99, 102, 241, 0.05);
+}
+
+.formula-tab.active {
+    color: var(--proofs-accent);
+    background: white;
+}
+
+.formula-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--proofs-gradient);
+}
+
+.formula-panels {
+    padding: 40px;
+}
+
+.formula-panel {
+    animation: fadeIn 0.4s ease;
+}
+
+.formula-display {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.formula-equation {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 280px;
+}
+
+.formula-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.formula-math {
+    font-size: 2.5rem;
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+    color: var(--text-primary);
+    line-height: 1.5;
+}
+
+.fraction {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.2;
+}
+
+.numerator, .denominator {
+    padding: 4px 8px;
+    border: 1px solid currentColor;
+    border-radius: 4px;
+}
+
+.demonstration-panel {
+    flex: 1;
+    min-width: 300px;
+}
+
+.formula-origin h3 {
+    font-size: 1.4rem;
+    margin: 0 0 16px;
+    color: var(--text-primary);
+}
+
+.formula-origin p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+.formula-origin h4 {
+    font-size: 1.1rem;
+    margin: 24px 0 16px;
+    color: var(--text-primary);
+}
+
+.derivation-list {
+    counter-reset: derivation-step;
+    list-style: none;
+    padding: 0;
+}
+
+.derivation-list li {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 16px;
+    color: var(--text-secondary);
+    line-height: 1.65;
+}
+
+.derivation-list li::before {
+    counter-increment: derivation-step;
+    content: counter(derivation-step);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 28px;
+    height: 28px;
+    background: var(--proofs-gradient);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.formula-insight {
+    margin-top: 30px;
+    padding: 24px;
+    background: linear-gradient(135deg, #e0e7ff 0%, #f3f4f6 100%);
+    border-radius: 16px;
+    border-left: 5px solid var(--proofs-accent);
+}
+
+.formula-insight strong {
+    display: block;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+/* =========================================
+   Derivations Section
+   ========================================= */
+
+.derivations-section {
+    padding: 100px 0;
+    background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
+}
+
+.derivation-interactive {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.derivation-selector {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.derivation-selector h3 {
+    font-size: 1.3rem;
+    margin: 0 0 16px;
+    color: var(--text-primary);
+}
+
+.derivation-dropdown {
+    width: 100%;
+    max-width: 500px;
+    padding: 16px 24px;
+    font-size: 1rem;
+    border: 2px solid rgba(99, 102, 241, 0.15);
+    border-radius: 12px;
+    background: white;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.derivation-dropdown:hover {
+    border-color: var(--proofs-accent);
+}
+
+.derivation-dropdown:focus {
+    outline: none;
+    border-color: var(--proofs-accent);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.derivation-content {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 40px;
+    animation: fadeIn 0.5s ease;
+}
+
+.derivation-content:not(.active) {
+    display: none;
+}
+
+.derivation-content h3 {
+    font-size: 1.8rem;
+    margin: 0 0 16px;
+    color: var(--text-primary);
+}
+
+.derivation-goal {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin: 0 0 40px;
+    padding: 16px 24px;
+    background: rgba(99, 102, 241, 0.05);
+    border-radius: 12px;
+    border-left: 4px solid var(--proofs-accent);
+}
+
+.derivation-steps {
+    margin-bottom: 40px;
+}
+
+.derivation-step {
+    margin-bottom: 30px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+}
+
+.derivation-step:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.step-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+    cursor: pointer;
+    border-bottom: 1px solid rgba(99, 102, 241, 0.08);
+}
+
+.step-header:hover {
+    background: linear-gradient(135deg, #f3f4f6 0%, #e0e7ff 100%);
+}
+
+.step-toggle {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: var(--transition);
+    color: var(--text-secondary);
+}
+
+.step-toggle:hover {
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--proofs-accent);
+}
+
+.step-content {
+    padding: 24px;
+}
+
+.step-content.hidden {
+    display: none;
+}
+
+.step-label {
+    font-weight: 700;
+    color: var(--proofs-accent);
+    margin-right: 12px;
+}
+
+.step-math {
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    margin: 12px 0;
+    padding: 16px 24px;
+    background: #f8f9fc;
+    border-radius: 8px;
+    text-align: center;
+    color: var(--text-primary);
+}
+
+.step-math-block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.step-math-block p {
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    margin: 0;
+    padding: 12px 16px;
+    background: #f8f9fc;
+    border-radius: 8px;
+}
+
+.step-explanation {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 12px 0;
+}
+
+.step-math-final {
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    margin: 20px 0;
+    padding: 20px 32px;
+    background: linear-gradient(135deg, #e0e7ff 0%, #f3f4f6 100%);
+    border-radius: 12px;
+    text-align: center;
+    color: var(--text-primary);
+    border: 2px solid var(--proofs-accent);
+}
+
+.step-insight {
+    padding: 16px 20px;
+    background: rgba(99, 102, 241, 0.08);
+    border-radius: 12px;
+    border-left: 4px solid var(--proofs-accent);
+    margin-top: 20px;
+}
+
+.derivation-controls {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.derivation-btn {
+    padding: 12px 28px;
+    background: white;
+    border: 2px solid rgba(99, 102, 241, 0.2);
+    border-radius: 10px;
+    font-weight: 600;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.derivation-btn:hover {
+    background: var(--proofs-accent);
+    border-color: var(--proofs-accent);
+    color: white;
+}
+
+/* =========================================
+   Visual Proofs Section
+   ========================================= */
+
+.visual-proofs-section {
+    padding: 100px 0;
+    background: linear-gradient(180deg, #ffffff 0%, #f8f9fc 100%);
+}
+
+.proofs-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.visual-proof-card {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.visual-proof-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+}
+
+.visual-proof-card h3 {
+    padding: 24px 30px;
+    font-size: 1.4rem;
+    margin: 0;
+    color: var(--text-primary);
+    border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+}
+
+.proof-canvas-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.proof-canvas-container canvas {
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+}
+
+.proof-explanation {
+    padding: 24px 30px;
+}
+
+.proof-explanation p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+.animate-btn {
+    padding: 12px 24px;
+    background: var(--proofs-gradient);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 100%;
+}
+
+.animate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+}
+
+/* =========================================
+   Theorems Section
+   ========================================= */
+
+.theorems-section {
+    padding: 100px 0;
+    background: white;
+}
+
+.theorems-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 450px), 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.theorem-card {
+    background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    border: 1px solid rgba(99, 102, 241, 0.1);
+    transition: var(--transition);
+}
+
+.theorem-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+}
+
+.theorem-header {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.theorem-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--proofs-gradient);
+    color: white;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: 'Times New Roman', serif;
+    flex-shrink: 0;
+}
+
+.theorem-title-block h3 {
+    font-size: 1.4rem;
+    margin: 0 0 8px;
+    color: var(--text-primary);
+}
+
+.theorem-statement {
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 1.25rem;
+    color: var(--text-primary);
+}
+
+.theorem-body {
+    padding-left: 90px;
+}
+
+.theorem-body p {
+    margin-bottom: 16px;
+    line-height: 1.65;
+}
+
+.theorem-meaning, .theorem-why, .theorem-impact {
+    padding: 16px 20px;
+    background: white;
+    border-radius: 12px;
+    border-left: 4px solid var(--proofs-accent);
+}
+
+.theorem-meaning { border-left-color: var(--proofs-accent); }
+.theorem-why { border-left-color: var(--proofs-purple); }
+.theorem-impact { border-left-color: #10b981; }
+
+.theorem-meaning strong { color: var(--text-primary); }
+.theorem-why strong { color: var(--text-primary); }
+.theorem-impact strong { color: var(--text-primary); }
+
+/* =========================================
+   Reasoning Challenges Section
+ ========================================= */
+
+.explore-reasoning-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.explore-reasoning-section .section-header h2 {
+    color: white;
+}
+
+.explore-reasoning-section .section-header p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.reasoning-challenges {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+    gap: 30px;
+}
+
+.challenge-card {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 30px;
+    color: var(--text-primary);
+}
+
+.challenge-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.challenge-header h3 {
+    font-size: 1.3rem;
+    margin: 0;
+    color: var(--text-primary);
+}
+
+.difficulty-badge {
+    padding: 6px 14px;
+    background: var(--proofs-gradient);
+    color: white;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.challenge-content {
+    margin-bottom: 20px;
+}
+
+.challenge-question {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin: 0 0 16px;
+    padding: 16px 20px;
+    background: #f9fafb;
+    border-radius: 12px;
+    border-left: 4px solid var(--proofs-accent);
+}
+
+.reveal-btn {
+    padding: 12px 24px;
+    background: white;
+    border: 2px solid rgba(99, 102, 241, 0.2);
+    border-radius: 8px;
+    font-weight: 600;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: var(--transition);
+    width: 100%;
+}
+
+.reveal-btn:hover {
+    border-color: var(--proofs-accent);
+    background: #f3f4f6;
+}
+
+.challenge-answer {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(99, 102, 241, 0.1);
+}
+
+.challenge-answer ol {
+    margin: 0 0 16px;
+    padding-left: 24px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+.challenge-answer li {
+    margin-bottom: 8px;
+}
+
+.insight-box {
+    padding: 16px 20px;
+    background: linear-gradient(135deg, #e0e7ff 0%, #f3f4f6 100%);
+    border-radius: 12px;
+    border-left: 4px solid var(--proofs-accent);
+    margin-top: 16px;
+}
+
+.insight-box p {
+    margin: 0;
+    font-style: italic;
+    color: var(--text-primary);
+}
+
+.reasoning-cta {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.reasoning-cta h3 {
+    font-size: 2rem;
+    margin: 0 0 16px;
+}
+
+.reasoning-cta p {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.15rem;
+    margin: 0 0 32px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 16px 40px;
+    background: white;
+    color: var(--proofs-accent);
+    font-weight: 700;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: var(--transition);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* =========================================
+   Footer
+ ========================================= */
+
+.proofs-page .main-footer {
+    background: #1f2937;
+    color: white;
+}
+
+.proofs-page .main-footer .footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 60px 20px 40px;
+}
+
+.proofs-page .main-footer .footer-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+.proofs-page .main-footer h3, .proofs-page .main-footer h4 {
+    color: white;
+    margin: 0 0 20px;
+}
+
+.proofs-page .main-footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.proofs-page .main-footer li {
+    margin-bottom: 12px;
+}
+
+.proofs-page .main-footer a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.proofs-page .main-footer a:hover {
+    color: white;
+}
+
+.proofs-page .footer-bottom {
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.proofs-page .footer-bottom p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* =========================================
+   Responsive Design
+ ========================================= */
+
+@media (max-width: 1024px) {
+    .hero-visual {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        width: 100%;
+        height: 50vh;
+        margin-top: 60px;
+    }
+
+    .formula-display {
+        flex-direction: column;
+    }
+
+    .visual-proofs-section .proofs-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .theorems-list {
+        grid-template-columns: 1fr;
+    }
+
+    .reasoning-challenges {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .proofs-page .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .proofs-page .hero-stats {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .intuition-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .formula-tabs {
+        flex-wrap: wrap;
+    }
+
+    .formula-tab {
+        flex: none;
+        min-width: 200px;
+    }
+
+    .derivation-selector h3 {
+        text-align: left;
+    }
+
+    .visual-proof-card h3 {
+        padding: 16px;
+        font-size: 1.2rem;
+    }
+
+    .proof-explanation {
+        padding: 16px;
+    }
+
+    .proof-canvas-container canvas {
+        height: 300px;
+    }
+
+    .theorem-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .theorem-body {
+        padding-left: 70px;
+    }
+
+    .theorem-title-block h3 {
+        font-size: 1.15rem;
+    }
+
+    .theorem-statement {
+        font-size: 1rem;
+    }
+
+    .challenge-header {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+    .reasoning-cta h3 {
+        font-size: 1.5rem;
+    }
+
+    .proofs-page .main-footer .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .proofs-page .main-footer .footer-section {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .proofs-page .hero-title {
+        font-size: 2rem;
+    }
+
+    .formula-math {
+        font-size: 1.8rem;
+    }
+
+    .step-math, .step-math-block p, .step-math-final {
+        font-size: 1rem;
+    }
+
+    .step-header {
+        padding: 14px 16px;
+    }
+
+    .proof-canvas-container canvas {
+        height: 250px;
+    }
+
+    .derivation-content {
+        padding: 24px;
+    }
+
+    .derivation-goal {
+        font-size: 1rem;
+        padding: 12px 16px;
+    }
+
+    .intuition-card, .challenge-card {
+        padding: 20px;
+    }
+}
+
+/* =========================================
+   Accessibility
+ ========================================= */
+
+[aria-expanded="false"] + .step-content,
+[aria-expanded="false"] + .step-content.hidden {
+    display: none;
+}
+
+[aria-expanded="true"] + .step-content {
+    display: block;
+}
+
+/* Focus states */
+:focus {
+    outline: 3px solid var(--proofs-accent);
+    outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+:focus-visible {
+    outline: 3px solid var(--proofs-accent);
+    outline-offset: 2px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .intuition-card:hover,
+    .visual-proof-card:hover,
+    .theorem-card:hover,
+    .cta-button:hover,
+    .explore-btn:hover,
+    .animate-btn:hover {
+        transform: none;
+    }
+
+    .step-header:hover,
+    .derivation-step:hover {
+        box-shadow: none;
+    }
+
+    .proofs-page main *,
+    .proofs-page footer * {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    :root {
+        --card-bg: #ffffff;
+        --border-color: #1f2937;
+    }
+
+    .intuition-card,
+    .visual-proof-card,
+    .theorem-card,
+    .challenge-card {
+        border: 2px solid var(--border-color);
+    }
+
+    .step-toggle:hover,
+    .reveal-btn:hover {
+        background: #ffffff;
+    }
+}

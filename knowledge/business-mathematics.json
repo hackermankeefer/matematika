@@ -1,0 +1,310 @@
+{
+  "topicName": "Business Mathematics",
+  "topicOverview": "Business Mathematics applies percentages to real-world earning, buying, and selling problems. Grade 11 competencies include percentage increase and decrease, inflation, markups, discounts, VAT, profit and loss in absolute and percentage terms, and payroll. Identify the correct original/base amount, follow the stated order of operations, and use only the rates and tax rules supplied by the problem.",
+  "keywords": ["business mathematics", "business math", "salary", "annual salary", "weekly salary", "monthly salary", "wage", "hourly wage", "overtime", "allowance", "commission", "piecework", "gross earnings", "gross pay", "net earnings", "net income", "take-home pay", "payroll", "deduction", "tax deduction", "percentage", "percent", "percentage increase", "percentage decrease", "increase", "decrease", "inflation", "markup", "mark up", "markdown", "mark down", "profit", "loss", "discount", "VAT", "value-added tax", "selling price", "cost price", "simple interest", "compound interest", "present value", "future value", "annuity", "annuities", "loan", "amortization", "depreciation", "budget", "tax", "hire purchase", "installment", "exchange rate"],
+  "prerequisites": ["Decimal, fraction, and ratio arithmetic", "Percentages", "Rearranging formulas", "Exponents", "Reading tables and financial statements", "Consistent currency and time units"],
+  "subtopics": [
+    {
+      "name": "Wages, Salaries, Overtime, Allowances, Commission and Piecework",
+      "keywords": ["salary", "annual salary", "weekly wages", "monthly wages", "hourly rate", "hourly wage", "overtime pay", "overtime hours", "allowance", "allowances", "benefit", "benefits", "commission", "piecework", "pay per piece", "gross earnings", "gross income", "gross pay", "net earnings", "net income", "payroll", "digital payslip", "deductions", "income tax", "tax computation", "taxable income", "tax withheld", "take-home pay"],
+      "definitions": [
+        {"term": "Salary", "meaning": "A fixed amount of pay stated for a time period, such as a year; convert it to another pay period using the number of periods stated or specified in the problem."},
+        {"term": "Wage", "meaning": "Pay calculated from time worked, commonly an hourly rate multiplied by hours worked."},
+        {"term": "Overtime pay", "meaning": "Additional pay for overtime hours, calculated using the stated overtime multiplier and hourly rate."},
+        {"term": "Allowance", "meaning": "An additional stated amount added to earnings, such as a travel or meal allowance."},
+        {"term": "Commission", "meaning": "Pay calculated as a stated percentage of eligible sales."},
+        {"term": "Piecework pay", "meaning": "Pay calculated by multiplying the number of completed units by the stated pay per unit."},
+        {"term": "Benefit", "meaning": "A stated monetary employment benefit added to gross income when the problem says it is included in earnings; do not assume an unstated taxable value or treatment."},
+        {"term": "Gross income", "meaning": "Total salary, wages, overtime, benefits, allowances, commission, piecework, and other stated earnings before deductions; also called gross earnings."},
+        {"term": "Deduction", "meaning": "A stated amount subtracted from gross income, such as a supplied tax amount or other payroll deduction."},
+        {"term": "Tax computation", "meaning": "Calculate tax only from the rate or table and taxable base supplied by the problem."},
+        {"term": "Net income", "meaning": "Take-home income after the stated tax and other deductions are subtracted from gross income; also called net earnings."}
+      ],
+      "formulas": [
+        {"name": "Convert annual salary to weekly or monthly earnings", "latex": "W = S / 52, M = S / 12", "variables": [{"symbol": "S", "meaning": "annual salary"}, {"symbol": "W", "meaning": "weekly earnings using 52 weeks per year"}, {"symbol": "M", "meaning": "monthly earnings using 12 months per year"}]},
+        {"name": "Hourly wage", "latex": "P=rh", "variables": [{"symbol": "r", "meaning": "stated hourly rate"}, {"symbol": "h", "meaning": "hours worked"}, {"symbol": "P", "meaning": "regular pay"}]},
+        {"name": "Pay with overtime", "latex": "P=rh_r+(mr)h_o", "variables": [{"symbol": "r", "meaning": "hourly rate"}, {"symbol": "h_r", "meaning": "regular hours"}, {"symbol": "h_o", "meaning": "overtime hours"}, {"symbol": "m", "meaning": "stated overtime multiplier"}]},
+        {"name": "Commission and piecework", "latex": "C = s * q / 100, P = u * n", "variables": [{"symbol": "s", "meaning": "eligible sales"}, {"symbol": "q", "meaning": "commission rate as a percent"}, {"symbol": "u", "meaning": "pay per completed unit"}, {"symbol": "n", "meaning": "number of units"}]},
+        {"name": "Gross income and net income", "latex": "G = S + W + O + B + A + C + P; N = G - T - D", "variables": [{"symbol": "S", "meaning": "salary"}, {"symbol": "W", "meaning": "regular wages"}, {"symbol": "O", "meaning": "stated overtime pay"}, {"symbol": "B", "meaning": "monetary benefits included by the problem"}, {"symbol": "A", "meaning": "allowances"}, {"symbol": "C", "meaning": "commission"}, {"symbol": "P", "meaning": "piecework pay"}, {"symbol": "G", "meaning": "gross income before deductions"}, {"symbol": "T", "meaning": "tax calculated from the supplied rate/table and taxable base"}, {"symbol": "D", "meaning": "other stated deductions"}, {"symbol": "N", "meaning": "net income after deductions"}]},
+        {"name": "Tax from a stated rate and taxable base", "latex": "T = X * r / 100", "variables": [{"symbol": "X", "meaning": "taxable base explicitly identified in the problem"}, {"symbol": "r", "meaning": "tax rate supplied by the problem"}, {"symbol": "T", "meaning": "tax amount"}]},
+        {"name": "Progressive tax from a supplied table", "latex": "T = sum(r_i * x_i / 100)", "variables": [{"symbol": "r_i", "meaning": "rate in supplied tax bracket i"}, {"symbol": "x_i", "meaning": "portion of taxable income that falls within bracket i"}, {"symbol": "T", "meaning": "total tax across the supplied brackets"}]}
+      ],
+      "conditions": ["Use 52 weeks and 12 months for annual salary conversion unless the problem specifies a different convention.", "Use only the overtime rate or multiplier stated in the problem; do not assume a legal rate.", "Apply commission only to the sales amount described as commissionable.", "Add each stated monetary benefit or allowance once to gross income; use only its stated value and treatment.", "Subtract tax and other deductions from gross income to find net income.", "For tax, use the supplied rate or table and the taxable base identified by the problem. Apply each progressive rate only to the income portion in its bracket. If the rate/table or base is missing, ask for it rather than supplying jurisdiction-specific rules.", "A digital payslip should show earnings/additions, gross income, each tax and other deduction, total deductions, and net income in that order.", "Keep the currency and pay period attached to the final result and explain whether it is gross or net."],
+      "importantProperties": ["Gross income is found before deductions; net income is gross income minus the stated tax and other deductions.", "Overtime pay is the regular hourly rate multiplied by the stated overtime multiplier and overtime hours, in addition to regular pay.", "Tax is computed only from a supplied rate/table and its stated taxable base; progressive tax rates apply to their own brackets, not to all income.", "Commission and piecework pay depend on the stated eligible sales or completed output."],
+      "workedExamples": ["Annual salary $62,400: monthly earnings = 62,400/12 = $5,200; weekly earnings = 62,400/52 = $1,200.", "Hourly wage $18 for 35 hours: 18×35 = $630 gross pay.", "At $20 per hour, 40 regular hours and 5 overtime hours paid at 1.5 times the rate: regular pay = $800; overtime pay = 20×1.5×5 = $150; gross pay = $950.", "Sales of $4,000 at 6% commission: 0.06×4,000 = $240 commission.", "Making 120 items at $4 per item: 120×4 = $480 piecework pay.", "Monthly salary $4,000 plus overtime pay $250 and a stated $150 benefit gives gross income of $4,400. With $320 income tax withheld and a $300 insurance deduction, total deductions are $620 and net income is $3,780.", "When a problem states tax is 10% of gross income of $4,400, tax = 0.10×4,400 = $440. Use that rate only because the problem supplies both the rate and base.", "If a problem supplies a table of 0% on the first $1,000, 10% on the next $2,000, and 20% on remaining taxable income of $4,000, compute tax by bracket: $0 + $200 + $200 = $400. These rates are example-provided values, not general tax rules."],
+      "commonMistakes": ["Dividing annual salary by 12 for weekly pay instead of by 52.", "Applying the overtime multiplier to regular hours or forgetting to add regular pay.", "Treating a percentage as a whole-number multiplier, or applying commission to the wrong sales base.", "Multiplying a piece rate by the rate instead of the number of units.", "Subtracting deductions before finding gross income, or labeling gross income as take-home income.", "Assuming a monetary/taxable value for a benefit when the problem does not provide one.", "Using an unstated tax rate, tax table, or taxable base."],
+      "prerequisites": ["Decimal and percentage arithmetic", "Multiplication, addition, and subtraction", "Reading pay rates and time periods"],
+      "exampleProblemTypes": ["Convert an annual salary to weekly or monthly earnings.", "Calculate regular hourly wages.", "Calculate regular and overtime pay using a stated multiplier or stated overtime amount.", "Add stated monetary benefits and allowances to gross income.", "Calculate commission from eligible sales or pay from piecework output.", "Prepare a digital payslip showing earnings, additions, gross income, tax, other deductions, total deductions, and net income.", "Calculate tax using a supplied rate/table and taxable base; ask for missing tax information rather than guessing.", "Compare pay arrangements using the same time period and identify the better option."]
+    },
+    {
+      "name": "Percentages",
+      "keywords": ["percentage", "percent", "percentage of", "part whole", "base amount"],
+      "definitions": [{"term": "Percentage", "meaning": "A ratio expressed per one hundred."}, {"term": "Rate", "meaning": "The percent number divided by 100, written as a decimal for calculation."}],
+      "formulas": [
+        {"name": "Find p percent of A", "latex": "\\text{part}=\\frac{p}{100}A", "variables": [{"symbol": "p", "meaning": "percentage rate written as a number such as 15"}, {"symbol": "A", "meaning": "base or whole amount"}, {"symbol": "part", "meaning": "amount represented by the percentage"}]},
+        {"name": "Find a percentage rate", "latex": "p=\\frac{\\text{part}}{A}\\times100\\%", "variables": [{"symbol": "part", "meaning": "portion being compared"}, {"symbol": "A", "meaning": "whole or base, not zero"}]}
+      ],
+      "conditions": ["Identify which amount is the whole/base before calculating.", "Convert a percent to a decimal by dividing by 100 when multiplying."],
+      "importantProperties": ["100% of an amount is the full amount; 1% is one hundredth.", "A percentage is dimensionless, so the resulting part has the same units as the base."],
+      "workedExamples": ["Find 15% of $240: 0.15 × 240 = $36.", "$18 is what percent of $120? (18/120) × 100% = 15%."],
+      "commonMistakes": ["Multiplying by 15 instead of 0.15 when finding 15%.", "Using the part as the base when the question asks for a percentage of the whole.", "Reporting a decimal rate as a percent without multiplying by 100."],
+      "prerequisites": ["Fractions and decimals", "Multiplication and division"],
+      "exampleProblemTypes": ["Find a percentage of a price or income.", "Find what percent one quantity is of another.", "Find the whole amount from a known percentage and part."]
+    },
+    {
+      "name": "Percentage increase and decrease",
+      "keywords": ["percentage increase", "percentage decrease", "percent change", "increase by", "decrease by", "new amount", "original amount"],
+      "definitions": [{"term": "Percentage change", "meaning": "The signed change divided by the original/base amount, expressed as a percent."}, {"term": "Multiplier", "meaning": "The factor applied to the current base value: 1+r for an increase or 1-r for a decrease, where r is a decimal."}, {"term": "Inflation", "meaning": "A percentage increase in prices over time; when repeated each period, apply the rate to the price at the start of each period."}],
+      "formulas": [
+        {"name": "Percentage change", "latex": "\\frac{\\text{new}-\\text{original}}{\\text{original}}\\times100\\%", "variables": [{"symbol": "new", "meaning": "final amount"}, {"symbol": "original", "meaning": "starting amount; must not be zero"}]},
+        {"name": "Increase or decrease by rate r", "latex": "N=O(1\\pm r)", "variables": [{"symbol": "N", "meaning": "new amount"}, {"symbol": "O", "meaning": "original amount"}, {"symbol": "r", "meaning": "rate as a decimal; plus for increase, minus for decrease"}]}
+      ],
+      "conditions": ["Identify the starting/original amount before applying a rate; it is the base for a single percentage change.", "Use the original value as the denominator for percent change.", "The multiplier formula uses r as a decimal, for example 8%=0.08.", "For repeated inflation or other repeated changes, apply each multiplier to the current amount, not repeatedly to the initial value."],
+      "importantProperties": ["A percentage increase and then the same percentage decrease do not usually return to the starting value.", "Successive percentage changes multiply their factors; their rates cannot generally be added.", "Percentage change can be negative for a decrease.", "An absolute change is an amount; a percentage change compares that amount with the original base."],
+      "workedExamples": ["Increase $80 by 15%: increase amount = 0.15×80=$12; new value = $80+$12=$92.", "Decrease $250 by 12%: decrease amount = 0.12×250=$30; reduced value = $250-$30=$220.", "A price rises from $40 to $46: absolute increase = $6; percentage increase = (6/40)×100%=15%, using $40 as the base.", "A $1,000 item rises by 3% inflation each year for 2 years: $1,000(1.03)^2=$1,060.90."],
+      "commonMistakes": ["Using the new amount as the denominator instead of the original/base amount.", "Adding successive percentage rates instead of multiplying each stage's factor.", "Subtracting 12 rather than 12% of the original value.", "Confusing the VAT or discount amount with the price after VAT or discount."],
+      "prerequisites": ["Percentages", "Decimal multiplication"],
+      "exampleProblemTypes": ["Find the increase or decrease amount and the new value.", "Find percentage increase or decrease using the original amount as the base.", "Model inflation over one or more periods.", "Apply several successive percentage changes in order."]
+    },
+    {
+      "name": "Markup",
+      "keywords": ["markup", "mark up", "cost price", "selling price", "markup rate", "retail price"],
+      "definitions": [{"term": "Markup", "meaning": "The amount added to cost to set a selling or listed price."}, {"term": "Markup rate", "meaning": "Markup divided by cost, expressed as a percentage."}],
+      "formulas": [
+        {"name": "Markup amount", "latex": "M=Cm", "variables": [{"symbol": "M", "meaning": "markup amount"}, {"symbol": "C", "meaning": "cost price"}, {"symbol": "m", "meaning": "markup rate as a decimal"}]},
+        {"name": "Selling price after markup", "latex": "S=C(1+m)", "variables": [{"symbol": "S", "meaning": "selling price before discount or tax"}, {"symbol": "C", "meaning": "cost price"}, {"symbol": "m", "meaning": "markup rate based on cost"}]}
+      ],
+      "conditions": ["Markup percentage is normally based on cost price unless the problem defines another base.", "Convert the rate to a decimal before multiplying."],
+      "importantProperties": ["Markup rate and profit margin use different denominators: cost and selling price, respectively.", "Selling price equals cost plus markup."],
+      "workedExamples": ["Cost is $80 and markup is 25%: markup=$20 and selling price=$100.", "A store pays $60 and sells for $75: markup rate=(15/60)×100%=25%."],
+      "commonMistakes": ["Calculating markup percent using selling price as the base.", "Adding the rate as a whole number rather than a decimal.", "Including tax or discount before the question asks for it."],
+      "prerequisites": ["Percentages", "Percentage increase", "Currency arithmetic"],
+      "exampleProblemTypes": ["Find selling price from cost and markup rate.", "Find markup amount or markup rate.", "Compare two pricing policies." ]
+    },
+    {
+      "name": "Markdown",
+      "keywords": ["markdown", "mark down", "price reduction", "reduced price", "markdown rate", "sale price"],
+      "definitions": [{"term": "Markdown", "meaning": "A reduction from an item's original or listed price."}, {"term": "Markdown rate", "meaning": "The reduction divided by the original listed price, expressed as a percentage."}],
+      "formulas": [
+        {"name": "Markdown amount", "latex": "D=Ld", "variables": [{"symbol": "D", "meaning": "markdown amount"}, {"symbol": "L", "meaning": "original listed price"}, {"symbol": "d", "meaning": "markdown rate as a decimal"}]},
+        {"name": "Price after markdown", "latex": "S=L(1-d)", "variables": [{"symbol": "S", "meaning": "reduced price"}, {"symbol": "L", "meaning": "original listed price"}, {"symbol": "d", "meaning": "markdown rate based on listed price"}]}
+      ],
+      "conditions": ["The markdown rate is based on the stated original/listed price.", "A markdown reduces price before any later discount, tax, or fee unless specified otherwise."],
+      "importantProperties": ["A markdown amount is the difference between listed price and reduced price.", "A price can be marked down more than once; apply each new rate to the then-current price if stated."],
+      "workedExamples": ["A $120 item is marked down 20%: 120(0.80)=$96.", "A $90 item is reduced to $72: markdown rate=(18/90)×100%=20%."],
+      "commonMistakes": ["Applying a markdown to cost instead of listed price.", "Subtracting the percent number rather than its value.", "Treating a markdown amount and markdown rate as the same quantity."],
+      "prerequisites": ["Percentages", "Percentage decrease"],
+      "exampleProblemTypes": ["Find sale/listed price after markdown.", "Find the markdown amount or percentage.", "Compare original and reduced prices." ]
+    },
+    {
+      "name": "Discounts",
+      "keywords": ["discount", "discount rate", "sale", "coupon", "successive discount", "trade discount"],
+      "definitions": [{"term": "Discount", "meaning": "An amount subtracted from a listed price."}, {"term": "Net price", "meaning": "The price remaining after discounts, before additional taxes or fees unless stated otherwise."}],
+      "formulas": [
+        {"name": "Discount amount and net price", "latex": "D=Ld,\\quad N=L(1-d)", "variables": [{"symbol": "L", "meaning": "list price"}, {"symbol": "d", "meaning": "discount rate as a decimal"}, {"symbol": "D", "meaning": "discount amount"}, {"symbol": "N", "meaning": "net price"}]},
+        {"name": "Successive discounts", "latex": "N=L(1-d_1)(1-d_2)", "variables": [{"symbol": "d_1,d_2", "meaning": "successive discount rates as decimals"}, {"symbol": "L", "meaning": "original list price"}, {"symbol": "N", "meaning": "price after both discounts"}]}
+      ],
+      "conditions": ["Apply successive discounts in sequence to the current price.", "Tax and shipping order depends on the problem; follow the stated order."],
+      "importantProperties": ["Successive discounts are not generally added.", "The equivalent single discount for two rates is 1-(1-d_1)(1-d_2)."],
+      "workedExamples": ["A $200 item receives 10% then 5% off: 200(0.90)(0.95)=$171.", "The combined equivalent discount is 1-(0.90)(0.95)=14.5%, not 15%."],
+      "commonMistakes": ["Adding successive discount rates.", "Applying the second discount to the original price when it should apply to the reduced price.", "Applying sales tax in the wrong order."],
+      "prerequisites": ["Percentages", "Percentage decrease", "Multiplication of factors"],
+      "exampleProblemTypes": ["Calculate a final sale price after one or more discounts.", "Find an equivalent single discount.", "Compare coupons or trade discounts." ]
+    },
+    {
+      "name": "VAT",
+      "keywords": ["VAT", "value-added tax", "value added tax", "VAT amount", "price including VAT", "VAT-inclusive price", "price before VAT", "excluding VAT"],
+      "definitions": [{"term": "VAT amount", "meaning": "Tax calculated as the stated VAT rate multiplied by the price before VAT."}, {"term": "Price including VAT", "meaning": "The price before VAT plus the VAT amount."}],
+      "formulas": [
+        {"name": "VAT on a price before VAT", "latex": "VAT = P * r / 100; total price = P + VAT", "variables": [{"symbol": "P", "meaning": "price before VAT and the percentage base"}, {"symbol": "r", "meaning": "VAT rate as a percent"}]},
+        {"name": "Find VAT within a VAT-inclusive price", "latex": "price before VAT = T / (1 + r/100); VAT = T - price before VAT", "variables": [{"symbol": "T", "meaning": "price including VAT"}, {"symbol": "r", "meaning": "VAT rate as a percent"}]}
+      ],
+      "conditions": ["Use the VAT rate supplied by the problem; do not assume a jurisdiction-specific rate.", "If the price is before VAT, calculate VAT from that base and add it to obtain the total.", "If the price already includes VAT, do not add VAT again; use the inclusive-price formula to separate the tax amount."],
+      "importantProperties": ["VAT amount and price including VAT are different quantities.", "The VAT rate applies to the price before VAT, not to the total including VAT."],
+      "workedExamples": ["Price before VAT is $100 and the stated rate is 12%: VAT = 0.12×100=$12; total including VAT = $112.", "A total of $112 includes 12% VAT: price before VAT = 112/1.12=$100; VAT amount = $112-$100=$12."],
+      "commonMistakes": ["Calling the VAT amount the total price.", "Adding VAT to a price that already includes VAT.", "Applying the VAT rate to the VAT-inclusive total instead of the pre-VAT price."],
+      "prerequisites": ["Percentages", "Multiplication and division", "Percentage increase"],
+      "exampleProblemTypes": ["Find the VAT amount and total price from a pre-VAT price and stated rate.", "Separate the VAT amount from a VAT-inclusive total.", "Apply VAT after other stated price changes in the order specified."]
+    },
+    {
+      "name": "Multi-step percentage price changes",
+      "keywords": ["multi-step percentage", "successive percentage changes", "markup then discount", "discount then VAT", "price including markup discount VAT", "final price after markup discount VAT"],
+      "definitions": [{"term": "Sequential percentage change", "meaning": "A series of percentage adjustments where each rate is applied to the value produced by the previous stage."}],
+      "formulas": [
+        {"name": "Sequential markup, discount, and VAT", "latex": "F = C(1+m)(1-d)(1+v)", "variables": [{"symbol": "C", "meaning": "original cost price"}, {"symbol": "m", "meaning": "markup rate as a decimal"}, {"symbol": "d", "meaning": "discount rate as a decimal"}, {"symbol": "v", "meaning": "VAT rate as a decimal"}, {"symbol": "F", "meaning": "final price including VAT"}]}
+      ],
+      "conditions": ["Use the order stated in the problem; do not combine or add percentage rates.", "Treat each intermediate selling price as the base for the next stage.", "Apply VAT to the price immediately before VAT unless the problem specifies a different taxable base."],
+      "importantProperties": ["Changing the order of markup, discount, and VAT can change the result.", "Keep each intermediate amount so the final answer can be explained and checked."],
+      "workedExamples": ["An item costs $100, receives a 25% markup, then a 10% discount, then 12% VAT: $100×1.25=$125; $125×0.90=$112.50; $112.50×1.12=$126 final price."],
+      "commonMistakes": ["Adding markup, discount, and VAT rates into one percentage.", "Applying each percentage to the original cost instead of the preceding stage.", "Forgetting whether the requested final price includes VAT."],
+      "prerequisites": ["Percentage increase and decrease", "Markup", "Discounts", "VAT"],
+      "exampleProblemTypes": ["Calculate a final price through multiple ordered percentage changes.", "Show each intermediate price and name its base.", "Compare absolute price changes with percentage rates at each stage."]
+    },
+    {
+      "name": "Profit and loss",
+      "keywords": ["profit", "loss", "cost price", "selling price", "sale price profit", "cost and sale price", "percentage profit", "profit percentage", "loss percentage", "profit margin", "profit rate", "loss rate"],
+      "definitions": [{"term": "Profit", "meaning": "The positive difference when selling price exceeds total cost."}, {"term": "Loss", "meaning": "The positive difference when total cost exceeds selling price."}, {"term": "Profit margin", "meaning": "Profit divided by selling price, expressed as a percentage; distinct from markup rate."}],
+      "formulas": [
+        {"name": "Profit or loss amount", "latex": "P=S-C", "variables": [{"symbol": "P", "meaning": "profit if positive and loss amount with opposite sign if negative"}, {"symbol": "S", "meaning": "selling price"}, {"symbol": "C", "meaning": "total cost"}]},
+        {"name": "Profit or loss rate", "latex": "\\text{rate}=\\frac{|S-C|}{C}\\times100\\%", "variables": [{"symbol": "S", "meaning": "selling price"}, {"symbol": "C", "meaning": "cost-price base, nonzero"}]},
+        {"name": "Profit margin", "latex": "\\text{margin}=\\frac{S-C}{S}\\times100\\%", "variables": [{"symbol": "S", "meaning": "selling price, nonzero"}, {"symbol": "C", "meaning": "cost"}]}
+      ],
+      "conditions": ["Include all stated costs in C.", "Profit/loss percentage normally uses cost as the base; margin uses selling price.", "Use positive rates for stated profit or loss amounts and identify which case applies."],
+      "importantProperties": ["S>C implies profit; S<C implies loss; S=C is break-even.", "A percentage profit and equal percentage loss do not cancel because their bases differ."],
+      "workedExamples": ["Buy for $50, sell for $65: profit=$15 and profit rate=15/50=30%.", "Buy for $80, sell for $68: loss=$12 and loss rate=12/80=15%."],
+      "commonMistakes": ["Using selling price rather than cost as the profit-rate base.", "Ignoring fees or overhead included in total cost.", "Confusing markup with margin."],
+      "prerequisites": ["Percentages", "Markup", "Discounts", "Currency arithmetic"],
+      "exampleProblemTypes": ["Find profit/loss amount and percentage.", "Find the required selling price for a target profit rate.", "Compare markup, margin, and break-even prices." ]
+    },
+    {
+      "name": "Commission",
+      "keywords": ["commission", "commission rate", "sales commission", "base salary", "commission earnings", "sales target"],
+      "definitions": [{"term": "Commission", "meaning": "Pay calculated as a percentage of sales or another stated base."}, {"term": "Commission rate", "meaning": "The commission amount divided by the commissionable base."}],
+      "formulas": [
+        {"name": "Commission pay", "latex": "C=rs", "variables": [{"symbol": "C", "meaning": "commission earned"}, {"symbol": "r", "meaning": "commission rate as a decimal"}, {"symbol": "s", "meaning": "eligible sales or commission base"}]},
+        {"name": "Total earnings with base pay", "latex": "E=B+rs", "variables": [{"symbol": "E", "meaning": "total earnings"}, {"symbol": "B", "meaning": "base salary"}, {"symbol": "r", "meaning": "commission rate"}, {"symbol": "s", "meaning": "eligible sales"}]}
+      ],
+      "conditions": ["Apply the rate only to the commissionable sales specified.", "For tiered commission, calculate each tier using its stated interval and rate.", "Check whether returns, tax, or a threshold affect eligible sales."],
+      "importantProperties": ["Commission is proportional to the base when the rate is fixed.", "With a base salary, total pay is base plus commission; do not calculate commission on the base salary."],
+      "workedExamples": ["At 6% commission on $4,000 sales: 0.06×4,000=$240.", "Base pay $500 plus 4% of $3,000 sales: 500+120=$620."],
+      "commonMistakes": ["Using the percent number instead of its decimal rate.", "Applying a tier rate to all sales when only the excess is in that tier.", "Adding base salary before applying a sales-only commission."],
+      "prerequisites": ["Percentages", "Linear expressions", "Reading tier tables"],
+      "exampleProblemTypes": ["Calculate commission or total earnings.", "Find the sales needed to reach an income target.", "Compare flat-rate and tiered commission plans." ]
+    },
+    {
+      "name": "Simple interest",
+      "keywords": ["simple interest", "principal", "interest amount", "simple-interest balance", "flat rate interest"],
+      "definitions": [{"term": "Principal", "meaning": "The original amount invested or borrowed."}, {"term": "Simple interest", "meaning": "Interest calculated only on the original principal for each period."}],
+      "formulas": [
+        {"name": "Simple interest", "latex": "I=Prt", "variables": [{"symbol": "I", "meaning": "interest amount"}, {"symbol": "P", "meaning": "principal"}, {"symbol": "r", "meaning": "rate per time unit as a decimal"}, {"symbol": "t", "meaning": "number of matching time units"}]},
+        {"name": "Simple-interest accumulated value", "latex": "A=P(1+rt)", "variables": [{"symbol": "A", "meaning": "principal plus interest"}, {"symbol": "P,r,t", "meaning": "principal, rate per period, and number of periods"}]}
+      ],
+      "conditions": ["Rate and time must use matching periods.", "Use r as a decimal.", "Interest is not added to principal for subsequent interest calculations."],
+      "importantProperties": ["Simple interest grows linearly with time.", "The interest amount is proportional to P, r, and t."],
+      "workedExamples": ["P=$1,000, r=5% per year, t=3 years: I=1000(0.05)(3)=$150 and A=$1,150.", "If rate is annual and time is 18 months, use t=1.5 years or convert to a monthly rate consistently."],
+      "commonMistakes": ["Using 5 instead of 0.05.", "Mixing annual rate with months without converting.", "Using compound interest when the question specifies simple interest."],
+      "prerequisites": ["Percentages", "Substitution into formulas", "Time-unit conversion"],
+      "exampleProblemTypes": ["Find interest, final amount, rate, principal, or time.", "Compare simple interest with compound interest.", "Interpret a simple-interest contract." ]
+    },
+    {
+      "name": "Compound interest",
+      "keywords": ["compound interest", "compounding frequency", "nominal rate", "effective rate", "interest on interest"],
+      "definitions": [{"term": "Compound interest", "meaning": "Interest added to the balance so later interest is calculated on principal plus accumulated interest."}, {"term": "Compounding period", "meaning": "The interval at which interest is added to the account balance."}],
+      "formulas": [
+        {"name": "Compound accumulated value", "latex": "A=P\\left(1+\\frac{r}{n}\\right)^{nt}", "variables": [{"symbol": "A", "meaning": "future/accumulated value"}, {"symbol": "P", "meaning": "principal"}, {"symbol": "r", "meaning": "nominal annual rate as a decimal"}, {"symbol": "n", "meaning": "compounding periods per year"}, {"symbol": "t", "meaning": "time in years"}]},
+        {"name": "Effective annual rate", "latex": "r_{eff}=\\left(1+\\frac{r}{n}\\right)^n-1", "variables": [{"symbol": "r_eff", "meaning": "effective annual rate as a decimal"}, {"symbol": "r", "meaning": "nominal annual rate"}, {"symbol": "n", "meaning": "compounding periods per year"}]}
+      ],
+      "conditions": ["The formula assumes a fixed nominal rate and regular compounding.", "The annual rate r is nominal; divide by n for the periodic rate.", "Time t is in years and total periods are nt."],
+      "importantProperties": ["Interest is earned on previously credited interest.", "For positive rates, more frequent compounding usually increases the balance.", "Effective annual rate accounts for within-year compounding."],
+      "workedExamples": ["P=$1,000 at 12% nominal compounded monthly for 1 year: A=1000(1+0.12/12)^12≈$1,126.83.", "At 6% compounded quarterly, periodic rate is 0.06/4=1.5% and 3 years has 12 periods."],
+      "commonMistakes": ["Using the annual rate as the periodic rate.", "Using t as the number of compounding periods when the formula expects years.", "Using nt incorrectly as the exponent."],
+      "prerequisites": ["Simple interest", "Exponent rules", "Percentages", "Time-unit conversion"],
+      "exampleProblemTypes": ["Find accumulated value or compound interest.", "Compare investments with different compounding frequencies.", "Find the effective annual rate.", "Solve for an unknown time or nominal rate when methods are provided." ]
+    },
+    {
+      "name": "Present value",
+      "keywords": ["present value", "discounted value", "discount rate", "value today", "future payment value today"],
+      "definitions": [{"term": "Present value", "meaning": "The amount today equivalent to a specified future amount at a stated interest/discount rate."}, {"term": "Discounting", "meaning": "Converting a future value into a present value by reversing accumulation."}],
+      "formulas": [
+        {"name": "Present value with periodic compounding", "latex": "P=\\frac{A}{(1+i)^n}", "variables": [{"symbol": "P", "meaning": "present value"}, {"symbol": "A", "meaning": "future amount"}, {"symbol": "i", "meaning": "interest rate per period as a decimal"}, {"symbol": "n", "meaning": "number of periods"}]},
+        {"name": "Present value with nominal annual compounding", "latex": "P=\\frac{A}{\\left(1+\\frac{r}{m}\\right)^{mt}}", "variables": [{"symbol": "r", "meaning": "nominal annual rate"}, {"symbol": "m", "meaning": "compounding periods per year"}, {"symbol": "t", "meaning": "years"}]}
+      ],
+      "conditions": ["Use the same period rate and period count as the compounding schedule.", "The future amount and present value are single lump sums, not a stream of payments.", "Assume a fixed rate over the stated period unless the problem says otherwise."],
+      "importantProperties": ["For a positive rate and positive time, present value is less than future value.", "Present value decreases as the discount rate or time increases."],
+      "workedExamples": ["Receive $1,210 in 2 years at 10% annually: P=1210/(1.10)^2=$1,000.", "For 12% nominal compounded monthly, use i=0.12/12 per month and count months."],
+      "commonMistakes": ["Multiplying instead of discounting/dividing.", "Using a nominal annual rate as a per-period rate.", "Using an annuity formula for one future lump sum."],
+      "prerequisites": ["Compound interest", "Rearranging formulas", "Exponents"],
+      "exampleProblemTypes": ["Find the amount to invest today to reach a future target.", "Compare cash today with a single future payment.", "Find the rate or time consistent with a present and future value." ]
+    },
+    {
+      "name": "Future value",
+      "keywords": ["future value", "accumulated value", "investment growth", "single deposit future value", "amount after n periods"],
+      "definitions": [{"term": "Future value", "meaning": "The value of a current lump sum after it earns interest for a specified number of periods."}],
+      "formulas": [
+        {"name": "Future value of a lump sum", "latex": "A=P(1+i)^n", "variables": [{"symbol": "A", "meaning": "future value"}, {"symbol": "P", "meaning": "present principal"}, {"symbol": "i", "meaning": "interest rate per period as a decimal"}, {"symbol": "n", "meaning": "number of periods"}]}
+      ],
+      "conditions": ["The rate i and number of periods n must use the same period.", "This formula is for one starting lump sum; repeated deposits use an annuity formula.", "Use the stated compounding convention."],
+      "importantProperties": ["For positive i, future value increases with time and rate.", "Future value is the inverse operation of present-value discounting."],
+      "workedExamples": ["Invest $500 at 4% annually for 3 years: A=500(1.04)^3≈$562.43.", "At 1% monthly for 24 months, use i=0.01 and n=24."],
+      "commonMistakes": ["Forgetting that n is the number of periods, not automatically years.", "Using this lump-sum formula for regular deposits.", "Applying a percent rate without converting it to a decimal."],
+      "prerequisites": ["Compound interest", "Exponent rules", "Rate and time conversion"],
+      "exampleProblemTypes": ["Find an investment balance after a stated time.", "Compare future value under different rates or terms.", "Determine how much to invest now to meet a target." ]
+    },
+    {
+      "name": "Annuities",
+      "keywords": ["annuity", "annuities", "regular payments", "ordinary annuity", "annuity due", "payment stream", "sinking fund"],
+      "definitions": [{"term": "Annuity", "meaning": "A sequence of equal payments or deposits made at regular intervals."}, {"term": "Ordinary annuity", "meaning": "Payments made at the end of each period."}, {"term": "Annuity due", "meaning": "Payments made at the beginning of each period."}],
+      "formulas": [
+        {"name": "Future value of an ordinary annuity", "latex": "FV=R\\frac{(1+i)^n-1}{i}", "variables": [{"symbol": "FV", "meaning": "value just after the final payment period"}, {"symbol": "R", "meaning": "equal payment per period"}, {"symbol": "i", "meaning": "interest rate per payment period as a decimal"}, {"symbol": "n", "meaning": "number of payments"}]},
+        {"name": "Present value of an ordinary annuity", "latex": "PV=R\\frac{1-(1+i)^{-n}}{i}", "variables": [{"symbol": "PV", "meaning": "value one period before the first payment"}, {"symbol": "R,i,n", "meaning": "payment, periodic rate, and number of payments"}]},
+        {"name": "Annuity due adjustment", "latex": "FV_{due}=FV_{ordinary}(1+i),\\quad PV_{due}=PV_{ordinary}(1+i)", "variables": [{"symbol": "i", "meaning": "rate per period"}]}
+      ],
+      "conditions": ["Payments are equal and occur at regular intervals.", "Use a periodic rate matching the payment interval and n equal to total payment count.", "The ordinary-annuity formulas assume end-of-period payments; multiply by (1+i) for beginning-of-period payments.", "For i=0, FV=nR and PV=nR; do not divide by zero in the standard formulas."],
+      "importantProperties": ["Annuities are payment streams; a lump sum uses single-payment present/future value formulas.", "Timing changes value: an annuity due earns or discounts for one extra period relative to an ordinary annuity."],
+      "workedExamples": ["Deposit $100 at each month-end for 12 months at 1% monthly: FV=100((1.01)^12-1)/0.01≈$1,268.25.", "If the same payments occur at each month-start, multiply the ordinary-annuity value by 1.01."],
+      "commonMistakes": ["Confusing annuity due with ordinary annuity.", "Using an annual rate with monthly payments without converting it.", "Counting the number of years instead of total payments.", "Using a lump-sum formula for repeated deposits."],
+      "prerequisites": ["Compound interest", "Present value", "Future value", "Geometric series"],
+      "exampleProblemTypes": ["Find the accumulated value of regular savings deposits.", "Find the present value of a stream of payments.", "Compare payment-at-start versus payment-at-end plans.", "Solve for payment, rate, or number of periods when the method is specified." ]
+    },
+    {
+      "name": "Loans",
+      "keywords": ["loan", "loan payment", "repayment", "installment loan", "monthly payment", "borrowed amount", "mortgage"],
+      "definitions": [{"term": "Loan principal", "meaning": "The amount borrowed at the start, or the present value of the repayment stream."}, {"term": "Loan payment", "meaning": "A regular payment that covers interest due and reduces principal, when amortizing."}],
+      "formulas": [
+        {"name": "Level end-of-period payment", "latex": "R=PV\\frac{i}{1-(1+i)^{-n}}", "variables": [{"symbol": "R", "meaning": "regular payment per period"}, {"symbol": "PV", "meaning": "amount borrowed"}, {"symbol": "i", "meaning": "interest rate per payment period"}, {"symbol": "n", "meaning": "total number of payments"}]},
+        {"name": "Total paid", "latex": "T=nR", "variables": [{"symbol": "T", "meaning": "total of all regular payments, excluding separately stated fees or deposit"}, {"symbol": "n", "meaning": "payment count"}, {"symbol": "R", "meaning": "payment amount"}]}
+      ],
+      "conditions": ["The level-payment formula assumes equal end-of-period payments and a fixed periodic rate.", "Convert the nominal annual rate to the payment-period rate as specified by the contract.", "Fees, insurance, deposits, and balloon payments must be handled separately if not included in PV or R."],
+      "importantProperties": ["Early payments contain a larger interest share because the balance is larger.", "A payment must exceed the period's interest for the principal balance to decrease.", "Total borrowing cost is total paid minus principal, plus applicable fees."],
+      "workedExamples": ["Borrow $1,000 at 1% monthly for 12 end-of-month payments: R=1000(0.01)/(1-(1.01)^(-12))≈$88.85.", "Total scheduled payments are 12×$88.85=$1,066.20 before fees."],
+      "commonMistakes": ["Using annual rate directly as a monthly rate.", "Omitting the payment count or miscounting periods.", "Calling total payments the interest cost without subtracting the principal.", "Ignoring fees or an upfront deposit."],
+      "prerequisites": ["Compound interest", "Present value of annuities", "Rate-period conversion"],
+      "exampleProblemTypes": ["Calculate a fixed periodic loan payment.", "Compare total cost for different rates or terms.", "Find total interest paid or affordability from a payment limit.", "Interpret loan offers with fees or deposits." ]
+    },
+    {
+      "name": "Amortization",
+      "keywords": ["amortization", "amortisation", "amortization schedule", "loan balance", "principal portion", "interest portion", "outstanding balance"],
+      "definitions": [{"term": "Amortization", "meaning": "Gradual repayment of a loan through scheduled payments that reduce the outstanding balance."}, {"term": "Amortization schedule", "meaning": "A period-by-period table showing beginning balance, interest, payment, principal reduction, and ending balance."}],
+      "formulas": [
+        {"name": "Periodic interest", "latex": "I_k=iB_{k-1}", "variables": [{"symbol": "I_k", "meaning": "interest charged during period k"}, {"symbol": "i", "meaning": "rate per period"}, {"symbol": "B_(k-1)", "meaning": "balance at the start of period k"}]},
+        {"name": "Principal repaid and new balance", "latex": "Q_k=R-I_k,\\quad B_k=B_{k-1}-Q_k", "variables": [{"symbol": "Q_k", "meaning": "principal repaid in period k"}, {"symbol": "R", "meaning": "payment"}, {"symbol": "B_k", "meaning": "ending balance"}]}
+      ],
+      "conditions": ["Calculate interest on the beginning balance for the period unless the contract specifies another convention.", "Keep precision through the schedule and round currency according to the problem's instructions.", "The final payment may need adjustment for rounding."],
+      "importantProperties": ["For a fixed-rate level-payment loan, the interest part usually decreases over time and the principal part increases.", "Each row should satisfy ending balance = beginning balance - principal repaid.", "The balance should reach zero after the final correctly calculated payment."],
+      "workedExamples": ["Balance $1,000, monthly rate 1%, payment $90: interest=$10, principal repaid=$80, new balance=$920.", "Next period interest is 1% of $920=$9.20, so a $90 payment repays $80.80 of principal."],
+      "commonMistakes": ["Calculating interest on the original principal every period.", "Treating the whole payment as principal.", "Rounding intermediate balances too early.", "Subtracting interest from balance rather than payment to find principal repaid."],
+      "prerequisites": ["Loans", "Compound interest", "Subtraction and percentages"],
+      "exampleProblemTypes": ["Complete an amortization schedule.", "Find interest and principal portions of a payment.", "Find the outstanding balance after several payments.", "Explain how payment allocation changes over a loan term." ]
+    },
+    {
+      "name": "Depreciation and inflation",
+      "keywords": ["depreciation", "inflation", "asset value", "purchasing power", "price index"],
+      "definitions": [{"term": "Depreciation", "meaning": "A repeated decrease in an asset's value over time."}, {"term": "Inflation", "meaning": "A general rise in prices that reduces money's purchasing power."}],
+      "formulas": [
+        {"name": "Repeated percentage change", "latex": "A_t=A_0(1+r)^t", "variables": [{"symbol": "A_0", "meaning": "initial amount"}, {"symbol": "A_t", "meaning": "amount after t periods"}, {"symbol": "r", "meaning": "per-period rate as a decimal"}, {"symbol": "t", "meaning": "number of periods"}]},
+        {"name": "Declining-balance depreciation", "latex": "V_t=V_0(1-d)^t", "variables": [{"symbol": "V_0", "meaning": "initial asset value"}, {"symbol": "d", "meaning": "depreciation rate per period"}, {"symbol": "t", "meaning": "number of periods"}]}
+      ],
+      "conditions": ["Use a repeated percentage model only when the stated rate applies each period.", "Inflation/index methods and periods must match the data supplied."],
+      "importantProperties": ["Repeated percentage change is exponential, not a fixed currency decrease.", "An index-based adjustment is a model and may not match an individual item's price."],
+      "workedExamples": ["An asset worth $10,000 depreciates 20% per year: after 2 years V=10,000(0.8)^2=$6,400.", "Prices rise 3% per year for 2 years: multiplier is (1.03)^2, not 1.06 exactly."],
+      "commonMistakes": ["Using 1+d instead of 1-d for depreciation.", "Subtracting the same amount each period when the rate is a percentage.", "Adding repeated inflation percentages rather than multiplying factors."],
+      "prerequisites": ["Percentage change", "Exponential functions", "Compound interest"],
+      "exampleProblemTypes": ["Find an asset's value after repeated depreciation.", "Find an original amount from a depreciated value.", "Adjust prices for stated inflation or index changes." ]
+    },
+    {
+      "name": "Budgets, tax tables, and installment purchases",
+      "keywords": ["budget", "income", "expenses", "tax table", "tax bracket", "hire purchase", "installment purchase", "deposit", "fees"],
+      "definitions": [{"term": "Budget", "meaning": "A plan comparing income with expenses over a stated period."}, {"term": "Progressive tax", "meaning": "A method where portions of income may be taxed at different marginal rates."}, {"term": "Installment purchase", "meaning": "A purchase paid over time, often with a deposit, scheduled payments, and fees or interest."}],
+      "formulas": [
+        {"name": "Budget balance", "latex": "\\text{balance}=\\text{income}-\\text{expenses}", "variables": []},
+        {"name": "Installment total", "latex": "T=D+nR+F", "variables": [{"symbol": "T", "meaning": "total paid"}, {"symbol": "D", "meaning": "deposit"}, {"symbol": "n", "meaning": "number of installments"}, {"symbol": "R", "meaning": "installment amount"}, {"symbol": "F", "meaning": "stated fees"}]}
+      ],
+      "conditions": ["Use the same period for all budget income and expense entries.", "Tax rates, thresholds, and deductions vary by jurisdiction and year; use the supplied table.", "Include deposit, fees, and all installments in a purchase comparison."],
+      "importantProperties": ["A positive budget balance is surplus; a negative balance is deficit.", "For a marginal tax table, apply each rate only to the income portion in its bracket unless instructed otherwise.", "Compare installment total with cash price, while noting timing and financing terms."],
+      "workedExamples": ["Monthly income $2,400 and expenses $2,050 gives a surplus of $350.", "Deposit $200 plus 10 installments of $85 plus $25 fee totals $1,075."],
+      "commonMistakes": ["Mixing annual income with monthly expenses.", "Applying the highest marginal tax rate to all income.", "Forgetting deposit or fees in the installment total."],
+      "prerequisites": ["Percentages", "Reading tables", "Addition and subtraction", "Unit conversion"],
+      "exampleProblemTypes": ["Complete a monthly budget and find surplus or deficit.", "Calculate tax from a supplied table.", "Compare cash price with installment or hire-purchase cost.", "Find take-home income after stated deductions." ]
+    }
+  ]
+}

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mathematics Observatory | Grade 11</title>
+    <link rel="stylesheet" href="styles.css?v=3">
+    <link rel="stylesheet" href="assistant.css?v=3">
+    <style>
+        /* Temporary test: hide the text I-beam cursor on the home page. */
+        body,
+        body * {
+            cursor: default !important;
+            user-select: none;
+        }
+
+        a,
+        button,
+        [role="button"] {
+            cursor: pointer !important;
+        }
+
+        input,
+        textarea,
+        [contenteditable="true"] {
+            user-select: text;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-symbol">∫</span>
+                <span class="logo-text">The Mathematics Observatory</span>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#" class="nav-link active">Home</a></li>
+                <li><a href="learn.html" class="nav-link" data-section="learn">Learn</a></li>
+                <li><a href="explore.html" class="nav-link" data-section="explore">Explore</a></li>
+                <li><a href="visualize.html" class="nav-link" data-section="visualize">Visualize</a></li>
+                <li><a href="laboratory.html" class="nav-link" data-section="laboratory">Laboratory</a></li>
+                <li><a href="challenges.html" class="nav-link" data-section="challenges">Challenges</a></li>
+                <li><a href="history.html" class="nav-link" data-section="history">History</a></li>
+                <li><a href="proofs.html" class="nav-link" data-section="proofs">Why It Works</a></li>
+                <li><a href="library.html" class="nav-link" data-section="library">Library</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="grid-overlay"></div>
+            <canvas id="hero-canvas"></canvas>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line">The Mathematics</span>
+                <span class="title-line highlight">Observatory</span>
+            </h1>
+            <p class="hero-subtitle">A comprehensive digital exploration of Grade 11 Mathematics</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">8</span>
+                    <span class="stat-label">Sections</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">∞</span>
+                    <span class="stat-label">Possibilities</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">1</span>
+                    <span class="stat-label">Journey</span>
+                </div>
+            </div>
+            <button class="cta-button" onclick="scrollToSections()">Begin Exploration</button>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Sections Grid -->
+    <section class="sections-grid" id="sections">
+        <div class="section-card learn">
+            <div class="card-icon">📚</div>
+            <h2 class="card-title">Learn</h2>
+            <p class="card-description">Master the Grade 11 curriculum through structured lessons covering functions, algebra, statistics, geometry, trigonometry, and probability.</p>
+            <ul class="card-topics">
+                <li>Functions & Relations</li>
+                <li>Algebraic Expressions</li>
+                <li>Statistical Analysis</li>
+                <li>Geometric Principles</li>
+            </ul>
+            <a href="learn.html" class="card-link">Enter →</a>
+        </div>
+
+        <div class="section-card explore">
+            <div class="card-icon">🔍</div>
+            <h2 class="card-title">Explore</h2>
+            <p class="card-description">Discover fascinating mathematical concepts beyond the textbook—from infinity and paradoxes to real-world applications.</p>
+            <ul class="card-topics">
+                <li>Mathematical Patterns</li>
+                <li>Famous Constants</li>
+                <li>Paradoxes & Infinity</li>
+                <li>Real-World Math</li>
+            </ul>
+            <a href="explore.html" class="card-link">Enter →</a>
+        </div>
+
+        <div class="section-card visualize">
+            <div class="card-icon">📊</div>
+            <h2 class="card-title">Visualize</h2>
+            <p class="card-description">See mathematics come alive through interactive graphs, geometric animations, and dynamic visualizations.</p>
+            <ul class="card-topics">
+                <li>Function Graphing</li>
+                <li>Geometric Transformations</li>
+                <li>Unit Circle Explorer</li>
+                <li>Statistical Plots</li>
+            </ul>
+            <a href="visualize.html" class="card-link">Enter →</a>
+        </div>
+
+        <div class="section-card laboratory">
+            <div class="card-icon">🧪</div>
+            <h2 class="card-title">Laboratory</h2>
+            <p class="card-description">Experiment with mathematical concepts by manipulating variables and observing real-time results.</p>
+            <ul class="card-topics">
+                <li>Function Transformation Lab</li>
+                <li>Probability Simulator</li>
+                <li>Sequence Generator</li>
+                <li>Statistical Experiments</li>
+            </ul>
+            <a href="laboratory.html" class="card-link">Enter →</a>
+        </div>
+
+        <div class="section-card challenges">
+            <div class="card-icon">🎯</div>
+            <h2 class="card-title">Challenges</h2>
+            <p class="card-description">Test your understanding with problems, puzzles, and practice exercises ranging from fundamental to advanced.</p>
+            <ul class="card-topics">
+                <li>Practice Problems</li>
+                <li>Mathematical Puzzles</li>
+                <li>Logic Challenges</li>
+                <li>Competition Prep</li>
+            </ul>
+            <a href="challenges.html" class="card-link">Enter →</a>
+        </div>
+
+        <div class="section-card history">
+            <div class="card-icon">📜</div>
+            <h2 class="card-title">History</h2>
+            <p class="card-description">Journey through the development of mathematics and learn about the brilliant minds who shaped our understanding.</p>
+            <ul class="card-topics">
+                <li>Mathematical Timeline</li>
+                <li>Famous Mathematicians</li>
+                <li>Breakthrough Discoveries</li>
+                <li>Cultural Mathematics</li>
+            </ul>
+            <a href="history.html" class="card-link">Enter →</a>
+        </div>
+
+        <div class="section-card proofs">
+            <div class="card-icon">💡</div>
+            <h2 class="card-title">Why It Works</h2>
+            <p class="card-description">Understand the reasoning behind the formulas through proofs, derivations, and intuitive explanations.</p>
+            <ul class="card-topics">
+                <li>Formula Derivations</li>
+                <li>Theorem Proofs</li>
+                <li>Intuitive Explanations</li>
+                <li>Visual Proofs</li>
+            </ul>
+            <a href="proofs.html" class="card-link">Enter →</a>
+        </div>
+
+        <div class="section-card library">
+            <div class="card-icon">📖</div>
+            <h2 class="card-title">Library</h2>
+            <p class="card-description">Your comprehensive reference for formulas, definitions, theorems, symbols, and mathematical constants.</p>
+            <ul class="card-topics">
+                <li>Formula Reference</li>
+                <li>Glossary</li>
+                <li>Symbol Guide</li>
+                <li>Quick Tables</li>
+            </ul>
+            <a href="library.html" class="card-link">Enter →</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="about-content">
+            <h2 class="section-heading">About This Archive</h2>
+            <p class="about-text">
+                The Mathematics Observatory is an interactive digital experience designed to transform how Grade 11 students
+                engage with mathematics. More than a collection of lessons, it's a journey through the beauty, logic,
+                and power of mathematical thinking.
+            </p>
+            <div class="approach-grid">
+                <div class="approach-item">
+                    <span class="approach-number">01</span>
+                    <h3>Learn the Fundamentals</h3>
+                    <p>Build a solid foundation in core Grade 11 concepts</p>
+                </div>
+                <div class="approach-item">
+                    <span class="approach-number">02</span>
+                    <h3>Explore Beyond</h3>
+                    <p>Discover connections and applications beyond the curriculum</p>
+                </div>
+                <div class="approach-item">
+                    <span class="approach-number">03</span>
+                    <h3>Visualize & Experiment</h3>
+                    <p>See and manipulate mathematical concepts in real-time</p>
+                </div>
+                <div class="approach-item">
+                    <span class="approach-number">04</span>
+                    <h3>Challenge Yourself</h3>
+                    <p>Apply your knowledge through problems and puzzles</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>The Mathematics Observatory</h3>
+                <p>A Grade 11 exploration project</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="learn.html">Learn</a></li>
+                    <li><a href="explore.html">Explore</a></li>
+                    <li><a href="visualize.html">Visualize</a></li>
+                    <li><a href="library.html">Library</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Sources</a></li>
+                    <li><a href="#">Technology</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 The Mathematics Observatory. Created with precision and passion.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="curriculum-data.js?v=6"></script>
+    <script src="math-calculator.js?v=6"></script>
+    <script src="assistant.js?v=42"></script>
+</body>
+</html>

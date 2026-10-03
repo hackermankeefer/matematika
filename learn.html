@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn - The Mathematics Observatory</title>
+    <link rel="stylesheet" href="styles.css?v=3">
+    <link rel="stylesheet" href="assistant.css?v=3">
+    <link rel="stylesheet" href="learn.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="Home">
+                <span class="logo-symbol">∫</span>
+                <span class="logo-text">The Mathematics Observatory</span>
+            </a>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="learn.html" class="nav-link active">Learn</a></li>
+                <li><a href="explore.html" class="nav-link">Explore</a></li>
+                <li><a href="visualize.html" class="nav-link">Visualize</a></li>
+                <li><a href="laboratory.html" class="nav-link">Laboratory</a></li>
+                <li><a href="challenges.html" class="nav-link">Challenges</a></li>
+                <li><a href="history.html" class="nav-link">History</a></li>
+                <li><a href="proofs.html" class="nav-link">Why It Works</a></li>
+                <li><a href="library.html" class="nav-link">Library</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-hero">
+            <div class="hero-content">
+                <div class="hero-badge">Grade 11 Curriculum</div>
+                <h1 class="hero-title">Learn</h1>
+                <p class="hero-subtitle">Master the foundations of advanced mathematics through structured lessons and guided exploration</p>
+            </div>
+            <div class="hero-decoration">
+                <div class="floating-formula">f(x) = ax² + bx + c</div>
+                <div class="floating-formula delay-1">sin²θ + cos²θ = 1</div>
+                <div class="floating-formula delay-2">∫ f(x)dx</div>
+            </div>
+        </section>
+
+        <section class="curriculum-overview">
+            <div class="container">
+                <div class="section-intro">
+                    <h2>Curriculum Topics</h2>
+                    <p>Explore the six core areas of Grade 11 mathematics. Each topic builds upon foundational concepts and prepares you for advanced mathematical thinking.</p>
+                </div>
+
+                <div class="topics-grid">
+                    <!-- Functions -->
+                    <article class="topic-card" data-topic="functions">
+                        <div class="topic-icon">
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10,90 Q30,10 50,50 T90,10" stroke="currentColor" fill="none" stroke-width="2"/>
+                                <circle cx="50" cy="50" r="3" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="topic-content">
+                            <h3>Functions</h3>
+                            <p class="topic-description">Understand how quantities relate and change together</p>
+                            <ul class="topic-lessons">
+                                <li>Function notation and evaluation</li>
+                                <li>Domain and range</li>
+                                <li>Linear, quadratic, and exponential functions</li>
+                                <li>Function transformations</li>
+                                <li>Inverse functions</li>
+                                <li>Composite functions</li>
+                            </ul>
+                            <div class="topic-meta">
+                                <span class="lesson-count">12 lessons</span>
+                                <span class="duration">~8 hours</span>
+                            </div>
+                        </div>
+                        <button class="topic-start-btn">Start Learning</button>
+                    </article>
+
+                    <!-- Algebra -->
+                    <article class="topic-card" data-topic="algebra">
+                        <div class="topic-icon" aria-label="Algebra diagram">
+                            <svg viewBox="0 0 140 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+                                <path d="M18 96 L18 28 L104 96 Z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>
+                                <path d="M18 96 H104" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+                                <path d="M18 28 L104 96" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+                                <text x="9" y="68" font-family="serif" font-size="18" font-style="italic" fill="currentColor">c</text>
+                                <text x="56" y="110" font-family="serif" font-size="18" font-style="italic" fill="currentColor">b</text>
+                                <text x="60" y="58" font-family="serif" font-size="18" font-style="italic" fill="currentColor">a</text>
+                            </svg>
+                        </div>
+                        <div class="topic-content">
+                            <h3>Algebra</h3>
+                            <p class="topic-description">Master symbolic manipulation and equation solving</p>
+                            <ul class="topic-lessons">
+                                <li>Polynomial operations</li>
+                                <li>Factoring techniques</li>
+                                <li>Rational expressions</li>
+                                <li>Solving equations and inequalities</li>
+                                <li>Systems of equations</li>
+                                <li>Complex numbers</li>
+                            </ul>
+                            <div class="topic-meta">
+                                <span class="lesson-count">14 lessons</span>
+                                <span class="duration">~10 hours</span>
+                            </div>
+                        </div>
+                        <button class="topic-start-btn">Start Learning</button>
+                    </article>
+
+                    <!-- Trigonometry -->
+                    <article class="topic-card" data-topic="trigonometry">
+                        <div class="topic-icon">
+                            <img src="trigonometry.svg" alt="Trigonometry diagram">
+                        </div>
+                        <div class="topic-content">
+                            <h3>Trigonometry</h3>
+                            <p class="topic-description">Explore relationships between angles and sides</p>
+                            <ul class="topic-lessons">
+                                <li>Unit circle and radian measure</li>
+                                <li>Trigonometric ratios</li>
+                                <li>Trigonometric identities</li>
+                                <li>Graphs of trig functions</li>
+                                <li>Solving trigonometric equations</li>
+                                <li>Law of sines and cosines</li>
+                            </ul>
+                            <div class="topic-meta">
+                                <span class="lesson-count">11 lessons</span>
+                                <span class="duration">~9 hours</span>
+                            </div>
+                        </div>
+                        <button class="topic-start-btn">Start Learning</button>
+                    </article>
+
+                    <!-- Geometry -->
+                    <article class="topic-card" data-topic="geometry">
+                        <div class="topic-icon">
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <polygon points="50,15 85,75 15,75" stroke="currentColor" fill="none" stroke-width="2"/>
+                                <line x1="50" y1="15" x2="50" y2="75" stroke="currentColor" stroke-width="1" stroke-dasharray="2,2"/>
+                            </svg>
+                        </div>
+                        <div class="topic-content">
+                            <h3>Geometry</h3>
+                            <p class="topic-description">Study shapes, spaces, and their properties</p>
+                            <ul class="topic-lessons">
+                                <li>Coordinate geometry</li>
+                                <li>Lines and slopes</li>
+                                <li>Circles and conic sections</li>
+                                <li>Geometric proofs</li>
+                                <li>Transformations</li>
+                                <li>3D geometry basics</li>
+                            </ul>
+                            <div class="topic-meta">
+                                <span class="lesson-count">10 lessons</span>
+                                <span class="duration">~7 hours</span>
+                            </div>
+                        </div>
+                        <button class="topic-start-btn">Start Learning</button>
+                    </article>
+
+                    <!-- Statistics -->
+                    <article class="topic-card" data-topic="statistics">
+                        <div class="topic-icon">
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="15" y="60" width="15" height="30" fill="currentColor"/>
+                                <rect x="35" y="40" width="15" height="50" fill="currentColor"/>
+                                <rect x="55" y="25" width="15" height="65" fill="currentColor"/>
+                                <rect x="75" y="50" width="15" height="40" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="topic-content">
+                            <h3>Statistics</h3>
+                            <p class="topic-description">Learn to collect, analyze, and interpret data</p>
+                            <ul class="topic-lessons">
+                                <li>Measures of central tendency</li>
+                                <li>Measures of spread</li>
+                                <li>Data visualization</li>
+                                <li>Normal distribution</li>
+                                <li>Correlation and regression</li>
+                                <li>Statistical inference basics</li>
+                            </ul>
+                            <div class="topic-meta">
+                                <span class="lesson-count">9 lessons</span>
+                                <span class="duration">~6 hours</span>
+                            </div>
+                        </div>
+                        <button class="topic-start-btn">Start Learning</button>
+                    </article>
+
+                    <!-- Probability -->
+                    <article class="topic-card" data-topic="probability">
+                        <div class="topic-icon">
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="25" y="25" width="50" height="50" rx="5" stroke="currentColor" fill="none" stroke-width="2"/>
+                                <circle cx="40" cy="40" r="4" fill="currentColor"/>
+                                <circle cx="60" cy="40" r="4" fill="currentColor"/>
+                                <circle cx="40" cy="60" r="4" fill="currentColor"/>
+                                <circle cx="60" cy="60" r="4" fill="currentColor"/>
+                                <circle cx="50" cy="50" r="4" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="topic-content">
+                            <h3>Probability</h3>
+                            <p class="topic-description">Quantify uncertainty and predict outcomes</p>
+                            <ul class="topic-lessons">
+                                <li>Probability fundamentals</li>
+                                <li>Compound events</li>
+                                <li>Conditional probability</li>
+                                <li>Permutations and combinations</li>
+                                <li>Binomial probability</li>
+                                <li>Expected value</li>
+                            </ul>
+                            <div class="topic-meta">
+                                <span class="lesson-count">8 lessons</span>
+                                <span class="duration">~6 hours</span>
+                            </div>
+                        </div>
+                        <button class="topic-start-btn">Start Learning</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="learning-path">
+            <div class="container">
+                <h2>Suggested Learning Path</h2>
+                <p class="section-subtitle">Follow this sequence for optimal understanding and skill development</p>
+
+                <div class="path-timeline">
+                    <div class="path-item">
+                        <div class="path-number">1</div>
+                        <div class="path-details">
+                            <h3>Functions</h3>
+                            <p>Start here to build a strong foundation in mathematical relationships</p>
+                        </div>
+                    </div>
+                    <div class="path-connector"></div>
+                    <div class="path-item">
+                        <div class="path-number">2</div>
+                        <div class="path-details">
+                            <h3>Algebra</h3>
+                            <p>Develop symbolic reasoning and problem-solving skills</p>
+                        </div>
+                    </div>
+                    <div class="path-connector"></div>
+                    <div class="path-item">
+                        <div class="path-number">3</div>
+                        <div class="path-details">
+                            <h3>Trigonometry</h3>
+                            <p>Apply algebraic skills to circular and periodic phenomena</p>
+                        </div>
+                    </div>
+                    <div class="path-connector"></div>
+                    <div class="path-item">
+                        <div class="path-number">4</div>
+                        <div class="path-details">
+                            <h3>Geometry</h3>
+                            <p>Visualize and prove relationships in space</p>
+                        </div>
+                    </div>
+                    <div class="path-connector"></div>
+                    <div class="path-item">
+                        <div class="path-number">5</div>
+                        <div class="path-details">
+                            <h3>Statistics & Probability</h3>
+                            <p>Apply mathematical thinking to real-world data and uncertainty</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="study-resources">
+            <div class="container">
+                <h2>Study Resources</h2>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-icon">📝</div>
+                        <h3>Study Guides</h3>
+                        <p>Comprehensive summaries and key concepts for each topic</p>
+                        <a href="library.html" class="resource-link">Browse Guides →</a>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">🎥</div>
+                        <h3>Video Lessons</h3>
+                        <p>Step-by-step explanations with visual demonstrations</p>
+                        <a href="explore.html" class="resource-link">Watch Videos →</a>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">📊</div>
+                        <h3>Practice Problems</h3>
+                        <p>Hundreds of exercises with detailed solutions</p>
+                        <a href="challenges.html" class="resource-link">Start Practice →</a>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">🔬</div>
+                        <h3>Interactive Labs</h3>
+                        <p>Experiment with concepts in our virtual laboratory</p>
+                        <a href="laboratory.html" class="resource-link">Enter Lab →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>The Mathematics Observatory</h3>
+                <p>A Grade 11 exploration project</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="learn.html">Learn</a></li>
+                    <li><a href="explore.html">Explore</a></li>
+                    <li><a href="visualize.html">Visualize</a></li>
+                    <li><a href="library.html">Library</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Sources</a></li>
+                    <li><a href="#">Technology</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 The Mathematics Observatory. Created with precision and passion.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="curriculum-data.js?v=6"></script>
+    <script src="math-calculator.js?v=6"></script>
+    <script src="assistant.js?v=42"></script>
+    <script src="learn.js"></script>
+</body>
+</html>

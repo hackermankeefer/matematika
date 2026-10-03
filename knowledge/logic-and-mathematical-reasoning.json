@@ -1,0 +1,143 @@
+{
+  "topicName": "Logic and Mathematical Reasoning",
+  "topicOverview": "Logic gives precise ways to analyze statements, conditions, and arguments. Mathematical reasoning uses definitions, valid inference, examples, and counterexamples to justify conclusions.",
+  "keywords": ["logic", "reasoning", "statement", "proposition", "truth value", "truth table", "negation", "conjunction", "disjunction", "biconditional", "if and only if", "converse", "inverse", "contrapositive", "conditional", "implication", "premise", "conclusion", "argument", "valid argument", "invalid argument", "quantifier", "proof", "counterexample", "inductive", "deductive"],
+  "prerequisites": ["Reading mathematical sentences carefully", "Sets and number systems", "Basic algebraic statements"],
+  "subtopics": [
+    {
+      "name": "Statements and logical connectives",
+      "keywords": ["statement", "proposition", "truth value", "true or false", "negation", "not", "conjunction", "and", "disjunction", "or", "exclusive or"],
+      "definitions": [
+        {"term": "Statement (proposition)", "meaning": "A declarative sentence that has exactly one truth value, true or false; questions, commands, and open sentences with unspecified variables are not propositions."},
+        {"term": "Truth value", "meaning": "The status of a proposition as true (T) or false (F)."},
+        {"term": "Negation", "meaning": "A statement expressing that the original proposition is not true."},
+        {"term": "Conjunction", "meaning": "The compound statement p and q; true only when both p and q are true."},
+        {"term": "Disjunction", "meaning": "The inclusive statement p or q; false only when both p and q are false."}
+      ],
+      "formulas": [
+        {"name": "Connective notation", "latex": "\\neg p,\\quad p\\land q,\\quad p\\lor q", "variables": [{"symbol": "p,q", "meaning": "statements whose truth values are considered"}]}
+      ],
+      "importantProperties": ["A question or command is not a proposition because it has no truth value.", "Negation reverses the truth value of its proposition.", "A conjunction p and q is true only when both propositions are true.", "Inclusive disjunction p or q is true if at least one proposition is true, including when both are true.", "The negation of p and q is equivalent to not p or not q; the negation of p or q is equivalent to not p and not q."],
+      "commonMistakes": ["Treating inclusive or as exclusive or without an explicit definition.", "Negating only part of a compound statement.", "Calling an open sentence with an unspecified variable a proposition."],
+      "prerequisites": ["Interpreting declarative sentences", "True and false values"],
+      "exampleProblemTypes": ["Decide whether a sentence is a proposition.", "Translate a verbal statement into symbols.", "Negate a compound statement using De Morgan's laws.", "Determine truth values from given propositions." ]
+    },
+    {
+      "name": "Truth tables and equivalent statements",
+      "keywords": ["truth table", "logical equivalence", "logically equivalent", "equivalent statements", "tautology", "contradiction", "De Morgan"],
+      "definitions": [
+        {"term": "Truth table", "meaning": "A table listing the truth value of a compound statement for every possible assignment to its variables."},
+        {"term": "Tautology", "meaning": "A statement that is true for every possible assignment of truth values."},
+        {"term": "Logical equivalence", "meaning": "Two statements with identical truth values in every possible case."}
+      ],
+      "formulas": [
+        {"name": "Truth table for basic connectives and implication", "latex": "\\begin{array}{cc|ccccc}p&q&\\neg p&p\\land q&p\\lor q&p\\to q&p\\leftrightarrow q\\\\T&T&F&T&T&T&T\\\\T&F&F&F&T&F&F\\\\F&T&T&F&T&T&F\\\\F&F&T&F&F&T&T\\end{array}", "variables": [{"symbol": "T", "meaning": "true"}, {"symbol": "F", "meaning": "false"}]},
+        {"name": "Implication equivalence", "latex": "p\\to q\\equiv\\neg p\\lor q", "variables": [{"symbol": "p", "meaning": "hypothesis"}, {"symbol": "q", "meaning": "conclusion"}]},
+        {"name": "De Morgan's laws", "latex": "\\neg(p\\land q)\\equiv(\\neg p\\lor\\neg q),\\quad\\neg(p\\lor q)\\equiv(\\neg p\\land\\neg q)", "variables": [{"symbol": "p,q", "meaning": "propositions"}]}
+      ],
+      "importantProperties": ["For n propositions, a complete truth table has 2^n rows.", "The negation column reverses T and F; conjunction is T only for (T,T), while inclusive disjunction is F only for (F,F).", "An implication p to q is false only when p is true and q is false.", "Equivalent statements have matching truth values in every row, so their final truth columns match.", "A statement is a tautology if its final column is all T and a contradiction if its final column is all F."],
+      "commonMistakes": ["Using fewer than 2^n rows.", "Marking p to q false when p is false.", "Confusing equivalence with both statements being true in one example."],
+      "prerequisites": ["Statements and connectives", "Binary truth values"],
+      "exampleProblemTypes": ["Complete a truth table for a compound proposition.", "Test whether two statements are equivalent.", "Identify a tautology or contradiction.", "Use truth tables to check a proposed logical identity." ]
+    },
+    {
+      "name": "Conditional statements and contrapositives",
+      "keywords": ["conditional", "implication", "if then", "biconditional", "if and only if", "converse", "inverse", "contrapositive", "necessary", "sufficient", "square", "rectangle", "non-square rectangle"],
+      "definitions": [
+        {"term": "Conditional", "meaning": "A statement written if p then q, symbolized p implies q."},
+        {"term": "Biconditional", "meaning": "A statement written p if and only if q; it asserts both p implies q and q implies p."},
+        {"term": "Converse", "meaning": "The statement q implies p, formed by reversing hypothesis and conclusion."},
+        {"term": "Inverse", "meaning": "The statement not p implies not q."},
+        {"term": "Contrapositive", "meaning": "The statement not q implies not p; it is logically equivalent to the original conditional."}
+      ],
+      "formulas": [
+        {"name": "Conditional and contrapositive", "latex": "p\\to q\\equiv\\neg q\\to\\neg p", "variables": [{"symbol": "p", "meaning": "hypothesis"}, {"symbol": "q", "meaning": "conclusion"}]},
+        {"name": "Biconditional", "latex": "p\\leftrightarrow q\\equiv(p\\to q)\\land(q\\to p)", "variables": [{"symbol": "p", "meaning": "first proposition"}, {"symbol": "q", "meaning": "second proposition"}]}
+      ],
+      "importantProperties": ["A conditional and its contrapositive always have the same truth value.", "The converse and inverse are equivalent to each other, but neither is generally equivalent to the original conditional.", "A biconditional is true exactly when p and q have the same truth value, meaning both component conditionals are true.", "p is sufficient for q means p implies q; p is necessary for q means q implies p.", "A counterexample to 'if a shape is a square, then it is a rectangle' must be a rectangle that is not a square."],
+      "workedExamples": ["The converse of 'if a shape is a square, then it is a rectangle' is 'if a shape is a rectangle, then it is a square.' It is false: a 2-by-1 rectangle is a rectangle but is not a square. This example satisfies the converse's premise and disproves its conclusion."],
+      "commonMistakes": ["Assuming a true conditional automatically makes its converse true.", "Using a non-square rhombus to disprove that every rectangle is a square; a counterexample must first be a rectangle.", "Forming the inverse by reversing rather than negating both parts.", "Treating 'if' as 'if and only if'; a biconditional requires both directions.", "Negating a statement without changing quantifiers or inequalities correctly."],
+      "prerequisites": ["Negation", "Implication", "Truth tables"],
+      "exampleProblemTypes": ["Write the converse, inverse, and contrapositive.", "Find a counterexample to a false converse.", "Identify necessary and sufficient conditions.", "Prove a statement by proving its contrapositive." ]
+    },
+    {
+      "name": "Arguments, premises, conclusions, and validity",
+      "keywords": ["argument", "premise", "premises", "conclusion", "valid argument", "invalid argument", "validity", "does the conclusion follow", "modus ponens", "affirming the consequent"],
+      "definitions": [
+        {"term": "Argument", "meaning": "A sequence of statements in which one or more premises are offered as support for a conclusion."},
+        {"term": "Premise", "meaning": "A statement assumed or given as support in an argument."},
+        {"term": "Conclusion", "meaning": "The claim that an argument is intended to establish from its premises."},
+        {"term": "Valid argument", "meaning": "An argument where it is impossible for all premises to be true and the conclusion false at the same time."},
+        {"term": "Invalid argument", "meaning": "An argument for which there is at least one case where all premises are true but the conclusion is false."}
+      ],
+      "formulas": [
+        {"name": "Modus ponens", "latex": "p\\to q,\\quad p\\quad\\therefore q", "variables": [{"symbol": "p,q", "meaning": "propositions"}]},
+        {"name": "Invalid affirming-the-consequent form", "latex": "p\\to q,\\quad q\\quad\\therefore p", "variables": [{"symbol": "p,q", "meaning": "propositions"}]}
+      ],
+      "importantProperties": ["Validity concerns the logical structure: a valid argument preserves truth from premises to conclusion, regardless of whether the premises are in fact true.", "To show an argument is invalid, give an assignment or concrete case with true premises and a false conclusion.", "Modus ponens is valid; affirming the consequent is invalid."],
+      "derivations": ["For p implies q, if p is true then q must be true. This makes the inference from p implies q and p to q valid.", "A conditional does not guarantee its converse: q can be true for reasons other than p, so inferring p from q is not valid."],
+      "workedExamples": ["Valid: If a number is divisible by 4, then it is even. 12 is divisible by 4. Therefore, 12 is even. The premises force the conclusion.", "Invalid: If an integer is divisible by 4, then it is even. 6 is even. Therefore, 6 is divisible by 4. Both premises can be true while the conclusion is false."],
+      "commonMistakes": ["Calling an argument invalid just because one premise is false; validity asks whether true premises could lead to a false conclusion.", "Confusing the truth of a conclusion with the validity of the reasoning.", "Assuming the conclusion from a conditional's consequent."],
+      "prerequisites": ["Propositions", "Conditionals", "Truth tables"],
+      "exampleProblemTypes": ["Identify premises and conclusion in a verbal argument.", "Decide whether an argument form is valid using a truth table.", "Construct a case showing an argument is invalid.", "Distinguish a valid argument from one with true premises and conclusion by coincidence."]
+    },
+    {
+      "name": "Deductive and inductive reasoning",
+      "keywords": ["deductive reasoning", "deduction", "inductive reasoning", "induction", "pattern", "conjecture", "generalize from examples"],
+      "definitions": [
+        {"term": "Deductive reasoning", "meaning": "Reasoning from general rules, definitions, or premises to a conclusion that must follow if the reasoning is valid."},
+        {"term": "Inductive reasoning", "meaning": "Reasoning from observed cases or patterns to a conjecture that is plausible but not guaranteed by those observations."},
+        {"term": "Conjecture", "meaning": "A mathematical claim suggested by examples or a pattern and awaiting proof or disproof."}
+      ],
+      "formulas": [],
+      "importantProperties": ["A valid deduction guarantees its conclusion when its premises are true.", "Inductive evidence can support a conjecture but finitely many examples do not prove a universal claim.", "A conjecture may be proved deductively or disproved with a counterexample."],
+      "workedExamples": ["Deductive: Every multiple of 6 is even. 30 is a multiple of 6. Therefore, 30 is even.", "Inductive: The first several odd numbers each have a square ending in 1, 5, or 9; one may conjecture that every odd integer has a square ending in one of these digits, then prove it or test it further."],
+      "commonMistakes": ["Treating a pattern observed in several examples as a proof for all cases.", "Assuming inductive reasoning is necessarily incorrect; it can guide conjectures, but its conclusion is not logically guaranteed."],
+      "prerequisites": ["Arguments, premises, conclusions, and validity", "Number patterns"],
+      "exampleProblemTypes": ["Classify reasoning as deductive or inductive.", "Identify the conjecture suggested by a sequence of examples.", "Explain why examples support but do not prove a general claim."]
+    },
+    {
+      "name": "Counterexamples and conjectures",
+      "keywords": ["counterexample", "disprove", "false conjecture", "universal claim", "find an example that disproves", "test a conjecture", "converse counterexample", "rectangle but not square"],
+      "definitions": [
+        {"term": "Counterexample", "meaning": "A valid example that satisfies the stated conditions but makes a universal claim false."}
+      ],
+      "formulas": [],
+      "importantProperties": ["One counterexample is enough to disprove a claim that says something is true for every case.", "A counterexample must satisfy the claim's assumptions; an unrelated example does not disprove it.", "Examples that fit a conjecture do not establish that it is always true."],
+      "workedExamples": ["Claim: The sum of any two odd integers is odd. Counterexample: 1 and 3 are odd, but 1 + 3 = 4 is even, so the claim is false."],
+      "commonMistakes": ["Offering an example that does not meet the original conditions.", "Checking only a few cases and concluding a universal claim is proved.", "Using several examples to try to disprove a universal statement when a single counterexample is sufficient."],
+      "prerequisites": ["Integers and parity", "Universal statements", "Inductive reasoning"],
+      "exampleProblemTypes": ["Find a counterexample to a universal algebraic or number claim.", "Determine whether a proposed example actually disproves a conjecture.", "Distinguish a counterexample from an ordinary confirming example."]
+    },
+    {
+      "name": "Quantifiers and mathematical statements",
+      "keywords": ["quantifier", "for all", "there exists", "universal", "existential", "counterexample"],
+      "definitions": [
+        {"term": "Universal quantifier", "meaning": "For every element in a specified domain."},
+        {"term": "Existential quantifier", "meaning": "There is at least one element in a specified domain."},
+        {"term": "Counterexample", "meaning": "A single valid example that disproves a universal claim."}
+      ],
+      "formulas": [
+        {"name": "Quantifier negations", "latex": "\\neg(\\forall x\\,P(x))\\equiv\\exists x\\,\\neg P(x),\\quad\\neg(\\exists x\\,P(x))\\equiv\\forall x\\,\\neg P(x)", "variables": [{"symbol": "x", "meaning": "element of a stated domain"}, {"symbol": "P(x)", "meaning": "property being asserted"}]}
+      ],
+      "importantProperties": ["The truth of a quantified statement depends on its domain.", "To disprove a universal statement, one counterexample is enough.", "To prove an existential statement, provide a valid witness and verify it."],
+      "commonMistakes": ["Leaving the domain unspecified.", "Trying to disprove a universal claim by checking only typical cases.", "Negating 'for all' without changing it to 'there exists'."],
+      "prerequisites": ["Sets and number systems", "Negation", "Variables and predicates"],
+      "exampleProblemTypes": ["Translate quantified sentences into symbols.", "Negate a statement with one or more quantifiers.", "Prove or disprove a claim by finding a witness or counterexample.", "Compare a statement over integers with the same statement over real numbers." ]
+    },
+    {
+      "name": "Proof and mathematical reasoning",
+      "keywords": ["proof", "prove", "justify", "conjecture", "odd integers", "sum of odd integers"],
+      "definitions": [
+        {"term": "Deductive reasoning", "meaning": "Deriving a conclusion that must follow from stated definitions, assumptions, and valid rules."},
+        {"term": "Inductive reasoning", "meaning": "Using observed patterns or examples to form a conjecture; examples alone do not prove a universal claim."},
+        {"term": "Proof", "meaning": "A logically valid argument establishing a mathematical statement from accepted assumptions and results."}
+      ],
+      "formulas": [],
+      "importantProperties": ["A proof must justify each inference, not merely show that several examples work.", "A counterexample disproves a universal statement.", "State assumptions and the conclusion clearly before constructing an argument."],
+      "commonMistakes": ["Treating a pattern from examples as a proof.", "Assuming the conclusion while trying to prove it.", "Using a diagram as the only justification for a general claim."],
+      "prerequisites": ["Definitions", "Conditionals", "Algebraic equivalence", "Logical connectives"],
+      "exampleProblemTypes": ["Decide whether an argument is valid.", "Write a short direct proof from a definition.", "Test a conjecture with examples and counterexamples.", "Explain why a proposed algebraic step is valid." ]
+    }
+  ]
+}

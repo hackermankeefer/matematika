@@ -1,0 +1,32 @@
+{
+  "topicName": "Measurement and Conversion",
+  "topicOverview": "Measurement applies formulas and unit conversions to lengths, area, surface area, volume, scale, time, temperature, and currency. Keep units consistent and report the final unit appropriate to the quantity.",
+  "keywords": ["measurement", "unit conversion", "metric conversion", "convert units", "centimetres", "centimeters", "metres", "meters", "millimetres", "millimeters", "kilometres", "kilometers", "length", "area", "surface area", "volume", "cylinder", "prism", "scale drawing", "scale factor", "currency conversion", "time conversion", "temperature conversion", "Celsius", "Fahrenheit"],
+  "prerequisites": ["Arithmetic with decimals and fractions", "Area and perimeter", "Substitution into formulas", "Ratios and proportions"],
+  "subtopics": [
+    {
+      "name": "Unit conversion and scale",
+      "keywords": ["unit conversion", "convert units", "convert", "metric units", "centimetres", "centimeters", "metres", "meters", "millimetres", "millimeters", "kilometres", "kilometers", "scale", "scale drawing", "map scale", "currency conversion", "exchange rate", "time conversion", "temperature conversion", "Celsius", "Fahrenheit"],
+      "definitions": [{"term": "Conversion factor", "meaning": "A ratio equal to 1 that changes a measurement from one unit to an equivalent unit."}, {"term": "Scale", "meaning": "The ratio between a drawing or map measurement and the corresponding real measurement."}],
+      "formulas": [{"name": "Scale conversion", "latex": "\\text{actual length}=\\text{drawing length}\\times\\text{scale factor}", "variables": [{"symbol": "drawing length", "meaning": "measured length on the drawing"}, {"symbol": "scale factor", "meaning": "actual units represented by one drawing unit"}]}, {"name": "Celsius to Fahrenheit", "latex": "F=\\frac{9}{5}C+32", "variables": [{"symbol": "C", "meaning": "temperature in degrees Celsius"}, {"symbol": "F", "meaning": "temperature in degrees Fahrenheit"}]}],
+      "conditions": ["Use conversion factors with matching units so unwanted units cancel.", "Apply a stated scale or exchange rate in the direction requested.", "For temperature, use the affine conversion formula rather than multiplying by a unit ratio."],
+      "importantProperties": ["Equivalent measurements have the same physical size even when their numerical values differ.", "Area conversion factors are squared and volume conversion factors are cubed.", "Currency conversions require the exchange rate and its direction."],
+      "workedExamples": ["2.4 m = 2.4 × 100 = 240 cm.", "At a scale of 1:50,000, 3.2 cm represents 3.2 × 50,000 cm = 1.6 km.", "25°C = (9/5)(25)+32 = 77°F."],
+      "commonMistakes": ["Multiplying when the conversion requires division.", "Forgetting to square or cube a conversion factor for area or volume.", "Reversing a scale, exchange rate, or temperature conversion."],
+      "prerequisites": ["Ratios", "Metric prefixes", "Decimal multiplication and division"],
+      "exampleProblemTypes": ["Convert between metric length, area, and volume units.", "Use a map or drawing scale to find an actual distance.", "Convert time, temperature, or currency using supplied information."]
+    },
+    {
+      "name": "Surface area and volume",
+      "keywords": ["surface area", "volume", "cylinder", "rectangular prism", "cuboid", "prism", "capacity", "cubic units", "square units"],
+      "definitions": [{"term": "Surface area", "meaning": "The total area of the outside faces or curved surfaces of a solid."}, {"term": "Volume", "meaning": "The amount of three-dimensional space occupied by a solid."}],
+      "formulas": [{"name": "Cylinder volume", "latex": "V=\\pi r^2h", "variables": [{"symbol": "r", "meaning": "radius of the circular base"}, {"symbol": "h", "meaning": "perpendicular height"}]}, {"name": "Cylinder surface area", "latex": "S=2\\pi r^2+2\\pi rh", "variables": [{"symbol": "r", "meaning": "radius"}, {"symbol": "h", "meaning": "height"}]}, {"name": "Rectangular prism volume", "latex": "V=lwh", "variables": [{"symbol": "l", "meaning": "length"}, {"symbol": "w", "meaning": "width"}, {"symbol": "h", "meaning": "height"}]}],
+      "conditions": ["Use the same linear unit for every dimension before substituting.", "Volume is reported in cubic units and surface area in square units.", "Use the value of pi specified in the question; otherwise keep pi exact until rounding the final result."],
+      "importantProperties": ["A cylinder's volume is base area times perpendicular height.", "A cylinder's total surface area includes both circular ends and the curved surface.", "Check that an answer's units and magnitude suit the context."],
+      "workedExamples": ["For r=5.6 cm and h=13 cm, V=π(5.6)^2(13)=407.68π≈1280.76 cm³.", "For a 3 cm by 4 cm by 5 cm rectangular prism, V=3(4)(5)=60 cm³."],
+      "commonMistakes": ["Using diameter in place of radius.", "Forgetting to square the radius in a cylinder formula.", "Giving area in cubic units or volume in square units.", "Rounding intermediate values too early."],
+      "prerequisites": ["Area of a circle", "Substitution", "Powers and units"],
+      "exampleProblemTypes": ["Find volume or surface area from dimensions.", "Convert a result to requested square or cubic units.", "Compare capacity and volume in a practical context."]
+    }
+  ]
+}

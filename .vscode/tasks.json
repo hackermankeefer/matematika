@@ -1,0 +1,17 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run Grade 11 Mathematics test suite",
+			"type": "shell",
+			"command": "node",
+			"args": [
+				"--test",
+				"tests/grade11-ai.test.js"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "test"
+		}
+	]
+}

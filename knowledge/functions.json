@@ -1,0 +1,258 @@
+{
+  "topicName": "Functions",
+  "topicOverview": "Grade 11 Functions studies relations and function rules, their domains and ranges, operations and inverses, common families, graphs, and applications. Read a function as a relationship between inputs and outputs, and state restrictions and units when interpreting a model.",
+  "keywords": ["functions", "function", "relation", "mapping", "domain", "range", "function notation", "evaluate function", "operations on functions", "composition", "composite function", "one-to-one", "injective", "inverse function", "piecewise", "rational function", "exponential function", "logarithmic function", "logarithm", "graph", "transformation", "linear function", "quadratic function", "application", "model", "asymptote", "intercept", "vertex", "zero", "root"],
+  "prerequisites": ["Substitution into algebraic expressions", "Integer, fraction, and signed-number arithmetic", "Coordinate plane and ordered pairs", "Solving linear equations and inequalities", "Exponent rules", "Square roots and factoring"],
+  "subtopics": [
+    {
+      "name": "Relations",
+      "keywords": ["relation", "ordered pair", "mapping", "input output relation", "vertical line"],
+      "definitions": [
+        {"term": "Relation", "meaning": "Any association between elements of an input set and elements of an output set; it can be represented by ordered pairs, a table, a mapping diagram, a graph, or an equation."},
+        {"term": "Input and output", "meaning": "The first and second components of an ordered pair (x,y), respectively."}
+      ],
+      "formulas": [
+        {"name": "Relation as a set of ordered pairs", "latex": "R\\subseteq A\\times B", "variables": [{"symbol": "R", "meaning": "relation"}, {"symbol": "A", "meaning": "input set"}, {"symbol": "B", "meaning": "output set"}]}
+      ],
+      "importantProperties": ["A relation may assign several outputs to one input; a function may not.", "A graph represents a function of x if every vertical line intersects it at most once.", "The same input-output data may be represented in several equivalent ways."],
+      "commonMistakes": ["Assuming every relation is a function.", "Applying the horizontal line test to decide whether a graph is a function; the vertical line test is the relevant test.", "Treating repeated outputs as disqualifying; different inputs may share an output."],
+      "prerequisites": ["Ordered pairs", "Sets and coordinate graphs"],
+      "exampleProblemTypes": ["Decide whether a mapping diagram defines a function.", "Use a vertical line test on a graph.", "Convert a table or mapping into ordered pairs.", "Identify repeated inputs with conflicting outputs."]
+    },
+    {
+      "name": "Functions",
+      "keywords": ["function definition", "function rule", "function test", "vertical line test", "independent variable", "dependent variable"],
+      "definitions": [
+        {"term": "Function", "meaning": "A relation that assigns exactly one output to every input in its domain."},
+        {"term": "Independent variable", "meaning": "The input variable, commonly x."},
+        {"term": "Dependent variable", "meaning": "The output variable, whose value depends on the input, commonly y or f(x)."}
+      ],
+      "formulas": [
+        {"name": "Function rule", "latex": "y=f(x)", "variables": [{"symbol": "x", "meaning": "input from the domain"}, {"symbol": "f(x) or y", "meaning": "unique output"}]}
+      ],
+      "importantProperties": ["Each domain input must have exactly one output.", "Several different inputs may have the same output.", "A function can be represented by a rule, table, graph, mapping, or contextual model."],
+      "commonMistakes": ["Thinking an output can occur only once.", "Calling a relation a function when one input has two different outputs.", "Ignoring a stated domain restriction."],
+      "prerequisites": ["Relations", "Ordered pairs", "Substitution"],
+      "exampleProblemTypes": ["Classify a relation as a function or not.", "Write a rule from a verbal description or table.", "Identify input and output variables in context.", "Use the vertical line test."]
+    },
+    {
+      "name": "Domain and range",
+      "keywords": ["domain", "range", "allowed inputs", "possible outputs", "restricted domain", "range from graph"],
+      "definitions": [
+        {"term": "Domain", "meaning": "All permitted input values for which the function is defined."},
+        {"term": "Range", "meaning": "All output values produced by inputs in the domain."}
+      ],
+      "formulas": [
+        {"name": "Rational-function restriction", "latex": "q(x)\\ne0", "variables": [{"symbol": "q(x)", "meaning": "denominator; exclude its zeros from the domain"}]},
+        {"name": "Even-root restriction over real numbers", "latex": "g(x)\\ge0", "variables": [{"symbol": "g(x)", "meaning": "expression under an even root"}]}
+      ],
+      "importantProperties": ["For a graph, domain is read horizontally and range vertically.", "For formulas over the reals, denominator values cannot be zero and even-root radicands must be nonnegative.", "The range must be found from actual outputs, not by copying the domain.", "Use interval notation or set notation and respect open and closed endpoints."],
+      "commonMistakes": ["Forgetting denominator zeros or radical restrictions.", "Including an endpoint shown by an open circle.", "Using an interval that includes values outside a graph's plotted extent.", "Confusing x-values with y-values."],
+      "prerequisites": ["Inequalities", "Interval notation", "Factoring", "Reading graphs"],
+      "exampleProblemTypes": ["Find domain restrictions from a formula.", "Read domain and range from a graph or table.", "Find the range of a parabola from its vertex and opening direction.", "State the physical domain of a contextual model."]
+    },
+    {
+      "name": "Function notation",
+      "keywords": ["function notation", "f of x", "f(a)", "function names", "input notation"],
+      "definitions": [
+        {"term": "Function notation", "meaning": "A naming system in which f(x) denotes the output of function f for input x."},
+        {"term": "Function value", "meaning": "The output associated with a particular input; for example, f(3) is one value, not f multiplied by 3."}
+      ],
+      "formulas": [
+        {"name": "Evaluate a rule at an input", "latex": "f(a)=y", "variables": [{"symbol": "f", "meaning": "function name"}, {"symbol": "a", "meaning": "chosen input"}, {"symbol": "y", "meaning": "resulting output"}]}
+      ],
+      "importantProperties": ["The letter naming the function can be any symbol, such as f, g, or h.", "f(x) names a value and does not indicate multiplication.", "Replacing x by a number or expression means substituting the entire input."],
+      "commonMistakes": ["Reading f(x) as f times x.", "Substituting into only one occurrence of x.", "Dropping parentheses around a negative input."],
+      "prerequisites": ["Algebraic expressions", "Substitution"],
+      "exampleProblemTypes": ["Interpret f(4) from a table or graph.", "Translate a verbal rule into function notation.", "Write an output condition such as f(x)=7 as an equation.", "Distinguish f(x), f(a), and f(x+h)."]
+    },
+    {
+      "name": "Evaluating functions",
+      "keywords": ["evaluate function", "function value", "substitute into function", "f of negative", "evaluate f"],
+      "definitions": [
+        {"term": "Evaluation", "meaning": "Finding the function output for a specified input by substitution or by reading a representation."},
+        {"term": "Difference quotient", "meaning": "A ratio of change in function output to change in input, often used to compare average rates of change."}
+      ],
+      "formulas": [
+        {"name": "Difference quotient", "latex": "\\frac{f(x+h)-f(x)}{h},\\quad h\\ne0", "variables": [{"symbol": "x", "meaning": "starting input"}, {"symbol": "h", "meaning": "nonzero input change"}, {"symbol": "f(x+h)-f(x)", "meaning": "change in output"}]}
+      ],
+      "importantProperties": ["Substitute a negative input using parentheses before simplifying.", "For a table or graph, evaluation means finding the output at the stated input.", "An input must belong to the function's domain for its value to be defined."],
+      "commonMistakes": ["Replacing x with a negative number without parentheses.", "Confusing f(2) with solving f(x)=2.", "Dividing by zero in a difference quotient."],
+      "prerequisites": ["Function notation", "Order of operations", "Simplifying expressions"],
+      "exampleProblemTypes": ["Evaluate f(a) from a formula, table, mapping, or graph.", "Evaluate f(x+h) and simplify.", "Find inputs that produce a specified output.", "Compute an average rate of change over an interval."]
+    },
+    {
+      "name": "Operations on functions",
+      "keywords": ["operations on functions", "function operations", "sum of functions", "difference of functions", "product of functions", "quotient of functions", "quotient", "sum", "difference", "product", "f plus g", "f times g"],
+      "definitions": [
+        {"term": "Function operations", "meaning": "New functions formed by adding, subtracting, multiplying, or dividing the outputs of two functions at the same input."}
+      ],
+      "formulas": [
+        {"name": "Sum and difference", "latex": "(f\\pm g)(x)=f(x)\\pm g(x)", "variables": [{"symbol": "f,g", "meaning": "input functions"}, {"symbol": "x", "meaning": "input allowed in both domains"}]},
+        {"name": "Product and quotient", "latex": "(fg)(x)=f(x)g(x),\\quad (f/g)(x)=\\frac{f(x)}{g(x)}", "variables": [{"symbol": "f,g", "meaning": "input functions"}, {"symbol": "x", "meaning": "input; for the quotient also require g(x) not equal to zero"}]}
+      ],
+      "importantProperties": ["For sums, differences, and products, the domain is the intersection of the two input domains.", "For a quotient, also exclude inputs where the denominator function g(x) equals zero.", "Simplify the output expression only after applying each function to the same input."],
+      "commonMistakes": ["Adding the formulas but using different input values.", "Forgetting the extra zero restriction for a quotient.", "Assuming the product domain is the union of the original domains."],
+      "prerequisites": ["Function notation", "Domain and range", "Algebraic operations"],
+      "exampleProblemTypes": ["Find formulas for f+g, f-g, fg, or f/g.", "Determine the domain of an operation on functions.", "Evaluate an operation at a specified input.", "Simplify an expression involving two function rules."]
+    },
+    {
+      "name": "Composition of functions",
+      "keywords": ["composition", "composite function", "f of g", "g of f", "compose functions"],
+      "definitions": [
+        {"term": "Composition", "meaning": "Applying one function to the output of another function."},
+        {"term": "Inner and outer functions", "meaning": "In f(g(x)), g is applied first and f is applied to the result."}
+      ],
+      "formulas": [
+        {"name": "Function composition", "latex": "(f\\circ g)(x)=f(g(x))", "variables": [{"symbol": "g", "meaning": "inner function applied first"}, {"symbol": "f", "meaning": "outer function applied second"}]}
+      ],
+      "importantProperties": ["Composition is generally not commutative: f(g(x)) need not equal g(f(x)).", "The input must be in the domain of g, and g(x) must be in the domain of f.", "Composition can model a sequence of processes or unit conversions."],
+      "commonMistakes": ["Applying the outer function first.", "Substituting g(x) for only one occurrence of the input in f.", "Ignoring the intermediate domain restriction."],
+      "prerequisites": ["Function notation", "Evaluating functions", "Operations on expressions", "Domain"],
+      "exampleProblemTypes": ["Find f(g(x)) and g(f(x)).", "Evaluate a composition at a number.", "Determine the domain of a composite function.", "Represent a two-step process as a composition."]
+    },
+    {
+      "name": "One-to-one functions",
+      "keywords": ["one-to-one", "injective", "horizontal line test", "unique outputs", "inverse exists"],
+      "definitions": [
+        {"term": "One-to-one function", "meaning": "A function in which different inputs always produce different outputs; equivalently, each output in the range comes from exactly one input."}
+      ],
+      "formulas": [
+        {"name": "One-to-one condition", "latex": "f(a)=f(b)\\implies a=b", "variables": [{"symbol": "a,b", "meaning": "inputs in the domain"}]}
+      ],
+      "importantProperties": ["A function is one-to-one exactly when every horizontal line intersects its graph at most once.", "A one-to-one function has an inverse function on its range.", "A function that is not one-to-one may become one-to-one when its domain is restricted."],
+      "commonMistakes": ["Using the vertical line test instead of the horizontal line test.", "Assuming every function is one-to-one because it passes the vertical line test.", "Ignoring a stated or chosen domain restriction."],
+      "prerequisites": ["Functions", "Graphs", "Solving equations"],
+      "exampleProblemTypes": ["Use the horizontal line test to classify a graph.", "Show algebraically whether f(a)=f(b) forces a=b.", "Choose a restricted domain that makes a function one-to-one.", "Decide whether an inverse is a function."]
+    },
+    {
+      "name": "Inverse functions",
+      "keywords": ["inverse function", "find inverse", "f inverse", "inverse relation", "reflection y=x"],
+      "definitions": [
+        {"term": "Inverse function", "meaning": "The function that reverses the input-output mapping of a one-to-one function."},
+        {"term": "Inverse relation", "meaning": "The relation obtained by swapping the coordinates in every ordered pair; it is not always a function."}
+      ],
+      "formulas": [
+        {"name": "Inverse identities", "latex": "f^{-1}(f(x))=x,\\quad f(f^{-1}(x))=x", "variables": [{"symbol": "f", "meaning": "one-to-one function"}, {"symbol": "f^{-1}", "meaning": "its inverse on the corresponding range"}]}
+      ],
+      "importantProperties": ["To find a rule, write y=f(x), interchange x and y, then solve for y.", "The domain of f becomes the range of f inverse; the range of f becomes its domain.", "The graphs of f and f inverse reflect across y=x.", "Verify by composing in both orders on valid domains."],
+      "commonMistakes": ["Treating f^{-1}(x) as 1/f(x); inverse function and reciprocal are different.", "Failing to restrict the domain when the original function is not one-to-one.", "Forgetting to swap domain and range."],
+      "prerequisites": ["One-to-one functions", "Function notation", "Solving equations for a variable", "Domain and range"],
+      "exampleProblemTypes": ["Find an inverse formula and state its domain.", "Check whether two functions are inverses by composition.", "Reflect a graph across y=x.", "Find a domain restriction that permits an inverse function."]
+    },
+    {
+      "name": "Piecewise functions",
+      "keywords": ["piecewise", "piecewise function", "cases", "interval rule", "endpoint", "piecewise graph"],
+      "definitions": [
+        {"term": "Piecewise function", "meaning": "A function defined by different rules on different parts of its domain."},
+        {"term": "Breakpoint", "meaning": "An input value where the applicable rule or behavior changes."}
+      ],
+      "formulas": [
+        {"name": "Piecewise rule", "latex": "f(x)=\\begin{cases}g(x),&x<a\\\\h(x),&x\\ge a\\end{cases}", "variables": [{"symbol": "g(x),h(x)", "meaning": "rules used on their stated intervals"}, {"symbol": "a", "meaning": "breakpoint separating the intervals"}]}
+      ],
+      "importantProperties": ["Check the condition first, then substitute into only the rule whose interval contains the input.", "Open and closed endpoints determine which rule applies at a breakpoint.", "A piecewise function may have a jump or hole; continuity is not automatic.", "Its domain is the union of the intervals where its rules are defined."],
+      "commonMistakes": ["Using the wrong branch for an input.", "Ignoring equality in an interval condition.", "Drawing both branches as including the same endpoint when only one condition includes it."],
+      "prerequisites": ["Function evaluation", "Inequalities and intervals", "Graphing linear and quadratic rules"],
+      "exampleProblemTypes": ["Evaluate a piecewise rule at inputs on different intervals.", "Graph branches with open and closed endpoints.", "Find the domain, range, or breakpoint outputs.", "Write a piecewise model for fees, postage, or a tiered rate."]
+    },
+    {
+      "name": "Rational functions",
+      "keywords": ["rational function", "rational expression", "asymptote", "hole", "vertical asymptote", "horizontal asymptote", "slant asymptote"],
+      "definitions": [
+        {"term": "Rational function", "meaning": "A quotient of polynomial functions, written f(x)=p(x)/q(x), with q(x) not equal to zero."},
+        {"term": "Removable discontinuity (hole)", "meaning": "A missing graph point caused by a common factor that cancels algebraically; the original excluded input remains outside the domain."},
+        {"term": "Asymptote", "meaning": "A line that describes graph behavior as x approaches a value or becomes very large in magnitude."}
+      ],
+      "formulas": [
+        {"name": "Rational function", "latex": "f(x)=\\frac{p(x)}{q(x)},\\quad q(x)\\ne0", "variables": [{"symbol": "p(x)", "meaning": "numerator polynomial"}, {"symbol": "q(x)", "meaning": "denominator polynomial; its zeros are excluded from the domain"}]}
+      ],
+      "importantProperties": ["Find domain restrictions from the original denominator before cancelling factors.", "An uncancelled denominator zero often gives a vertical asymptote; a cancelled common factor gives a hole.", "If numerator and denominator degrees are equal, the horizontal asymptote is the ratio of leading coefficients.", "If numerator degree is less than denominator degree, y=0 is a horizontal asymptote; if it is exactly one degree higher, polynomial division gives a slant asymptote."],
+      "commonMistakes": ["Treating a cancelled denominator zero as part of the domain.", "Calling every denominator zero a vertical asymptote even when a common factor cancels.", "Finding x-intercepts from factors that also cancel.", "Assuming a graph never crosses a horizontal asymptote."],
+      "prerequisites": ["Factoring polynomials", "Fractions and restrictions", "Intercepts and graphing"],
+      "exampleProblemTypes": ["Find domain, intercepts, holes, and vertical asymptotes.", "Determine horizontal or slant asymptotes from degrees or division.", "Sketch a rational graph from its features.", "Solve a rational equation and reject excluded values."]
+    },
+    {
+      "name": "Exponential functions",
+      "keywords": ["exponential", "exponential function", "growth", "decay", "growth factor", "exponential graph"],
+      "definitions": [
+        {"term": "Exponential function", "meaning": "A function in which the variable appears in the exponent, commonly f(x)=ab^x with a not equal to zero, b>0, and b not equal to 1."},
+        {"term": "Growth or decay factor", "meaning": "The base b that multiplies the function value for each one-unit increase in x."}
+      ],
+      "formulas": [
+        {"name": "Exponential model", "latex": "f(x)=ab^x", "variables": [{"symbol": "a", "meaning": "initial value f(0)"}, {"symbol": "b", "meaning": "positive base; b>1 is growth and 0<b<1 is decay"}, {"symbol": "x", "meaning": "input or number of equal time periods"}]},
+        {"name": "Percent growth or decay", "latex": "A(t)=A_0(1+r)^t", "variables": [{"symbol": "A_0", "meaning": "initial amount"}, {"symbol": "r", "meaning": "rate per period as a decimal; negative for decay"}, {"symbol": "t", "meaning": "number of periods"}]}
+      ],
+      "importantProperties": ["For a>0, the basic graph passes through (0,a), has domain all real numbers, range positive outputs, and horizontal asymptote y=0.", "Equal increases in x multiply the output by a constant factor.", "Exponential growth is multiplicative, unlike linear growth which adds a constant amount.", "A vertical shift changes the horizontal asymptote."],
+      "commonMistakes": ["Confusing ab^x with (ab)^x.", "Using a percent rate directly instead of the factor 1+r or 1-r.", "Using an annual rate with a period measured in months without converting."],
+      "prerequisites": ["Exponent laws", "Percentages", "Function notation", "Graph transformations"],
+      "exampleProblemTypes": ["Identify growth or decay and initial value from a formula or graph.", "Build an exponential model from repeated percentage change.", "Solve for an unknown time or input using logarithms.", "Compare an exponential model with a linear model."]
+    },
+    {
+      "name": "Logarithmic functions",
+      "keywords": ["logarithm", "logarithmic", "log function", "common logarithm", "natural logarithm", "log rules", "change of base"],
+      "definitions": [
+        {"term": "Logarithm", "meaning": "The exponent to which a positive base must be raised to produce a given positive number."},
+        {"term": "Logarithmic function", "meaning": "The inverse of an exponential function with base b, where b>0 and b is not equal to 1."}
+      ],
+      "formulas": [
+        {"name": "Definition of logarithm", "latex": "\\log_b(x)=y\\iff b^y=x", "variables": [{"symbol": "b", "meaning": "base; positive and not equal to 1"}, {"symbol": "x", "meaning": "argument; must be positive"}, {"symbol": "y", "meaning": "exponent or logarithm value"}]},
+        {"name": "Product, quotient, and power rules", "latex": "\\log_b(MN)=\\log_b M+\\log_b N,\\quad\\log_b\\left(\\frac{M}{N}\\right)=\\log_b M-\\log_b N,\\quad\\log_b(M^p)=p\\log_b M", "variables": [{"symbol": "M,N", "meaning": "positive arguments"}, {"symbol": "p", "meaning": "exponent"}, {"symbol": "b", "meaning": "valid logarithm base"}]},
+        {"name": "Change of base", "latex": "\\log_b(x)=\\frac{\\log_c(x)}{\\log_c(b)}", "variables": [{"symbol": "b", "meaning": "original base"}, {"symbol": "c", "meaning": "any valid calculator base, commonly 10 or e"}, {"symbol": "x", "meaning": "positive argument"}]}
+      ],
+      "importantProperties": ["The argument must be positive; the base must be positive and not equal to 1.", "Logarithmic and exponential functions with the same base are inverses and reflect across y=x.", "The graph of y=log_b(x) has domain x>0, range all real numbers, and vertical asymptote x=0.", "Logarithm rules apply to products, quotients, and powers, not to sums."],
+      "commonMistakes": ["Writing log(M+N)=log M+log N; there is no such sum rule.", "Allowing a zero or negative argument in real logarithms.", "Dropping restrictions after solving a logarithmic equation.", "Confusing the base with the argument."],
+      "prerequisites": ["Exponent laws", "Inverse functions", "Solving exponential equations", "Domain restrictions"],
+      "exampleProblemTypes": ["Convert between logarithmic and exponential form.", "Expand or condense logarithmic expressions using valid rules.", "Solve logarithmic or exponential equations and check restrictions.", "Use logarithms to find time in a growth or decay model."]
+    },
+    {
+      "name": "Graphs and transformations",
+      "keywords": ["function graph", "graphing", "transformation", "translation", "reflection", "stretch", "compression", "intercept", "asymptote", "turning point"],
+      "definitions": [
+        {"term": "Graph of a function", "meaning": "The set of ordered pairs (x,f(x)) for all x in the domain."},
+        {"term": "Transformation", "meaning": "A change to a parent graph that shifts, reflects, stretches, or compresses it."}
+      ],
+      "formulas": [
+        {"name": "Transformed parent function", "latex": "g(x)=a f(b(x-h))+k", "variables": [{"symbol": "h", "meaning": "horizontal shift right by h"}, {"symbol": "k", "meaning": "vertical shift up by k"}, {"symbol": "a", "meaning": "vertical scale by |a| and reflection when negative"}, {"symbol": "b", "meaning": "horizontal scale by 1/|b| and reflection when negative"}]}
+      ],
+      "importantProperties": ["The graph's x-intercepts solve f(x)=0; its y-intercept is f(0), when defined.", "Inside changes act in the opposite direction: f(x-h) shifts right by h.", "A vertical reflection occurs when the outside multiplier is negative; a horizontal reflection occurs for a negative inside multiplier.", "Use domain, range, intercepts, turning points, asymptotes, and symmetry to sketch accurately."],
+      "commonMistakes": ["Reversing the direction of horizontal shifts.", "Applying horizontal and vertical scale factors in the same way.", "Drawing an asymptote as if it must never be crossed.", "Plotting points outside the function's domain."],
+      "prerequisites": ["Coordinate plane", "Parent functions", "Domain and range", "Solving equations"],
+      "exampleProblemTypes": ["Sketch linear, quadratic, rational, exponential, logarithmic, or piecewise graphs.", "Identify transformations from a formula.", "Find intercepts, extrema, symmetry, and asymptotes.", "Compare two function graphs or determine a graph's domain and range."]
+    },
+    {
+      "name": "Linear and quadratic functions",
+      "keywords": ["linear function", "slope", "gradient", "quadratic function", "parabola", "vertex", "axis of symmetry", "quadratic formula", "discriminant", "roots", "zeros"],
+      "definitions": [
+        {"term": "Linear function", "meaning": "A function with constant rate of change and a straight-line graph."},
+        {"term": "Quadratic function", "meaning": "A degree-two polynomial whose graph is a parabola."},
+        {"term": "Vertex", "meaning": "The turning point of a parabola and its maximum or minimum value point."}
+      ],
+      "formulas": [
+        {"name": "Linear slope-intercept form", "latex": "y=mx+b", "variables": [{"symbol": "m", "meaning": "slope"}, {"symbol": "b", "meaning": "y-intercept"}]},
+        {"name": "Quadratic standard form", "latex": "f(x)=ax^2+bx+c", "variables": [{"symbol": "a", "meaning": "nonzero leading coefficient"}, {"symbol": "b", "meaning": "linear coefficient"}, {"symbol": "c", "meaning": "y-intercept"}]},
+        {"name": "Quadratic axis and roots", "latex": "x_v=-\\frac{b}{2a},\\quad x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}", "variables": [{"symbol": "x_v", "meaning": "vertex x-coordinate"}, {"symbol": "a,b,c", "meaning": "quadratic coefficients"}, {"symbol": "b^2-4ac", "meaning": "discriminant"}]}
+      ],
+      "importantProperties": ["A linear function has constant slope.", "A quadratic opens upward for a>0 and downward for a<0.", "The discriminant determines whether a quadratic has two, one repeated, or no real roots.", "The vertex is on the axis of symmetry x=-b/(2a)."],
+      "commonMistakes": ["Confusing slope with intercept.", "Omitting plus-or-minus in the quadratic formula.", "Confusing a vertex with a root.", "Using quadratic formulas when a=0."],
+      "prerequisites": ["Algebraic manipulation", "Factoring", "Coordinate graphing", "Square roots"],
+      "exampleProblemTypes": ["Find a line rule from points or rate and intercept.", "Find quadratic roots, vertex, and intercepts.", "Choose a function family from a table or graph.", "Model maximum or minimum values in a contextual problem."]
+    },
+    {
+      "name": "Applications and mathematical models",
+      "keywords": ["function application", "function model", "word problem", "rate of change", "break-even", "maximum", "minimum", "optimization", "interpret model", "real world function"],
+      "definitions": [
+        {"term": "Mathematical model", "meaning": "A function or equation used to represent a relationship in a real situation."},
+        {"term": "Break-even point", "meaning": "An input where two modeled quantities, such as revenue and cost, are equal."},
+        {"term": "Extrapolation", "meaning": "Using a model beyond the range of observed or supplied data."}
+      ],
+      "formulas": [
+        {"name": "Average rate of change", "latex": "\\frac{f(b)-f(a)}{b-a},\\quad a\\ne b", "variables": [{"symbol": "a,b", "meaning": "input values in the model domain"}, {"symbol": "f(b)-f(a)", "meaning": "change in output"}]},
+        {"name": "Break-even condition", "latex": "R(x)=C(x)", "variables": [{"symbol": "R(x)", "meaning": "revenue or income"}, {"symbol": "C(x)", "meaning": "cost"}, {"symbol": "x", "meaning": "quantity or decision variable"}]}
+      ],
+      "importantProperties": ["Define variables and units before selecting or building a model.", "Choose a family consistent with the situation: constant rate suggests linear, a turning point may suggest quadratic, repeated percent change suggests exponential.", "Restrict the domain to meaningful values such as nonnegative quantities or stated time intervals.", "Distinguish interpolation from extrapolation and explain limits of a model."],
+      "commonMistakes": ["Using an unrealistic domain, such as negative people or items.", "Confusing the input units with output units.", "Interpreting a model's prediction as exact real-world certainty.", "Ignoring what an intercept or maximum means in context."],
+      "prerequisites": ["Function notation", "Graphs", "Linear, quadratic, and exponential models", "Solving equations and inequalities"],
+      "exampleProblemTypes": ["Build a function from a cost, distance, or population scenario.", "Find and interpret a break-even point.", "Use a graph or formula to find a maximum or minimum.", "Compare model predictions and state reasonable domain limits."]
+    }
+  ]
+}

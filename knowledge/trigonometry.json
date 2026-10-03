@@ -1,0 +1,56 @@
+{
+  "topicName": "Trigonometry",
+  "topicOverview": "Grade 11 trigonometry relates angles and side lengths in triangles and applies those relationships to area, bearings, and elevation problems. Sketch the situation, identify the reference angle, and keep angle mode and units consistent.",
+  "keywords": ["trigonometry", "trigonometric ratios", "right triangle", "sine", "cosine", "tangent", "SOHCAHTOA", "bearing", "angle of elevation", "angle of depression", "Heron's formula", "Heron formula", "area of triangle", "sine area formula", "circular functions", "radians", "degrees", "unit circle"],
+  "prerequisites": ["Angle measures", "Right triangles", "Pythagorean theorem", "Fractions and ratios", "Area of triangles"],
+  "subtopics": [
+    {
+      "name": "Trigonometric ratios in right triangles",
+      "keywords": ["sine", "cosine", "tangent", "SOHCAHTOA", "opposite", "adjacent", "hypotenuse", "right triangle", "trig ratio"],
+      "definitions": [{"term":"Sine","meaning":"For an acute angle in a right triangle, the ratio of the opposite side to the hypotenuse."},{"term":"Cosine","meaning":"For an acute angle in a right triangle, the ratio of the adjacent side to the hypotenuse."},{"term":"Tangent","meaning":"For an acute angle in a right triangle, the ratio of the opposite side to the adjacent side."}],
+      "formulas": [{"name":"Right-triangle ratios","latex":"\\sin\\theta=\\frac{\\text{opposite}}{\\text{hypotenuse}},\\quad \\cos\\theta=\\frac{\\text{adjacent}}{\\text{hypotenuse}},\\quad \\tan\\theta=\\frac{\\text{opposite}}{\\text{adjacent}}","variables":[{"symbol":"theta","meaning":"reference angle"}]}],
+      "conditions": ["The named opposite and adjacent sides are relative to the chosen angle.","The hypotenuse is opposite the right angle and is the longest side.","Set the calculator to the angle unit specified in the problem."],
+      "importantProperties": ["Use sine when opposite and hypotenuse are involved, cosine for adjacent and hypotenuse, and tangent for opposite and adjacent.","An inverse trigonometric function can find an angle from a known side ratio."],
+      "workedExamples": ["If the opposite side is 3 and the hypotenuse is 5, sin(theta)=3/5=0.6.","If opposite=6 and adjacent=8, tan(theta)=6/8=0.75."],
+      "commonMistakes": ["Choosing sides relative to the wrong angle.","Using the hypotenuse for a non-right side.","Mixing degrees and radians."],
+      "prerequisites": ["Ratios", "Right triangles", "Angle notation"],
+      "exampleProblemTypes": ["Find a missing side using a trig ratio.","Find an acute angle using an inverse trig ratio.","Select sine, cosine, or tangent from the known sides."]
+    },
+    {
+      "name": "Triangle area and Heron's formula",
+      "keywords": ["Heron's formula", "Heron formula", "area of a triangle", "sine area formula", "included angle", "three sides"],
+      "definitions": [{"term":"Semiperimeter","meaning":"Half the perimeter of a triangle, s=(a+b+c)/2."},{"term":"Included angle","meaning":"The angle between two specified sides of a triangle."}],
+      "formulas": [{"name":"Area using two sides and included angle","latex":"A=\\frac{1}{2}ab\\sin C","variables":[{"symbol":"a,b","meaning":"two side lengths"},{"symbol":"C","meaning":"included angle"}]},{"name":"Heron's formula","latex":"A=\\sqrt{s(s-a)(s-b)(s-c)},\\quad s=\\frac{a+b+c}{2}","variables":[{"symbol":"a,b,c","meaning":"side lengths"},{"symbol":"s","meaning":"semiperimeter"}]}],
+      "conditions": ["For the sine-area formula, the angle must be included between the two known sides.","For Heron's formula, all three side lengths must form a valid triangle."],
+      "importantProperties": ["Area is measured in square units.","A valid triangle has the sum of any two side lengths greater than the third."],
+      "workedExamples": ["For sides 8 and 10 with included angle 30 degrees, A=0.5(8)(10)sin(30 degrees)=20 square units.","For sides 13, 14, and 15, s=21 and A=sqrt(21·8·7·6)=84 square units."],
+      "commonMistakes": ["Using an angle that is not between the two stated sides.","Using Heron's formula before checking the side lengths form a triangle.","Reporting area in linear units."],
+      "prerequisites": ["Area of a triangle", "Square roots", "Trigonometric ratios"],
+      "exampleProblemTypes": ["Find a triangle area from two sides and the included angle.","Find area from three side lengths using Heron's formula."]
+    },
+    {
+      "name": "Bearings and angles of elevation or depression",
+      "keywords": ["bearing", "three-figure bearing", "angle of elevation", "angle of depression", "line of sight", "horizontal", "navigation"],
+      "definitions": [{"term":"Bearing","meaning":"A direction measured clockwise from north, commonly written as a three-digit angle."},{"term":"Angle of elevation","meaning":"The angle from a horizontal line upward to an observer's line of sight."},{"term":"Angle of depression","meaning":"The angle from a horizontal line downward to an object's line of sight."}],
+      "formulas": [{"name":"Right-triangle model","latex":"\\tan\\theta=\\frac{\\text{vertical change}}{\\text{horizontal distance}}","variables":[{"symbol":"theta","meaning":"angle from the horizontal"}]}],
+      "conditions": ["Draw and label a diagram before choosing a ratio.","Bearings are measured clockwise from north; distinguish a bearing from an angle measured from east or a triangle interior angle."],
+      "importantProperties": ["Horizontal lines are parallel, so corresponding angles of elevation and depression can be equal.","The line of sight, horizontal distance, and vertical change form a right-triangle model."],
+      "workedExamples": ["If a point is 20 m horizontally from a tower and the elevation angle is 30 degrees, height above the observer is 20tan(30 degrees)≈11.55 m."],
+      "commonMistakes": ["Measuring a bearing from east instead of north.","Using line-of-sight distance as horizontal distance.","Omitting the observer's eye height when the question asks for total height."],
+      "prerequisites": ["Right-triangle ratios", "Angle notation", "Scale diagrams"],
+      "exampleProblemTypes": ["Find a height or distance from an elevation/depression angle.","Interpret a three-figure bearing.","Draw a navigation or line-of-sight diagram and form a triangle."]
+    },
+    {
+      "name": "Angles and circular functions",
+      "keywords": ["circular functions", "unit circle", "radian", "radians", "degrees", "coterminal angle", "sine graph", "cosine graph", "periodic graph"],
+      "definitions": [{"term":"Radian","meaning":"An angle measure equal to the ratio of the intercepted arc length to the circle radius."},{"term":"Periodic function","meaning":"A function whose values repeat after a fixed positive interval called its period."}],
+      "formulas": [{"name":"Degree-radian conversion","latex":"180^\\circ=\\pi\\text{ radians}","variables":[]},{"name":"Arc length","latex":"s=r\\theta","variables":[{"symbol":"s","meaning":"arc length"},{"symbol":"r","meaning":"radius"},{"symbol":"theta","meaning":"angle in radians"}]}],
+      "conditions": ["Use radians in s=r theta.","Check the angle unit before evaluating trigonometric functions or reading their graphs."],
+      "importantProperties": ["One complete turn is 360 degrees or 2π radians.","Sine and cosine repeat every 360 degrees or 2π radians."],
+      "workedExamples": ["90 degrees = pi/2 radians.","For r=4 and theta=pi/3, arc length s=4pi/3."],
+      "commonMistakes": ["Using degree values in a radian formula.","Confusing the period with the amplitude of a graph."],
+      "prerequisites": ["Coordinate plane", "Ratios", "Angle measures"],
+      "exampleProblemTypes": ["Convert between degrees and radians.","Interpret common unit-circle angles.","Identify period or key features of a sine or cosine graph."]
+    }
+  ]
+}

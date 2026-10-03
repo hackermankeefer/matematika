@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 420" width="100%" height="100%">
+  <defs>
+    <style>
+      .label {
+        font-family: "Georgia", "Times New Roman", serif;
+        font-style: italic;
+        font-size: 38px;
+        fill: #000000;
+        text-anchor: middle;
+        dominant-baseline: middle;
+      }
+    </style>
+  </defs>
+
+  <!-- Main Right Triangle (Converted from 16px stroke to filled path) -->
+  <path fill="#000000" fill-rule="evenodd" d="
+    M 90,60 
+    L 430,320 
+    L 90,320 
+    Z 
+    M 106,98.6 
+    L 106,304 
+    L 374.3,304 
+    Z" />
+
+  <!-- Right Angle Square Symbol (Converted from 6px stroke to filled path) -->
+  <path fill="#000000" fill-rule="evenodd" d="
+    M 98,272 
+    L 134,272 
+    L 134,312 
+    L 128,312 
+    L 128,278 
+    L 98,278 
+    Z" />
+
+  <!-- Top Angle Arc (Converted from 6px stroke to filled path) -->
+  <path fill="#000000" fill-rule="evenodd" d="
+    M 98,110 
+    A 50,50 0 0,0 130,110 
+    L 134.5,106 
+    A 56,56 0 0,1 98,104 
+    Z" />
+
+  <!-- Bottom-Right Angle Arc (Converted from 6px stroke to filled path) -->
+  <path fill="#000000" fill-rule="evenodd" d="
+    M 370,312 
+    A 50,50 0 0,0 380,282 
+    L 384.8,285.6 
+    A 56,56 0 0,1 373.6,312 
+    Z" />
+
+  <!-- Labels (Filled vector text elements) -->
+  <text x="250" y="365" class="label">a</text>
+  <text x="55" y="200" class="label">b</text>
+  <text x="285" y="160" class="label">h</text>
+</svg>

@@ -1,0 +1,11 @@
+{
+  "name": "mathematics-archive",
+  "private": true,
+  "scripts": {
+    "test": "node --test tests/grade11-ai.test.js",
+    "test:ollama": "node --test tests/grade11-ai-live.test.js"
+  },
+  "dependencies": {
+    "katex": "^0.16.22"
+  }
+}
